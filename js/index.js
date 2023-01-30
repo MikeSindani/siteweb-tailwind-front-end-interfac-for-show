@@ -51,3 +51,17 @@ function showThink() {
   
   setTimeout(showThink, 6000); // Change image every 2 seconds
 }
+
+/* BARRE DE RECHCHER CODE */ 
+
+function on() {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementsById("body").style.overflow = "hidden";
+  
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementsByName("body").style.overflow = "auto";
+}
+
