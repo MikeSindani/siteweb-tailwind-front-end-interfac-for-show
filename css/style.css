@@ -1,0 +1,57 @@
+body{
+    font-family:'Poppins', sans-serif;;
+}
+
+@media (min-width:768px){
+    #search-btn-mobi{
+        display: none;
+    }
+}
+@media (min-width:768px){
+    #menu-hamberger{
+        display: none;
+    }
+}
+
+@media (max-width:768px){
+    #search-btn-mobi-2{
+        display: none;
+    }
+}
+@media (max-width:768px){
+    #nav-links{
+        display: none;
+    }
+}
+.open-close-menu{
+    display: flex !important;
+}
+/*
+.navlinks div a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #ff6347;
+    border-radius: 10%;
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+  }*/
+  
+  /*.navlinks div a:hover::after {
+    width: 30%;
+  }*/
+  
+  .navlinks:hover div:not(:hover) {
+    opacity: 0.5;
+  }
+@media (max-width:768px){
+    .welcome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+}

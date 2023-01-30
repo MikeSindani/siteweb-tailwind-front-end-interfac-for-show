@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--links -->
+  <link href="output.css" rel="stylesheet">
+  <link rel="stylesheet" href="hamburgers.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--links -->
+  <!--script -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <!--script-->
+  <title>interfac</title>
+</head>
+<body class="bg-slate-100 ">
+  <!--header -->
+  <header>
+  <!--navbar -->
+   <nav class="bg-black  flex flex-col lg:flex-row gap-10 items-center justify-around  p-2 fixed top-0 left-0 right-0 z-10">
+    <div class="flex justify-center items-center  " >  
+      <!--menu -->  
+      <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2"  id="menu-hamberger">
+        <span class="hamburger-box" >
+          <div class="hamburger-inner" ></div>
+        </span>
+      </div>
+      <!--menu -->
+       <!--logo -->
+      <div>
+        <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
+          <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline" >
+          INTERFAC
+        </a>
+      </div>
+      <!--logo -->
+      <div  class="absolute top-2 right-3 p-2">
+        <img src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi"  srcset="" style="height: 36px;" >
+      </div>
+    </div> 
+   <!-- nav links -->
+    <div class="flex gap-10 flex-wrap items-center justify-center" id="nav-links">
+      <div class="navlinks flex flex-col md:flex-row gap-5">
+        <div><a class="nav-link nav_links_content nav_links_content_hover" href="">Accueil</a></div>
+        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Enseigments</a></div>
+        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Predications</a></div>
+        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos News</a></div>
+        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Temoignages</a></div>
+      </div>
+      <div class="flex flex-wrap gap-5 justify-center p-2 items-center">
+        <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color "><a class="text-black text-bold text-md font-bold hover:text-white"  href=" ">Faire un don</a></div>
+        <div class="bg-primary-color px-10 py-1 rounded-3xl "><a class="text-white text-bold text-md font-bold"  href=" ">Contacte Nous</a></div>
+        <div>
+          <img src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi-2"  srcset="" style="height:28px;" class="cursor-pointer" >
+        </div> 
+      </div>
+    </div>
+     <!-- nav links -->
+   </nav>
+   <!--navbar -->
+    <!--slider-->
+   <div>
+    <div id="slider" class=" bg-fixed bg-cover " style="background-image: url('img/img-\(8\).png');height: 80vh;" >
+      <div class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center" style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(3px);height: 80vh;">
+        <div class="mt-10 md:mt-0">
+                <img  src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" >
+        </div> 
+        <div  class="welcome text-white text-lg font-bold px-2 md:p-0 ">
+           <h2 class="text-poppins text-3xl md:text-4xl text-primary-color">Bienvenu(e)</h2>
+           <div class="font-light">Sur le site de la</div>
+           <div class="md:text-4xl text-2xl font-medium">Cellule de Prière <strong>Interfac</strong>ultaire</div>
+           <div class="md:my-3 ">
+                  <div class="think ">
+                    <div class="text-oswald text-primary-color">THEME DE L'ANNEE</div>
+                    <div class="text-poppins text-white font-light w-80 md:w-96">Tous pour les saluts des Ames et edifications des saints   </div>
+                  </div>
+                  <div class="think" style="display: none;">
+                    <div class="text-oswald text-primary-color" >DEVISE</div>
+                    <div class="text-poppins text-white font-light w-80 md:w-96"> les saluts des Ames et edifications des saints   </div>
+                  </div>
+                  <div class="think" style="display: none;">
+                    <div class="text-oswald text-primary-color" >PENSE DU JOUR</div>
+                    <div class="text-poppins text-white font-light w-80 md:w-96"> les sal/uts des Ames et edifications des saints   </div>
+                  </div>
+          </div>
+             
+        </div>
+      </div> 
+    </div>
+   </div>
+<!--slider-->
+  </header>
+  <!--header -->
+
+  <main class="h-screen grid md:grid-cols-main grid-cols-1">
+
+    <article class="flex flex-col gap-5 md:p-5 p-3">
+
+      <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl  py-4">Nos Articles</h1>
+      <!--about card -->
+      <div class="shadow-xl bg-fixed bg-cover flex  " style="background-image: url('img/img-\(8\).png');">   
+        <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 " style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(3px);">
+          <span class="font-oswald text-white text-xl">Voulez-vous connaitre plus sur nous ?</span>
+          <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1"><a class="text-white text-bold text-sm sm:text-md font-bold "  href=" ">A Propos de Nous</a></span>
+        </div>    
+      </div>
+       <!--about card -->
+       <!--card items  -->
+      <div title="comment " class="bg-white grid grid-cols-card gap-3 hover:shadow-xl cursor-pointer">
+          <!--card thumbail   -->
+          <div> 
+            <div class="z-2" style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(3px);" >
+              <img   src="img/img- (2).jpg" alt="" class="  md:w-72 h-36" >
+            </div>    
+          </div>
+          <!--card body-->
+          <div class="p-2 flex gap-2 flex-col">
+              <!--card body titre-->
+              <div>
+                <h1 class="font-oswald text-md sm:text-xl">Comment prier Dieu?</h1>
+              </div>
+              <!--card body description-->
+              <div class="text-slate-600 hidden sm:block">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
+                porro aperiam saepe necessitatibus maxime nobis autem,
+              </div>
+              <!--card body details -->
+              <div class="flex sm:justify-around items-center flex-wrap ">
+                <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+                <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
+                <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
+              </div>
+          </div>
+          <!--card body -->
+      </div>
+       <!--card items  -->
+       <!--card items  -->
+       <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl cursor-pointer">
+        <!--card thumbail   -->
+        <div> 
+          <div class="z-2" >
+            <img   src="img/img- (7).jpg" alt="" class="w-72 h-40" >
+          </div>    
+        </div>
+        <!--card body-->
+        <div class="p-2 flex gap-2 flex-col">
+            <!--card body titre-->
+            <div>
+              <h1 class="font-oswald text-md sm:text-xl">Comment prier Dieu?</h1>
+            </div>
+            <!--card body description-->
+            <div class="text-slate-600 hidden sm:block">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
+              porro aperiam saepe necessitatibus maxime nobis autem,
+            </div>
+            <!--card body details -->
+            <div class="flex sm:justify-around items-center flex-wrap ">
+              <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
+            </div>
+        </div>
+        <!--card body -->
+       </div>
+       <!--card items  -->
+
+    </article>
+
+    <aside>
+      <section class="bg-white sm:h-screen h-full md:p-5 p-3 text-center md:text-left">
+        <h1 class="font-oswald font-bold  text-2xl md:text-3xl  titre_content py-4 ">Nos Programmes</h1>
+        <div>
+          <div class=""> 
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+
+    </aside>
+  </main>
+
+  <!--Footer 2-->
+  <section class="h-16  bg-fixed bg-cover" style="background-image: url('img/img-\(8\).png');">
+    <div class="h-16 flex  justify-center  items-center" style="background-color: rgba(0, 0, 0, 0.70);">
+      <div>
+        <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
+          <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline" >
+          INTERFAC
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="bg-black flex flex-wrap  p-5   md:justify-around">
+    <section >
+      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Nous Contacter</h2>
+      <div class="text-slate-700 w-80 text-sm md:py-5 p-5"> 
+        <div><ion-icon name="mail" size="small"></ion-icon> <a href="" class="text-lg  px-2">interfac@interfac.com</a></div>
+        <div><ion-icon name="logo-whatsapp" size="small"></ion-icon> <a href="" class="text-lg px-2">+243 081000000</a></div>
+        <div><ion-icon name="call" size="small"></ion-icon> <a href=""class="text-lg px-2" >+243 081000000</a></div>
+        <div><ion-icon name="call" size="small"></ion-icon> <a href="" class="text-lg px-2"  >+243 081000000</a></div>
+    </section>
+    <section >
+      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Ecrivez-Nous</h2>
+      <div class="text-slate-700 w-80 text-sm md:py-5 p-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repellendus, cupiditate suscipit facere sit rerum consequuntur enim natus exercitationem quis expedita tempora accusamus. Quas cum nam molestias, officia commodi sapiente.</div>
+    </section>
+    <section>
+      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Savoir plus sur Nous</h2>
+      <div class="p-5">
+        <div><a href="" class="text-slate-700 text-lg"><ion-icon name="arrow-round-forward"></ion-icon> Qui sommmes nous?</a></div>
+        <div><a href="" class="text-slate-700 text-lg"><ion-icon name="arrow-round-forward"></ion-icon> Ou nous trouver?</a></div>
+        <div><a href="" class="text-slate-700 text-lg"><ion-icon name="arrow-round-forward"></ion-icon> FAQ</a></div>
+      </div>
+    </section>
+    <section>
+      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Reseaux Social</h2>
+      <div class="p-5 ">
+        <div><a href="" class="text-slate-700 text-lg"><ion-icon name="logo-facebook"></ion-icon> Facebook</a></div>
+        <div><a href="" class="text-slate-700 text-lg"><ion-icon name="logo-instagram" size="small"></ion-icon> Instagram</a></div>
+        <div><a href="" class="text-slate-700 text-lg"><ion-icon name="logo-youtube" size="small" ></ion-icon> Youtube</a></div>
+      </div>
+    </section>
+
+  </section>
+  <footer class="bg-black   text-center text-gray-600 text-md md:text-lg p-5 ">
+     Cellule de priere <strong>Interfac</strong>ultaire 2023 - 2024 
+  </footer>
+ <!---scripts -->
+ <script src="js/index.js"></script>
+</body>
+</html>
