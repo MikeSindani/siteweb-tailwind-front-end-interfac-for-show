@@ -56,12 +56,56 @@ function showThink() {
 
 function on() {
   document.getElementById("overlay").style.display = "block";
-  document.getElementsById("body").style.overflow = "hidden";
+  document.body.style.overflow = 'hidden';
   
 }
 
 function off() {
   document.getElementById("overlay").style.display = "none";
-  document.getElementsByName("body").style.overflow = "auto";
+  document.body.style.overflow = 'auto';
+}
+
+/* RECHERCHER RECUPERE UN INPUT EST AFFICHER */ 
+document.querySelector("#input-saerch").addEventListener("keyup", function(event) {
+  event.preventDefault();
+  var myInput = document.querySelector("#input-saerch").value;
+  var text_see_search  = document.querySelector("#text-see-search")
+  text_see_search.innerHTML ='Nous rechcherchons'
+  document.querySelector("#text-search").innerHTML ='"'+ myInput+'"';
+  document.querySelector("#loader").style.display = "block";
+  if(myInput == ""){
+    document.querySelector("#text-search").innerHTML ='';
+    text_see_search.innerHTML ='Ecrivez quelque chose'
+    document.querySelector("#loader").style.display = "none";
+  }
+  
+});
+
+/*document.querySelector("form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var myInput = document.querySelector("#myInput").value;
+  document.querySelector("#myDiv").innerHTML = myInput;
+});*/
+
+//* bouton vers le haut 
+
+// Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
