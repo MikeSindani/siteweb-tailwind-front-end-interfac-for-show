@@ -28,9 +28,9 @@ function slider() {
     }
     
     slider_img.style.backgroundImage = "url('" + image[i] + "')";
-    slider_img.style.animation = "zoom 36s linear infinite";
+    slider_img.style.animation = "zoom 42s linear infinite";
     i++
-    setTimeout('slider()',3000);
+    setTimeout('slider()',6000);
 }
  slider()
 /* change de theme pense du jour etc */ 
@@ -96,16 +96,39 @@ let mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
 }
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+/* MODAL CARD APPELLE   */ 
+
+var a = setTimeout(() => {
+  document.getElementById("overlay_modal").style.display = "block"; // ! doit remmtre a block en production 
+}, 5000);
+
+function chose_modal() {
+  document.getElementById("overlay_modal").style.display = "none";
+  clearTimeout(a)
+}
+
+/* CODE QUI FAIT DISPARAITRE LKE BACKGROUND LORSQUE ON SCROLL */ 
+
+window.onscroll = function() {
+  var numbre_scroll = 250 
+  if (window.pageYOffset >= numbre_scroll) {
+    document.getElementById("bg-social-media").style.backgroundColor = "rgba(0, 0, 0, 0.699)";
+  }
+  if (window.pageYOffset < numbre_scroll) {
+    document.getElementById("bg-social-media").style.backgroundColor = "transparent";
+  }
 }
 
