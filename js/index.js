@@ -1,3 +1,10 @@
+//* activer anime on scroll 
+
+AOS.init();
+
+
+// MENU HAMBERGER CODE 
+
 const nav_links = document.querySelector("#nav-links")
 const menu = document.querySelector("#menu-hamberger")
 menu.addEventListener("click",()=>{
@@ -5,58 +12,13 @@ menu.addEventListener("click",()=>{
     menu.classList.toggle("is-active")
 })
 
-//* code slider 
-
-const slider_img = document.querySelector("#slider")
-
-var image = new Array (
-    "img/img- (1).jpg",
-    "img/img- (2).jpg",
-    "img/img- (3).jpg",
-    "img/img- (4).jpg",
-    "img/img- (5).jpg",
-    "img/img- (6).jpg",
-    "img/img- (7).jpg",
-    
-)
-
-var len = image.length 
-var i = 0
-function slider() {
-    if(i > len-1){
-        i = 0
-    }
-    
-    slider_img.style.backgroundImage = "url('" + image[i] + "')";
-    slider_img.style.animation = "zoom 42s linear infinite";
-    i++
-    setTimeout('slider()',6000);
-}
- slider()
-/* change de theme pense du jour etc */ 
-
-let slideIndex = 0;
-showThink();
-
-function showThink() {
-  let i;
-  let slides = document.getElementsByClassName("think");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.animation = "fade 3s linear infinite";
-  slides[slideIndex-1].style.display = "block";
-  
-  setTimeout(showThink, 6000); // Change image every 2 seconds
-}
 
 /* BARRE DE RECHCHER CODE */ 
 
 function on() {
   document.getElementById("overlay").style.display = "block";
   document.body.style.overflow = 'hidden';
+  
   
 }
 
@@ -89,19 +51,11 @@ document.querySelector("#input-saerch").addEventListener("keyup", function(event
 
 //* bouton vers le haut 
 
-// Get the button:
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+/*window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-}
+    
+}*/
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
@@ -129,6 +83,14 @@ window.onscroll = function() {
   }
   if (window.pageYOffset < numbre_scroll) {
     document.getElementById("bg-social-media").style.backgroundColor = "transparent";
+  }
+  // Get the button:
+   let mybutton = document.getElementById("myBtn");
+  // When the user scrolls down 20px from the top of the document, show the button
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
   }
 }
 
