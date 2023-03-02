@@ -1,8 +1,39 @@
+var menu_dropdown = document.getElementById("menu");
+
+// open/close the menu when the user clicks on the button
+function toggleMenu() {
+    if (menu_dropdown.classList.contains('md:hidden')) {
+        menu_dropdown.classList.remove('md:hidden');
+    } else {
+        menu_dropdown.classList.add('md:hidden');
+    }
+}
+
+// close the menu when the user clicks outside of it 
+window.onclick = function (event) {
+    var dropdownWrapper = document.getElementById('dropdown-wrapper');
+    if (!dropdownWrapper.contains(event.target) && !menu_dropdown.classList.contains('md:hidden') && !menu_dropdown.classList.contains('hidden')) {
+        menu_dropdown.classList.add('md:hidden');
+    }
+}
+
+
+
 //* activer anime on scroll 
+//AOS.init();
 
-AOS.init();
+const paralex_img = document.querySelector(".paralex")
 
 
+      window.addEventListener("scroll", () => {
+        updateImage();
+      });
+
+      function updateImage() {
+        paralex_img.style.opacity = 1 - window.pageYOffset / 600;
+        //slider_img.style.backgroundSize = 100 - window.pageYOffset / 12 + "%";
+        //slider_img.style.backgroundPositionY = 100 - window.pageYOffset / 12 + "px"
+      }
 // MENU HAMBERGER CODE 
 
 const nav_links = document.querySelector("#nav-links")

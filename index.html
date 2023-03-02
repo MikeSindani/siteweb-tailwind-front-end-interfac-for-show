@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,206 +16,291 @@
   <!--script-->
   <title>interfac - home page</title>
 </head>
+
 <body id="body" class="bg-slate-100 ">
-<!--############################################################# HEADER  ###############################################################-->
+  <!--############################################################# HEADER  ###############################################################-->
   <!--header -->
   <!+++++++++++++++++++++++++++++++++ NAV +++++++++++++++++++++++++++++++++++++++>
-  <header>
-  <!--navbar -->
-   <nav class="bg-transparent  flex flex-col lg:flex-row gap-10 items-center justify-around  p-2 fixed top-0 left-0 right-0 z-10" style="background-color: rgba(0, 0, 0, 0.80);backdrop-filter: blur(10px);">
-    <div class="flex justify-center items-center  " >  
-      <!--menu -->  
-      <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2"  id="menu-hamberger">
-        <span class="hamburger-box" >
-          <div class="hamburger-inner" ></div>
-        </span>
-      </div>
-      <!--menu -->
-       <!--logo -->
-      <div>
-        <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
-          <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline" >
-          INTERFAC
-        </a>
-      </div>
-      <!--logo -->
-      <div onclick="on()"   class="btn__search absolute top-2 right-3 p-2">
-        <img  src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi"  srcset="" style="height: 36px;" >
-      </div>
-    </div> 
-   <!-- nav links -->
-    <div class="flex gap-10 flex-wrap items-center justify-center" id="nav-links">
-      <div class="navlinks flex flex-col md:flex-row gap-5">
-        <div><a class="nav-link nav_links_content nav_links_content_hover" href="">Accueil</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Enseigments</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Predications</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos News</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Temoignages</a></div>
-      </div>
-      <div class="flex flex-wrap gap-5 justify-center p-2 items-center">
-        <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a class="text-black text-bold text-md font-bold hover:text-white transition"  href=" ">Faire un don</a></div>
-        <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a class="text-white text-bold text-md font-bold hover:text-black transition"  href=" ">Contacte Nous</a></div>
-        <div onclick="on()" class="btn__search" >
-          <img  src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi-2"  srcset="" style="height:28px;" class="cursor-pointer" >
-        </div> 
-      </div>
-    </div>
-     <!-- nav links -->
-   </nav>
-   <!--navbar -->
-   <!+++++++++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++>
-    <!--slider-->
-   <div>
-    <div id="slider" class=" bg-fixed bg-cover " style="background-image: url('img/img-\(8\).png');height: 80vh;" >
-      <div class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center" style="background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);height: 80vh;">
-        <div class="mt-10 md:mt-0 hidden  sm:block">
-                <img  src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" >
+    <header>
+      <!--navbar -->
+      <nav
+        class="bg-transparent  flex flex-col gap-3  p-2 fixed top-0 left-0 right-0 z-10"
+        style="background-color: rgba(0, 0, 0, 0.80);backdrop-filter: blur(10px);">
+        <div class="flex flex-col md:flex-row gap-3 md:gap-7 items-center justify-around  ">
+
+          <div class="flex justify-center items-center  ">
+            <!--menu -->
+            <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2" id="menu-hamberger">
+              <span class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </span>
+            </div>
+            <!--menu -->
+            <!--logo -->
+            <div>
+              <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
+                <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac"
+                  class="inline">
+                INTERFAC
+              </a>
+            </div>
+            <!--logo -->
+            <div onclick="on()" class="btn__search absolute top-2 right-3 p-2">
+              <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi" srcset="" style="height: 36px;">
+            </div>
+          </div>
+          <!-- nav links -->
+          <div class="flex gap-3 md:gap-7 flex-wrap items-center justify-center " id="nav-links">
+                <div class="navlinks flex flex-col md:flex-row gap-3 ">
+                  <div><a class="nav-link text-sm nav_links_content nav_links_content_hover" href="">Accueil</a></div>
+                  <div id="dropdown-wrapper" class="hidden md:flex items-center text-white">
+                    <bouton onclick="toggleMenu()" class="text-white text-sm nav_links_content nav_links_content_hover " href="">
+                      Nos Enseigements</bouton>
+                    <ion-icon name="arrow-dropdown" size="small"></ion-icon>
+                  </div>
+                  <div  class="inline-block md:hidden cursor-pointer">
+                      <button  class="text-white text-sm nav_links_content nav_links_content_hover ">
+                        Nos Enseigements 
+                        <ion-icon name="arrow-dropdown" ></ion-icon>
+                      </button>
+                      <div class="md:hidden flex flex-col drop-shadow-md border-white border-l">
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color  " href="#">Qui est Dieu?</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color " href="#">Qui est Jesus-Christ?</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color  " href="#">Qui est Le Saint Esprit?</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">ABC de la Foi Chretiens</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">Nos Predications</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">Nos Enseigements</a>
+                      </div>
+                  </div>
+                  <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Meditations</a>
+                  </div>
+                  <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos News</a></div>
+                  <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Temoignages</a>
+                  </div>
+                  <div><a class="text-primary-color text-sm nav_links_content nav_links_content_hover"
+                      href="#Contacter">Contactez-Nous</a></div>
+            </div>
+            <div class="flex flex-wrap gap-3 justify-center p-2 items-center">
+                  <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a
+                      class="text-black text-bold text-sm font-poppins font-bold hover:text-white transition flex items-center gap-1"
+                      href=" "><ion-icon name="heart"></ion-icon> Faire un don</a></div>
+                  <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a
+                      class="text-white text-bold text-sm font-poppins font-bold hover:text-black transition" href=" ">Lire la Bible</a>
+                  </div>
+                  <div onclick="on()" class="btn__search">
+                    <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi-2" srcset="" style="height:28px;"
+                      class="cursor-pointer">
+                  </div>
+            </div>
+          </div>
+          <!-- nav links -->
         </div>
+        <div id="menu" class="hidden md:hidden md:flex flex-row ">  
+          <div  class=" flex flex-row drop-shadow-md border-white border-l-4 ">
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color  " href="#">Qui est Dieu?</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color " href="#">Qui est Jesus-Christ?</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color  " href="#">Qui est Le Saint Esprit?</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">ABC de la Foi Chretiens</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">Nos Predications</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">Nos Enseigements</a>
+          </div>
+        </div>
+      </nav>
+      <!--navbar -->
 
-        <div class="mt-10 md:mt-0 block  sm:hidden">
-          <img  src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" height="200" width="200" >
-        </div> 
+      <!+++++++++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++>
+        <!--slider-->
+        <div>
+          <div id="slider" class="paralex bg-fixed bg-cover"
+            style="background-image: url('img/img-\(8\).png');height: 80vh;">
+            <div class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center"
+              style="background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);height: 80vh;">
+              <div class="mt-10 md:mt-0 hidden  sm:block">
+                <img src="img/inferc_logo-removebg-preview.png" alt="logo-interfac">
+              </div>
 
-        <div  class="welcome text-white text-lg font-bold px-2 md:p-0 ">
-           <h2 class="text-poppins text-3xl md:text-4xl text-primary-color">Bienvenu(e)</h2>
-           <div class="font-light">Sur le site de la</div>
-           <div class="md:text-4xl text-2xl font-medium">Cellule de Prière <strong class="font-bold">Interfac</strong>ultaire</div>
-           <div class="md:my-3 ">
+              <div class="mt-14 md:mt-0 block  sm:hidden">
+                <img src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" height="130" width="130">
+              </div>
+
+              <div class="welcome text-white text-lg font-bold md:px-2 md:p-0 ">
+                <h2 class="text-poppins text-3xl md:text-4xl text-primary-color">Bienvenu(e)</h2>
+                <div class="font-light">Sur le site de la</div>
+                <div class="md:text-4xl text-2xl font-medium">Cellule de Prière <strong
+                    class="font-bold">Interfac</strong>ultaire</div>
+                <div class="md:my-3 ">
                   <div class="think transition" style="display: none;">
-                    <div class="text-oswald text-primary-color" >QUI EST JESUS CHRIST?</div>
-                    <div class="flex flex-col  gap-3 text-sm  h-20"> 
-                        <div class="text-poppins text-white font-light font-bold text-sm w-80 md:w-96">
-                          Voulez-vous connaitre qui est JESUS CHRIST?
-                          <br>
-                          lui, il vous aime est veux vous connaitre!
-                        </div>
-                        <div>
-                          <span class="border-2 px-10 py-1 rounded-3xl bg-transparent  border-white border-spacing-1 hover:bg-white transition">
-                            <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "  href=" ">Je Veux Connaitre</a>
-                          </span>
-                        </div>
-                        
+                    <div class="text-oswald text-primary-color">QUI EST JESUS CHRIST?</div>
+                    <div class="flex flex-col  gap-3 text-sm  h-20">
+                      <div class="text-poppins text-white font-light font-bold text-sm w-80 md:w-96">
+                        Voulez-vous connaitre qui est JESUS CHRIST?
+                        <br>
+                        lui, il vous aime est veux vous connaitre!
+                      </div>
+                      <div>
+                        <span
+                          class="border-2 px-10 py-1 rounded-3xl bg-transparent  border-white border-spacing-1 hover:bg-white transition">
+                          <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "
+                            href=" ">Je Veux Connaitre</a>
+                        </span>
+                      </div>
+
                     </div>
                   </div>
                   <div class="think ">
                     <div class="text-oswald text-primary-color">THEME DE L'ANNEE</div>
-                    <div class="text-poppins text-white font-light text-sm w-80 md:w-96 h-20">Tous pour les saluts des Ames et edifications des saints   </div>
+                    <div class="text-poppins text-white font-light text-sm w-80 md:w-96 h-20">Tous pour les saluts des
+                      Ames et edifications des saints </div>
                   </div>
                   <div class="think" style="display: none;">
-                    <div class="text-oswald text-primary-color" >NOTRE DEVISE</div>
-                    <div class="text-poppins text-white font-light text-sm md:text-md  w-80 md:w-96  h-20"> les saluts des Ames et edifications des saints   </div>
+                    <div class="text-oswald text-primary-color">NOTRE DEVISE</div>
+                    <div class="text-poppins text-white font-light text-sm md:text-md  w-80 md:w-96  h-20"> les saluts
+                      des Ames et edifications des saints </div>
                   </div>
                   <div class="think transition" style="display: none;">
-                    <div class="text-oswald text-primary-color" >PENSE DU JOUR</div>
-                    <div class="text-poppins text-white font-light text-sm w-80 md:w-96 h-20 "> Romains 12:1 dit : «Je vous exhorte donc, frères, par les compassions de Dieu, à offrir vos corps comme un sacrifice vivant, saint, agréable à Dieu, ce qui sera de votre part un culte raisonnable.»   </div>
+                    <div class="text-oswald text-primary-color">PENSE DU JOUR</div>
+                    <div class="text-poppins text-white font-light text-sm w-80 md:w-96 h-20 "> Romains 12:1 dit : «Je
+                      vous exhorte donc, frères, par les compassions de Dieu, à offrir vos corps comme un sacrifice
+                      vivant, saint, agréable à Dieu, ce qui sera de votre part un culte raisonnable.» </div>
                   </div>
                   <div class="think transition" style="display: none;">
-                    <div class="text-oswald text-primary-color" >QUI SOMMES-NOUS?</div>
-                    <div class="flex flex-col  gap-3 text-sm  h-20"> 
-                        <div class="text-poppins text-white font-light font-bold text-sm w-80 md:w-96">Voulez-vous connaitre plus sur nous ?</div>
-                        <div>
-                          <span class="border-2 px-10 py-1 rounded-3xl bg-transparent  border-white border-spacing-1 hover:bg-white transition">
-                            <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "  href=" ">A Propos de Nous</a>
-                          </span>
-                        </div>
-                        
+                    <div class="text-oswald text-primary-color">QUI SOMMES-NOUS?</div>
+                    <div class="flex flex-col  gap-3 text-sm  h-20">
+                      <div class="text-poppins text-white font-light font-bold text-sm w-80 md:w-96">Voulez-vous
+                        connaitre plus sur nous ?</div>
+                      <div>
+                        <span
+                          class="border-2 px-10 py-1 rounded-3xl bg-transparent  border-white border-spacing-1 hover:bg-white transition">
+                          <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "
+                            href=" ">A Propos de Nous</a>
+                        </span>
+                      </div>
+
                     </div>
                   </div>
-                  
+
+                </div>
+
+              </div>
+            </div>
           </div>
-             
         </div>
-      </div> 
-    </div>
-   </div>
-   <!--slider-->
-  </header>
-  <!--header -->
-  <!-- body -->
-  <!--############################################################# MAIN ###############################################################-->
-  <main class="h-full grid md:grid-cols-main grid-cols-1">
+        <!--slider-->
+    </header>
+    <!--header -->
+    <!-- body -->
+    <!--############################################################# MAIN ###############################################################-->
+    <main class="h-full grid md:grid-cols-main grid-cols-1">
       <!--========================================= ARTICLE ============================================-->
-      
+
       <article class="flex flex-col gap-5 md:p-5 p-3 ">
 
         <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl  py-4">Nos Articles</h1>
 
-          <!--about card -->
-          <div class="shadow-xl bg-fixed bg-cover flex  " style="background-image: url('img/img-\(8\).png');">   
-            <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 " style="background-color: rgba(0, 0, 0, 0.40);backdrop-filter: blur(2px);">
-              <span class="font-oswald text-white text-xl">Voulez-vous connaitre plus sur nous ?</span>
-              <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1 hover:bg-white transition"><a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "  href=" ">A Propos de Nous</a></span>
-            </div>    
+
+        <div class="shadow-xl bg-fixed bg-cover flex"
+          style="background-image: url('data:image/jpeg;base64,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');">
+          <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 "
+            style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(2px);">
+            <span class="font-oswald text-white text-sm md:text-xl">Qui est Jesus Christ?</span>
+            <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1">
+              <a class="text-white text-bold text-sm sm:text-md font-bold " href=" ">Je veux le connaitre</a>
+            </span>
           </div>
-          <!--about card -->
-        
-          <!--card items  -->
-          <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer" data-aos="fade-right">
-                <!--card thumbail   -->
-                <div> 
-                  <div class="z-2" >
-                  <img   src="img/img- (5).jpg" alt="" class="w-72 h-40" >
-                  </div>    
-                </div>
-                <!--card body-->
-                <div class="p-2 flex gap-2 flex-col">
-                    <!--card body titre-->
-                    <div>
-                      <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
-                    </div>
-                    <!--card body description-->
-                    <div class="text-slate-600  text-sm  sm:block  limite_text" title="">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
-                      porro aperiam saepe necessitatibus maxime nobis autem, porro aperiam saepe necessitatibus maxime nobis autem,
-                      autem, porro aperiam saepe necessitatibus maxime nobis autem,
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
-                      porro aperiam saepe necessitatibus maxime nobis autem, porro aperiam saepe necessitatibus maxime nobis autem,
-                      autem, porro aperiam saepe necessitatibus maxime nobis autem,
-                    </div>
-                    <!--card body details -->
-                    <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
-                      <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-                      <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-                      <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
-                    </div>
-                </div>
-                <!--card body -->
-          </div>
-          <!--card items  -->
-          <!--card items  -->
-          <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer" data-aos="fade-right">
-            <!--card thumbail   -->
-            <div> 
-              <div class="z-2" >
-                <img   src="img/img- (4).jpg" alt="" class="w-72 h-40" >
-              </div>    
+        </div>
+
+        <!--card items  -->
+        <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
+          <!--card thumbail   -->
+          <div>
+            <div class="z-2">
+              <img src="img/img- (5).jpg" alt="" class="w-72 h-40">
             </div>
-            <!--card body-->
-            <div class="p-2 flex gap-2 flex-col">
-                <!--card body titre-->
-                <div>
-                  <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment aimer Dieu?</h1>
-                </div>
-                <!--card body description-->
-                <div class="text-slate-600  text-sm  sm:block  limite_text" title="">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
-                  porro aperiam saepe necessitatibus maxime nobis autem, porro aperiam saepe necessitatibus maxime nobis autem,
-                  autem, porro aperiam saepe necessitatibus maxime nobis autem,
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
-                  porro aperiam saepe necessitatibus maxime nobis autem, porro aperiam saepe necessitatibus maxime nobis autem,
-                  autem, porro aperiam saepe necessitatibus maxime nobis autem,
-                </div>
-                <!--card body details -->
-                <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
-                  <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
-                </div>
-            </div>
-            <!--card body -->
           </div>
-          <!--card items  -->
-        
+          <!--card body-->
+          <div class="p-2 flex gap-2 flex-col">
+            <!--card body titre-->
+            <div>
+              <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
+            </div>
+            <!--card body description-->
+            <div class="text-slate-600  text-sm  sm:block  limite_text" title="">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+              consequuntur
+              porro aperiam saepe necessitatibus maxime nobis autem, porro aperiam saepe necessitatibus maxime nobis
+              autem,
+              autem, porro aperiam saepe necessitatibus maxime nobis autem,
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+              consequuntur
+              porro aperiam saepe necessitatibus maxime nobis autem, porro aperiam saepe necessitatibus maxime nobis
+              autem,
+              autem, porro aperiam saepe necessitatibus maxime nobis autem,
+            </div>
+            <!--card body details -->
+            <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
+              <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                  2023</span></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                  Mulongo</span></span>
+            </div>
+          </div>
+          <!--card body -->
+        </div>
+        <!--card items  -->
+        <!--card items  -->
+        <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
+          <!--card thumbail   -->
+          <div>
+            <div class="z-2">
+              <img src="img/img- (4).jpg" alt="" class="w-72 h-40">
+            </div>
+          </div>
+          <!--card body-->
+          <div class="p-2 flex gap-2 flex-col">
+            <!--card body titre-->
+            <div>
+              <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment aimer Dieu?</h1>
+            </div>
+            <!--card body description-->
+            <div class="text-slate-600  text-sm  sm:block  limite_text" title="">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+              consequuntur
+              porro aperiam saepe necessitatibus maxime nobis autem, porro aperiam saepe necessitatibus maxime nobis
+              autem,
+              autem, porro aperiam saepe necessitatibus maxime nobis autem,
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+              consequuntur
+              porro aperiam saepe necessitatibus maxime nobis autem, porro aperiam saepe necessitatibus maxime nobis
+              autem,
+              autem, porro aperiam saepe necessitatibus maxime nobis autem,
+            </div>
+            <!--card body details -->
+            <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
+              <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                  2023</span></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                  Mulongo</span></span>
+            </div>
+          </div>
+          <!--card body -->
+        </div>
+        <!--card items  -->
+        <!--about card -->
+        <div class="shadow-xl bg-fixed bg-cover flex hidden " style="background-image: url('img/img-\(8\).png');">
+          <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 "
+            style="background-color: rgba(0, 0, 0, 0.40);backdrop-filter: blur(2px);">
+            <span class="font-oswald text-white text-xl">Voulez-vous connaitre plus sur nous ?</span>
+            <span
+              class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1 hover:bg-white transition">
+              <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "
+                href=" ">A Propos de Nous</a>
+            </span>
+          </div>
+        </div>
+        <!--about card -->
+
       </article>
 
 
@@ -226,356 +312,421 @@
 
           <h3 class="font-oswald font-bold  text-xl   titre_content py-4 ">Nos Programmes du Jour</h3>
 
-          <div class="flex flex-col gap-3"> 
-                    <!--starts card aside programme-->
-                    <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer" data-aos="fade-left"> 
-                      <div>
-                          <img src="img/img- (6).jpg" alt="" class="w-full h-full" >
-                      </div>
-                      <div class="flex flex-col ">
-                          <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Jeudi</a></span>
-                          <span class="font-oswald font-bold text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
-                          <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
-                          <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon> <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
-                      </div>     
-                    </div>
-                    <!--end card aside programme-->
-                    <!--starts card aside programme-->
-                    <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer" data-aos="fade-left"> 
-                      <div>
-                          <img src="img/img- (6).jpg" alt="" class="w-full h-full" >
-                      </div>
-                      <div class="flex flex-col ">
-                          <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Jeudi</a></span>
-                          <span class="font-oswald font-bold text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
-                          <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
-                          <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon> <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
-                      </div>     
-                    </div>
-                    <!--end card aside programme-->
+          <div class="flex flex-col gap-3">
+            <!--starts card aside programme-->
+            <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer">
+              <div>
+                <img src="img/img- (6).jpg" alt="" class="w-full h-full">
+              </div>
+              <div class="flex flex-col ">
+                <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Jeudi</a></span>
+                <span class="font-oswald font-bold text-left text-black text- md:text-md"><span>Culte de
+                    Priere</span></span>
+                <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon>
+                  <span>12 h 30</span> - <span>14 h 30</span></span>
+                <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon>
+                  <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
+              </div>
+            </div>
+            <!--end card aside programme-->
+            <!--starts card aside programme-->
+            <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer">
+              <div>
+                <img src="img/img- (6).jpg" alt="" class="w-full h-full">
+              </div>
+              <div class="flex flex-col ">
+                <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Jeudi</a></span>
+                <span class="font-oswald font-bold text-left text-black text- md:text-md"><span>Culte de
+                    Priere</span></span>
+                <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon>
+                  <span>12 h 30</span> - <span>14 h 30</span></span>
+                <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon>
+                  <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
+              </div>
+            </div>
+            <!--end card aside programme-->
           </div>
         </section>
         <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
         <section class="text-left">
-        
+
           <h3 class="font-oswald font-bold  text-xl  titre_content py-4 ">Nos Programmes de la semaine</h3>
 
-          <div class="flex flex-col gap-3" > 
+          <div class="flex flex-col gap-3">
 
-              <!--starts card aside programme-->
-              <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer" data-aos="fade-left"> 
-                <div>
-                  <img src="img/img- (6).jpg" alt="" class="w-full h-full" >
-                </div>
-                <div class="flex flex-col ">
-                  <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Jeudi</a></span>
-                  <span class="font-oswald font-bold text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
-                  <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
-                  <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon> <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
-                </div>     
+            <!--starts card aside programme-->
+            <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer">
+              <div>
+                <img src="img/img- (6).jpg" alt="" class="w-full h-full">
               </div>
-              <!--end card aside programme-->
-              
+              <div class="flex flex-col ">
+                <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Jeudi</a></span>
+                <span class="font-oswald font-bold text-left text-black text- md:text-md"><span>Culte de
+                    Priere</span></span>
+                <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon>
+                  <span>12 h 30</span> - <span>14 h 30</span></span>
+                <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon>
+                  <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
+              </div>
+            </div>
+            <!--end card aside programme-->
+
 
           </div>
         </section>
         <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
         <section class="text-left">
           <h3 class="font-oswald font-bold  text-xl   titre_content py-4 ">Nos Evennements du Mois</h3>
-          <div class="flex flex-col gap-3"> 
-                <!--starts card aside evement -->
-                <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer"> 
-                  <div>
-                    <img src="img/img- (6).jpg" alt="" class="w-full h-full" >
-                  </div>
-                  <div class="flex flex-col ">
-                    <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Du lundi Au Dimanche</a></span>
-                    <span class="font-oswald font-bold text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
-                    <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
-                    <span class="text-slate-600 text-left text-md sm:text-sm"><ion-icon name="calendar"></ion-icon> <span>4 dec 2023</span></span>
-                    <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon> <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
-                  </div>     
-                </div>
-                <!--end card aside evement-->
+          <div class="flex flex-col gap-3">
+            <!--starts card aside evement -->
+            <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer">
+              <div>
+                <img src="img/img- (6).jpg" alt="" class="w-full h-full">
+              </div>
+              <div class="flex flex-col ">
+                <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Du lundi Au
+                    Dimanche</a></span>
+                <span class="font-oswald font-bold text-left text-black text- md:text-md"><span>Culte de
+                    Priere</span></span>
+                <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon>
+                  <span>12 h 30</span> - <span>14 h 30</span></span>
+                <span class="text-slate-600 text-left text-md sm:text-sm"><ion-icon name="calendar"></ion-icon> <span>4
+                    dec 2023</span></span>
+                <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon>
+                  <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
+              </div>
+            </div>
+            <!--end card aside evement-->
             <!--about card -->
-            <div class="shadow-xl bg-cover flex  " style="background-image: url('https://images.pexels.com/photos/1098515/pexels-photo-1098515.jpeg?auto=compress&cs=tinysrgb&w=400');">   
-              <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-10 " style="background-color: rgba(0, 0, 0, 0.20);backdrop-filter: blur(2px);">
+            <div class="shadow-xl bg-cover flex  "
+              style="background-image: url('https://images.pexels.com/photos/1098515/pexels-photo-1098515.jpeg?auto=compress&cs=tinysrgb&w=400');">
+              <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-10 "
+                style="background-color: rgba(0, 0, 0, 0.20);backdrop-filter: blur(2px);">
                 <span>
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier"> <path d="M12 10C12.5523 10 13 10.4477 13 11V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V11C11 10.4477 11.4477 10 12 10Z" fill="#ffffff"></path>
-                      <path d="M12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z" fill="#ffffff"></path> 
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" fill="#ffffff"></path> </g>
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M12 10C12.5523 10 13 10.4477 13 11V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V11C11 10.4477 11.4477 10 12 10Z"
+                        fill="#ffffff"></path>
+                      <path
+                        d="M12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z"
+                        fill="#ffffff"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
+                        fill="#ffffff"></path>
+                    </g>
                   </svg>
                 </span>
-                <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1 hover:bg-white transition">
-                  <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "  href=" ">
+                <span
+                  class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1 hover:bg-white transition">
+                  <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "
+                    href=" ">
                     <ion-icon name="navigate"></ion-icon>
                     Ou Nous trouver?
                   </a>
                 </span>
-              </div>    
+              </div>
             </div>
             <!--about card -->
-          
+
           </div>
         </section>
       </aside>
-      
-  </main>
+
+    </main>
 
 
-<!--############################################################# FOOTER ###############################################################-->
-  <!--Footer 2-->
-  <!--+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++-->
-  <section class="h-16  bg-fixed bg-cover" style="background-image: url('img/img-\(8\).png');">
-    <div class="h-16 flex  justify-center  items-center" style="background-color: rgba(0, 0, 0, 0.70);">
-      <div>
-        <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
-          <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline" >
-          INTERFAC
-        </a>
-      </div>
-    </div>
-  </section>
-  <!--+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++-->
-  <section class="bg-black flex flex-wrap  p-5   md:justify-around">
-    <section >
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Nous Contacter</h2>
-      <div class="text-slate-700 w-80 text-sm md:py-5 p-5"> 
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="mail" size="small"></ion-icon> <a href="" class="text-lg  px-2">interfac@interfac.com</a></div>
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="logo-whatsapp" size="small"></ion-icon> <a href="" class="text-lg px-2">+243 081000000</a></div>
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a href=""class="text-lg px-2" >+243 081000000</a></div>
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a href="" class="text-lg px-2"  >+243 081000000</a></div>
-    </section>
-  <!--+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++-->
-    <section >
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Ecrivez-Nous</h2>
-      <div class="p-2"> 
-        <form class="flex gap-5 flex-col justify-center ">
-          <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" type="text" name="text" placeholder="Enter Votre Name"   />
-          <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" type="email" name="email" placeholder="Enter Votre Email" />
-          <textarea class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" placeholder="Message"></textarea>
-          <button class="bg-black p-2 border-2 border-solid rounded-md  border-slate-600 text-white w-20 hover:bg-white hover:text-black transition ">Envoyer</button>
-      </form>
+    <!--############################################################# FOOTER ###############################################################-->
+    <!--Footer 2-->
+    <!--+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++-->
+    <section  class="h-16  bg-fixed bg-cover" style="background-image: url('img/img-\(8\).png');">
+      <div class="h-16 flex  justify-center  items-center" style="background-color: rgba(0, 0, 0, 0.70);">
+        <div>
+          <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
+            <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline">
+            INTERFAC
+          </a>
+        </div>
       </div>
     </section>
-  <!--+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++-->
-    <section>
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Savoir plus sur Nous</h2>
-      <div class="p-5">
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Qui sommes nous?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Ou nous trouver?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Nos dirigeants?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Notre Histoire?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Galerie Photo</a></div>
-      </div>
-    </section>
-  <!--+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++-->
-    <section>
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Reseaux Social</h2>
-      <div class="p-5 ">
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-facebook"></ion-icon> Facebook</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-instagram" size="small"></ion-icon> Instagram</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-youtube" size="small" ></ion-icon> Youtube</a></div>
-      </div>
-    </section>
+    <!--+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++-->
+    <section class="bg-black flex flex-wrap  p-5   md:justify-around">
+      <section id="Contacter">
+        <h2 class="text-slate-600 font-bold font-Oswald titre_content">Nous Contacter</h2>
+        <div class="text-slate-700 text-sm md:py-5 p-5">
+          <div class="text-slate-700 transition hover:text-white"><ion-icon name="mail" size="small"></ion-icon> <a
+              href="" class="text-sm  px-2">interfac@interfac.com</a></div>
+          <div class="text-slate-700 transition hover:text-white"><ion-icon name="logo-whatsapp"
+              size="small"></ion-icon> <a href="" class="text-sm px-2">+243 081000000</a></div>
+          <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a
+              href="" class="text-sm px-2">+243 081000000</a></div>
+          <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a
+              href="" class="text-sm px-2">+243 081000000</a></div>
+      </section>
+      <!--+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++-->
+      <section>
+        <h2 class="text-slate-600 font-bold font-Oswald titre_content">Ecrivez-Nous</h2>
+        <div class="p-2">
+          <form class="flex gap-5 flex-col justify-center ">
+            <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white text-sm"
+              type="text" name="text" placeholder="Enter Votre Name" />
+            <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white text-sm"
+              type="email" name="email" placeholder="Enter Votre Email" />
+            <textarea class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white text-sm"
+              placeholder="Message"></textarea>
+            <button
+              class="bg-black p-2 border-2 border-solid rounded-md  border-slate-600 text-white w-20 hover:bg-white hover:text-black transition  text-sm">Envoyer</button>
+          </form>
+        </div>
+      </section>
+      <!--+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++-->
+      <section>
+        <h2 class="text-slate-600 font-bold font-Oswald titre_content">Savoir plus sur Nous</h2>
+        <div class="p-5">
+          <div><a href="" class="text-slate-700 text-sm transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Qui sommes nous?</a></div>
+          <div><a href="" class="text-slate-700 text-sm transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Ou nous trouver?</a></div>
+          <div><a href="" class="text-slate-700 text-sm transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Nos dirigeants?</a></div>
+          <div><a href="" class="text-slate-700 text-sm transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Questions/Reponses</a></div>
+          <div><a href="" class="text-slate-700 text-sm transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Galerie Photo</a></div>
+          <div><a href="" class="text-slate-700 text-sm transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Mention legal</a></div>
+        </div>
+      </section>
+      <!--+++++++++++++++++++++++++++++++++ SECTION +++++sm++++++++++++++++++++++++++++-->
+      <section>
+        <h2 class="text-slate-600 font-bold font-Oswald titre_content">Reseaux Social</h2>
+        <div class="p-5 ">
+          <div><a href="" class="text-slate-700 text-sm transition hover:text-white"><ion-icon
+                name="logo-facebook"></ion-icon> Facebook</a></div>
+          <div><a href="" class="text-slate-700 text-sm transition hover:text-white"><ion-icon name="logo-instagram"
+                size="small"></ion-icon> Instagram</a></div>
+          <div><a href="" class="text-slate-700 text-sm transition hover:text-white"><ion-icon name="logo-youtube"
+                size="small"></ion-icon> Youtube</a></div>
+        </div>
+      </section>
 
-  </section>
-  <footer class="bg-black   text-center text-gray-600 text-md md:text-lg p-5 ">
-    &copy; Cellule de priere <strong>Interfac</strong>ultaire 2023 - 2024 
-  </footer>
-<!--############################################################# MODAL ###############################################################-->
-  <!--MODAL CONNAITRE JESUS -->
-  <div id="overlay_modal"  class="flex flex-col md:p-5 p-3  items-center relative ">  
-    <div id="modal" class="flex flex-row gap-2 items-center h-4/5 w-72 md:w-2/3  shadow-sm" style="background-image: url('https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');background-size: cover;">
-      <div class="flex flex-col gap-5  justify-center p-10 h-full w-72 md:w-full" style="background-color: rgba(0, 0, 0, 0.50);">
-         <div class="font-bold text-xl md:text-3xl text-center text-white">
+    </section>
+    <footer class="bg-black   text-center text-gray-600 text-md md:text-lg p-5 ">
+      &copy; Cellule de priere <strong>Interfac</strong>ultaire 2023 - 2024
+    </footer>
+    <!--############################################################# MODAL ###############################################################-->
+    <!--MODAL CONNAITRE JESUS -->
+    <div id="overlay_modal" class="flex flex-col md:p-5 p-3  items-center relative ">
+      <div id="modal" class="flex flex-row gap-2 items-center h-4/5 w-72 md:w-2/3  shadow-sm"
+        style="background-image: url('https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');background-size: cover;">
+        <div class="flex flex-col gap-5  justify-center p-10 h-full w-72 md:w-full"
+          style="background-color: rgba(0, 0, 0, 0.50);">
+          <div class="font-bold text-xl md:text-3xl text-center text-white">
             Voulez-vous Connaitre qui est JESUS CHRIST?
-         </div>
-         <div class="font-bold text-xl md:text-3xl text-center text-primary-color ">
-             lui,Il t'aime et veux te connaitre!
-         </div>
-         <div class="flex flex-col gap-3 items-center justify-center md:w-full">
-          <div>
-               <button  class="  border-2 px-10 py-1 w-64 md:w-72 rounded-3xl bg-white  text-black text-sm sm:text-md font-bold cursor-pointer">Oui, Je Veux le connaitre!</button>
-           </div>
-           <div>
-               <button onclick="chose_modal()"  class="  border-2 px-10 py-1 w-64 rounded-3xl bg-transparent border-solid border-white text-white text-sm sm:text-md font-bold cursor-pointer">je le connais deja</button>
-           </div>
-           <div>
-               <button onclick="chose_modal()"  class="px-10 py-1 w-36 rounded-3xl  bg-transparent text-white text-sm sm:text-md font-bold cursor-pointer"><ion-icon name="close" size="large"></ion-icon>Fermer</button>
-           </div>
-         </div>
-         
+          </div>
+          <div class="font-bold text-xl md:text-3xl text-center text-primary-color ">
+            lui,Il t'aime et veux te connaitre!
+          </div>
+          <div class="flex flex-col gap-3 items-center justify-center md:w-full">
+            <div>
+              <button
+                class="  border-2 px-10 py-1 w-64 md:w-72 rounded-3xl bg-white  text-black text-sm sm:text-md font-bold cursor-pointer">Oui,
+                Je Veux le connaitre!</button>
+            </div>
+            <div>
+              <button onclick="chose_modal()"
+                class="  border-2 px-10 py-1 w-64 rounded-3xl bg-transparent border-solid border-white text-white text-sm sm:text-md font-bold cursor-pointer">je
+                le connais deja</button>
+            </div>
+            <div>
+              <button onclick="chose_modal()"
+                class="px-10 py-1 w-36 rounded-3xl  bg-transparent text-white text-sm sm:text-md font-bold cursor-pointer"><ion-icon
+                  name="close" size="large"></ion-icon>Fermer</button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-  <!-- MODAL rechercher overlay -->
-  <div id="overlay"  class="flex flex-col md:p-5 p-3  items-center relative ">  
-  <div id="text" class="flex flex-col gap-2  md:w-4/6  ">
-    <div class="flex justify-center">
-      <img  src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" height="100" width="100">
-   </div> 
-    <!--about card -->
-    <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl text-white py-4">Rechercher</h1>
+    <!-- MODAL rechercher overlay -->
+    <div id="overlay" class="flex flex-col md:p-5 p-3  items-center relative ">
+      <div id="text" class="flex flex-col gap-2  md:w-4/6  ">
+        <div class="flex justify-center">
+          <img src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" height="100" width="100">
+        </div>
+        <!--about card -->
+        <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl text-white py-4">Rechercher</h1>
 
-    <div> 
-      <form class="flex gap-3 justify-center ">
-        <botton onclick="off()" class="bg-transparent p-2  text-white">
-          <ion-icon name="close" size="large"></ion-icon>
-          
-        </botton>
-        <input id="input-saerch" class="bg-transparent p-2 border-b-2 border-solid  md:w-96 border-white text-md text-white" type="text" name="text" placeholder="Rechercher "   />
-        <botton class="bg-transparent p-2  text-white " >
-          <ion-icon name="search" size="large"></ion-icon>
-        </botton>
-    </form>
-    </div>
-    
-    <h1 class="font-poppins font-light text-center text-xl md:text-2xl text-white py-4"><span id="text-see-search">Ecrivez quelque chose</span> <span id="text-search"></span></h1> 
-    <div class="flex justify-center items-center">
-      <div id="loader" class="loader" style="display: none;"></div>
-    </div>
-    
-    <!--about card -->
-        <div class="shadow-xl bg-fixed bg-cover flex" style="background-image: url('img/img-\(8\).png');">   
-          <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 " style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(2px);">
-            <span class="font-oswald text-white text-sm md:text-xl">Voulez-vous connaitre plus sur nous ?</span>
-            <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1"><a class="text-white text-bold text-sm sm:text-md font-bold "  href=" ">A Propos de Nous</a></span>
-          </div>    
+        <div>
+          <form class="flex gap-3 justify-center ">
+            <botton onclick="off()" class="bg-transparent p-2  text-white">
+              <ion-icon name="close" size="large"></ion-icon>
+
+            </botton>
+            <input id="input-saerch"
+              class="bg-transparent p-2 border-b-2 border-solid  md:w-96 border-white text-md text-white" type="text"
+              name="text" placeholder="Rechercher " />
+            <botton class="bg-transparent p-2  text-white ">
+              <ion-icon name="search" size="large"></ion-icon>
+            </botton>
+          </form>
+        </div>
+
+        <h1 class="font-poppins font-light text-center text-xl md:text-2xl text-white py-4"><span
+            id="text-see-search">Ecrivez quelque chose</span> <span id="text-search"></span></h1>
+        <div class="flex justify-center items-center">
+          <div id="loader" class="loader" style="display: none;"></div>
+        </div>
+
+        <!--about card -->
+        <div class="shadow-xl bg-fixed bg-cover flex"
+          style="background-image: url('data:image/jpeg;base64,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');">
+          <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 "
+            style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(2px);">
+            <span class="font-oswald text-white text-sm md:text-xl">Qui est Jesus Christ?</span>
+            <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1"><a
+                class="text-white text-bold text-sm sm:text-md font-bold " href=" ">Je veux le connaitre</a></span>
+          </div>
         </div>
         <!--card items  -->
         <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
           <!--card thumbail   -->
-          <div> 
-            <div class="z-2" >
-              <img   src="img/img- (7).jpg" alt="" class="w-72 h-40" >
-            </div>    
+          <div>
+            <div class="z-2">
+              <img src="img/img- (7).jpg" alt="" class="w-72 h-40">
+            </div>
           </div>
           <!--card body-->
           <div class="p-2 flex gap-2 flex-col">
-              <!--card body titre-->
-              <div>
-                <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
-              </div>
-              <!--card body description-->
-              <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
-                porro aperiam saepe necessitatibus maxime nobis autem,
-              </div>
-              <!--card body details -->
-              <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
-                <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-                <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-                <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
-              </div>
-          </div>
-          <!--card body -->
-         </div>
-         <!--card items  -->
-          <!--card items  -->
-       <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
-        <!--card thumbail   -->
-        <div> 
-          <div class="z-2" >
-            <img   src="img/img- (7).jpg" alt="" class="w-72 h-40" >
-          </div>    
-        </div>
-        <!--card body-->
-        <div class="p-2 flex gap-2 flex-col">
             <!--card body titre-->
             <div>
               <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
             </div>
             <!--card body description-->
             <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+              consequuntur
               porro aperiam saepe necessitatibus maxime nobis autem,
             </div>
             <!--card body details -->
             <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
               <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                  2023</span></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                  Mulongo</span></span>
             </div>
+          </div>
+          <!--card body -->
         </div>
-        <!--card body -->
-       </div>
-       <!--card items  -->
-       
-      
-       <!--card items  -->
-     </div>
-     <div style="display: none" class="flex justify-center mx-20 z-5">
-      <button onclick="off()"  class="  border-2 px-10 py-1 w-36 rounded-3xl bg-transparent border-solid border-white border-spacing-1 text-white text-sm sm:text-md font-bold cursor-pointer">Fermer</button>
-     </div>
-  </div>
- <!--############################################################# OTHER ###############################################################-->
-  </div>
-  <!--BOUTON POUR MONTER EN HAUT-->
-  <button onclick="topFunction()" id="myBtn" title="Go to top">
-    <img src="img/up-arrow-svgrepo-com.svg" alt="" height="50" width="50">
-  </button>
-  <!--BOUTON POUR SUVRE SUR LE RESEAU -->
-  <div class="fixed top-36 left-0" >
-    <div id="bg-social-media" class=" p-3 flex gap-5 flex-col" style=" ;backdrop-filter:blur(3px) ;">
-      <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-facebook"></ion-icon></a></div>
-      <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-instagram" size="small"></ion-icon></a></div>
-      <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-youtube" size="small" ></ion-icon></a></div>
+        <!--card items  -->
+        <!--card items  -->
+        <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
+          <!--card thumbail   -->
+          <div>
+            <div class="z-2">
+              <img src="img/img- (7).jpg" alt="" class="w-72 h-40">
+            </div>
+          </div>
+          <!--card body-->
+          <div class="p-2 flex gap-2 flex-col">
+            <!--card body titre-->
+            <div>
+              <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
+            </div>
+            <!--card body description-->
+            <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+              consequuntur
+              porro aperiam saepe necessitatibus maxime nobis autem,
+            </div>
+            <!--card body details -->
+            <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
+              <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                  2023</span></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                  Mulongo</span></span>
+            </div>
+          </div>
+          <!--card body -->
+        </div>
+        <!--card items  -->
+
+
+        <!--card items  -->
+      </div>
+      <div style="display: none" class="flex justify-center mx-20 z-5">
+        <button onclick="off()"
+          class="  border-2 px-10 py-1 w-36 rounded-3xl bg-transparent border-solid border-white border-spacing-1 text-white text-sm sm:text-md font-bold cursor-pointer">Fermer</button>
+      </div>
     </div>
-  </div>
+    <!--############################################################# OTHER ###############################################################-->
 
- <!---scripts -->
- <script src="js/index.js"></script>
- <script>
-   
-//* code slider 
+    <!--BOUTON POUR MONTER EN HAUT-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="img/up-arrow-svgrepo-com.svg" alt="" height="50" width="50">
+    </button>
+    <!--BOUTON POUR SUVRE SUR LE RESEAU -->
+    <div class="fixed top-36 left-0">
+      <div id="bg-social-media" class=" p-3 flex gap-5 flex-col" style=" ;backdrop-filter:blur(3px) ;">
+        <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon
+              name="logo-facebook"></ion-icon></a></div>
+        <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-instagram"
+              size="small"></ion-icon></a></div>
+        <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-youtube"
+              size="small"></ion-icon></a></div>
+      </div>
+    </div>
 
-const slider_img = document.querySelector("#slider")
+    <!---scripts -->
+    <script src="js/index.js"></script>
+    <script>
 
-var image = new Array (
-    "img/img- (1).jpg",
-    "img/img- (2).jpg",
-    "img/img- (3).jpg",
-    "img/img- (4).jpg",
-    "img/img- (5).jpg",
-    "img/img- (6).jpg",
-    "img/img- (7).jpg",
-    
-)
+      //* code slider 
+      const slider_img = document.querySelector("#slider")
+      var image = new Array(
+        "img/img- (1).jpg",
+        "img/img- (2).jpg",
+        "img/img- (3).jpg",
+        "img/img- (4).jpg",
 
-var len = image.length 
-var i = 0
-function slider() {
-    if(i > len-1){
-        i = 0
-    }
-    
-    slider_img.style.backgroundImage = "url('" + image[i] + "')";
-    slider_img.style.animation = "zoom 42s linear infinite";
-    i++
-    setTimeout('slider()',6000);
-}
- slider()
-/* change de theme pense du jour etc */ 
+      )
 
-let slideIndex = 0;
-showThink();
+      var len = image.length
+      var i = 0
+      function slider() {
+        if (i > len - 1) {
+          i = 0
+        }
 
-function showThink() {
-  let i;
-  let slides = document.getElementsByClassName("think");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.animation = "fade 3s linear infinite";
-  slides[slideIndex-1].style.display = "block";
-  
-  setTimeout(showThink, 6000); // Change image every 2 seconds
-}
- </script>
+        slider_img.style.backgroundImage = "url('" + image[i] + "')";
+        slider_img.style.animation = "zoom 42s linear infinite";
+        i++
+        setTimeout('slider()', 6000);
+      }
+      slider()
+      /* change de theme pense du jour etc */
+
+      let slideIndex = 0;
+      showThink();
+
+      function showThink() {
+        let i;
+        let slides = document.getElementsByClassName("think");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.animation = "fade 3s linear infinite";
+        slides[slideIndex - 1].style.display = "block";
+
+        setTimeout(showThink, 6000); // Change image every 2 seconds
+      }
+    </script>
 </body>
+
 </html>

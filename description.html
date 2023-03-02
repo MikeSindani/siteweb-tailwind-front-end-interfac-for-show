@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,617 +9,926 @@
   <link rel="stylesheet" href="css/hamburgers.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
   <!--links -->
   <!--script -->
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+    defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous">
   <!--script-->
   <title>interfac - description page</title>
   <!--style propre -->
   <style>
-    #article-body  h1,#article-body  h2, #article-body  h3,#article-body  h4,#article-body  h5,#article-body  h6 {
-        margin:10px !important;
-        font-weight: bold !important;
-        font-size: 20px !important;
-     }
-    #article-body  blockquote,#article-body  dl,#article-body  dd,#article-body  hr,#article-body  figure,#article-body  p,#article-body  pre {
-        margin: 5px !important;
-     }
-    
+    #article-body h1,
+    #article-body h2,
+    #article-body h3,
+    #article-body h4,
+    #article-body h5,
+    #article-body h6 {
+      margin: 10px !important;
+      font-weight: bold !important;
+      font-size: 20px !important;
+    }
+
+    #article-body blockquote,
+    #article-body dl,
+    #article-body dd,
+    #article-body hr,
+    #article-body figure,
+    #article-body p,
+    #article-body pre {
+      margin: 5px !important;
+    }
   </style>
 </head>
+
 <body id="body" class="bg-slate-100 ">
-<!--############################################################# HEADER  ###############################################################-->
+  <!--############################################################# HEADER  ###############################################################-->
   <!--header -->
   <!+++++++++++++++++++++++++++++++++ NAV +++++++++++++++++++++++++++++++++++++++>
-  <header>
-  <!--navbar -->
-   <nav class="bg-transparent  flex flex-col lg:flex-row gap-10 items-center justify-around  p-2 fixed top-0 left-0 right-0 z-10" style="background-color: rgba(0, 0, 0, 0.80);backdrop-filter: blur(10px);">
-    <div class="flex justify-center items-center  " >  
-      <!--menu -->  
-      <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2"  id="menu-hamberger">
-        <span class="hamburger-box" >
-          <div class="hamburger-inner" ></div>
-        </span>
-      </div>
-      <!--menu -->
-       <!--logo -->
+    <header>
+      <!--navbar -->
+      <nav
+        class="bg-transparent  flex flex-col lg:flex-row gap-10 items-center justify-around  p-2 fixed top-0 left-0 right-0 z-10"
+        style="background-color: rgba(0, 0, 0, 0.80);backdrop-filter: blur(10px);">
+        <div class="flex justify-center items-center  ">
+          <!--menu -->
+          <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2" id="menu-hamberger">
+            <span class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </span>
+          </div>
+          <!--menu -->
+          <!--logo -->
+          <div>
+            <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
+              <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline">
+              INTERFAC
+            </a>
+          </div>
+          <!--logo -->
+          <div onclick="on()" class="btn__search absolute top-2 right-3 p-2">
+            <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi" srcset="" style="height: 36px;">
+          </div>
+        </div>
+        <!-- nav links -->
+        <div class="flex gap-10 flex-wrap items-center justify-center" id="nav-links">
+          <div class="navlinks flex flex-col md:flex-row gap-5">
+            <div><a class="nav-link nav_links_content nav_links_content_hover" href="">Accueil</a></div>
+            <div><a class="text-white text-md nav_links_content nav_links_content_hover" href="">Nos Enseigments</a>
+            </div>
+            <div><a class="text-white text-md nav_links_content nav_links_content_hover" href="">Nos Predications</a>
+            </div>
+            <div><a class="text-white text-md nav_links_content nav_links_content_hover" href="">Nos News</a></div>
+            <div><a class="text-white text-md nav_links_content nav_links_content_hover" href="">Nos Temoignages</a>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-5 justify-center p-2 items-center">
+            <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a
+                class="text-black text-bold text-md font-bold hover:text-white transition" href=" ">Faire un don</a>
+            </div>
+            <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a
+                class="text-white text-bold text-md font-bold hover:text-black transition" href=" ">Contacte Nous</a>
+            </div>
+            <div onclick="on()" class="btn__search">
+              <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi-2" srcset="" style="height:28px;"
+                class="cursor-pointer">
+            </div>
+          </div>
+        </div>
+        <!-- nav links -->
+      </nav>
+      <!--navbar -->
+      <!--+++++++++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++-->
+      <!--slider-->
       <div>
-        <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
-          <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline" >
-          INTERFAC
-        </a>
+        <div class="paralex bg-fixed bg-cover " style="background-image: url('img/img-\ \(6\).jpg');height: 70vh">
+          <div class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center"
+            style="background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);height: 70vh;">
+          </div>
+        </div>
       </div>
-      <!--logo -->
-      <div onclick="on()"   class="btn__search absolute top-2 right-3 p-2">
-        <img  src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi"  srcset="" style="height: 36px;" >
-      </div>
-    </div> 
-   <!-- nav links -->
-    <div class="flex gap-10 flex-wrap items-center justify-center" id="nav-links">
-      <div class="navlinks flex flex-col md:flex-row gap-5">
-        <div><a class="nav-link nav_links_content nav_links_content_hover" href="">Accueil</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Enseigments</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Predications</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos News</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Temoignages</a></div>
-      </div>
-      <div class="flex flex-wrap gap-5 justify-center p-2 items-center">
-        <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a class="text-black text-bold text-md font-bold hover:text-white transition"  href=" ">Faire un don</a></div>
-        <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a class="text-white text-bold text-md font-bold hover:text-black transition"  href=" ">Contacte Nous</a></div>
-        <div onclick="on()" class="btn__search" >
-          <img  src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi-2"  srcset="" style="height:28px;" class="cursor-pointer" >
-        </div> 
-      </div>
-    </div>
-     <!-- nav links -->
-   </nav>
-   <!--navbar -->
-   <!--+++++++++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++-->
-    <!--slider-->
-   <div>
-    <div class=" bg-fixed bg-cover " style="background-image: url('img/img-\ \(6\).jpg');height: 50vh;background-position: center;" >
-      <div class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center" style="background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);height: 50vh;">
-          
-      </div> 
-    </div>
-   </div>
-   <!--slider-->
-  </header>
-  <!--header -->
-  <!-- body -->
-  <!--############################################################# MAIN ###############################################################-->
-  <main class="h-full grid md:grid-cols-main grid-cols-1">
-    <!--========================================= ARTICLE ============================================-->  
-    <article class="sm:m-5 m-3 h-fit flex flex-col gap-5 relative -top-24">
+      <!--slider-->
+    </header>
+    <!--header -->
+    <!-- body -->
+    <!--############################################################# MAIN ###############################################################-->
+    <main class="h-full grid md:grid-cols-main grid-cols-1">
+      <!--========================================= ARTICLE ============================================-->
+      <article class="sm:m-5 m-3 h-fit flex flex-col gap-5 relative -top-36">
         <section class="bg-white h-fit flex flex-col gap-5 md:p-5 p-2  shadow-xl ">
-            <header class="flex flex-col gap-5 text-center">
-                <section>
-                    <span class="text-slate-600 text-sm sm:text-md ">
-                        <ion-icon name="time"></ion-icon> 
-                        <span>14 mars 2023</span></span>
-                </section>
-                
-                <section>
-                    <span class="text-slate-600 text-sm sm:text-md px-10 py-3 bg-slate-100 rounded-3xl">
-                        <ion-icon name="person"></ion-icon> 
-                        <span>Clara Mulongo</span>
-                    </span>
-                </section>
-                <section>
-                    <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-                </section>
-                <section>
-                    <h1 class="text-black font-oswald text-3xl sm:text-5xl">
-                        Comment prier Dieu?
-                    </h1>
-                </section>
-            </header>
-            
-            <section id="article-body" class="text-justify p-2 ">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum optio velit dolorem vitae minus sed 
-                    pariatur praesentium, est eveniet accusamus molestiae. Itaque cumque expedita 
-                    odit fugiat blanditiis alias reprehenderit fuga?
-    
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum dignissimos totam corporis blanditiis!
-                     Tempora magni minus nulla tenetur explicabo quibusdam 
-                     atque tempore, vero asperiores illum, sequi distinctio saepe repudiandae dolorem.
+          <header class="flex flex-col gap-5 text-center">
+            <section>
+              <span class="text-slate-600 text-sm sm:text-md ">
+                <ion-icon name="time"></ion-icon>
+                <span>14 mars 2023</span></span>
+            </section>
 
-                     <div >
-                        <p>
-                                                Quand nous nous interrogeons sur la pri&egrave;re, il est int&eacute;ressant de noter que m&ecirc;me un disciple de J&eacute;sus demanda &agrave; ce Dernier comment s&rsquo;y prendre.</p>
-                                            <p>
-                                                &laquo;&nbsp;J&eacute;sus priait un jour en un certain lieu. Lorsqu&rsquo;il eut achev&eacute;, un de ses disciples lui dit&nbsp;: Seigneur, enseigne-nous &agrave; prier, comme Jean l&rsquo;a enseign&eacute; &agrave; ses disciples &raquo; (Luc 11:1).</p>
-                                            <p>
-                                                En somme, prier, c&rsquo;est communiquer avec Dieu. Et comme dans toute relation, plus nous avons d&#39;&eacute;changes avec Dieu, plus nous passons du temps avec Lui, plus notre relation avec Lui s&rsquo;approfondit.</p>
-                                            <p>
-                                                Comme la question du disciple de J&eacute;sus l&rsquo;indique, prier n&rsquo;est pas quelque chose que nous faisons tout naturellement. C&rsquo;est quelque chose que nous avons besoin d&rsquo;apprendre &agrave; faire. La Parole inspir&eacute;e de Dieu &ndash; la Bible &ndash; nous fournit la r&eacute;ponse aux questions couramment pos&eacute;es sur la mani&egrave;re de prier.</p>
-                                            <h3>
-                                                &Agrave; Qui devrions-nous prier?</h3>
-                                            <p>
-                                                Le proph&egrave;te &Eacute;lie et plusieurs autres, dans l&rsquo;Ancien Testament, priaient Dieu. L&rsquo;ap&ocirc;tre Paul fait allusion &agrave; ses pri&egrave;res &agrave; Dieu dans les deux &Eacute;p&icirc;tres qu&rsquo;il adressa aux chr&eacute;tiens vivant dans la ville pa&iuml;enne de Corinthe (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="1 Corinthiens 11:13<br>13&nbsp;Jugez-en vous-m&ecirc;mes&nbsp;: est-il convenable qu&rsquo;une femme prie Dieu sans &ecirc;tre voil&eacute;e&nbsp;?<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">1 Corinthiens 11:13</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="2 Corinthiens 13:7<br>7&nbsp;Cependant nous prions Dieu que vous ne fassiez rien de mal, non pour para&icirc;tre nous-m&ecirc;mes approuv&eacute;s, mais afin que vous pratiquiez ce qui est bien et que nous, nous soyons comme d&eacute;sapprouv&eacute;s.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">2 Corinthiens 13:7</a>).</p>
-                                            <p>
-                                                J&eacute;sus dit &agrave; Ses disciples de prier &laquo;&nbsp;notre P&egrave;re&nbsp;&raquo; (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Matthieu 6:6<br>6&nbsp;Mais quand tu pries, entre dans ta chambre, ferme ta porte, et prie ton P&egrave;re qui est l&agrave; dans le lieu secret&nbsp;; et ton P&egrave;re, qui voit dans le secret, te le rendra.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu 6:6</a>). Il d&eacute;clara plus tard &agrave; Pierre, quand la foule vint L&rsquo;arr&ecirc;ter, dans le jardin de Geths&eacute;man&eacute;e, &laquo;&nbsp;Penses-tu que je ne puisse pas invoquer mon P&egrave;re, qui me donnerait &agrave; l&rsquo;instant plus de douze l&eacute;gions d&rsquo;anges&nbsp;?&nbsp;&raquo; (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Matthieu 26:53<br>53&nbsp;Penses-tu que je ne puisse pas invoquer mon P&egrave;re, qui me donnerait &agrave; l&rsquo;instant plus de douze l&eacute;gions d&rsquo;anges&nbsp;?<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu 26:53</a>).</p>
-                                            <p>
-                                                Plus tard, apr&egrave;s Sa r&eacute;surrection, J&eacute;sus dit &agrave; Marie de Magdala&nbsp;de ne pas Le toucher, parce qu&rsquo;Il n&rsquo;&eacute;tait pas encore mont&eacute; au ciel pour &ecirc;tre agr&eacute;&eacute; de Son P&egrave;re. Il lui dit&nbsp;: &laquo;&nbsp;Ne me touche pas&nbsp;; car je ne suis pas encore mont&eacute; vers mon P&egrave;re. Mais va trouver mes fr&egrave;res, et dis-leur que je monte vers mon P&egrave;re et votre P&egrave;re, vers mon Dieu et votre Dieu &raquo; (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Jean 20:17<br>17&nbsp;&nbsp;J&eacute;sus lui dit&nbsp;: Ne me touche pas&nbsp;; car je ne suis pas encore mont&eacute; vers mon P&egrave;re. Mais va trouver mes fr&egrave;res, et dis-leur que je monte vers mon P&egrave;re et votre P&egrave;re, vers mon Dieu et votre Dieu.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Jean 20:17</a>).</p>
-                                            <h3>
-                                                Quand prier&nbsp;?</h3>
-                                            <p>
-                                                Dans <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Psaume 55:18<br>18 Le soir, le matin, et &agrave; midi, je soupire et je g&eacute;mis, Et il entendra ma voix.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Psaume 55:18</a>, le roi David d&eacute;clare prier &laquo; le soir, le matin, et &agrave; midi&nbsp;&raquo;, et Daniel, lui aussi, apparemment, priait trois fois par jour (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Daniel 6:10, 13<br>10&nbsp;Lorsque Daniel sut que le d&eacute;sert &eacute;tait &eacute;crit, il se retira dans sa maison, o&ugrave; les fen&ecirc;tres de la chambre sup&eacute;rieure &eacute;taient ouvertes dans la direction de J&eacute;rusalem&nbsp;; et trois fois par jour il se mettait &agrave; genoux, il priait, et il louait son Dieu, comme il le faisait auparavant.<br />
+            <section>
+              <span class="text-slate-600 text-sm sm:text-md px-10 py-3 bg-slate-100 rounded-3xl">
+                <ion-icon name="person"></ion-icon>
+                <span>Clara Mulongo</span>
+              </span>
+            </section>
+            <section>
+              <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+            </section>
+            <section>
+              <h1 class="text-black font-oswald text-3xl sm:text-5xl">
+                Comment prier Dieu?
+              </h1>
+            </section>
+          </header>
+
+          <section id="article-body" class="text-justify p-2 ">
+
+            <div>
+              <p>
+                Quand nous nous interrogeons sur la pri&egrave;re, il est int&eacute;ressant de noter que m&ecirc;me un
+                disciple de J&eacute;sus demanda &agrave; ce Dernier comment s&rsquo;y prendre.</p>
+              <p>
+                &laquo;&nbsp;J&eacute;sus priait un jour en un certain lieu. Lorsqu&rsquo;il eut achev&eacute;, un de
+                ses disciples lui dit&nbsp;: Seigneur, enseigne-nous &agrave; prier, comme Jean l&rsquo;a
+                enseign&eacute; &agrave; ses disciples &raquo; (Luc 11:1).</p>
+              <p>
+                En somme, prier, c&rsquo;est communiquer avec Dieu. Et comme dans toute relation, plus nous avons
+                d&#39;&eacute;changes avec Dieu, plus nous passons du temps avec Lui, plus notre relation avec Lui
+                s&rsquo;approfondit.</p>
+              <p>
+                Comme la question du disciple de J&eacute;sus l&rsquo;indique, prier n&rsquo;est pas quelque chose que
+                nous faisons tout naturellement. C&rsquo;est quelque chose que nous avons besoin d&rsquo;apprendre
+                &agrave; faire. La Parole inspir&eacute;e de Dieu &ndash; la Bible &ndash; nous fournit la
+                r&eacute;ponse aux questions couramment pos&eacute;es sur la mani&egrave;re de prier.</p>
+              <h3>
+                &Agrave; Qui devrions-nous prier?</h3>
+              <p>
+                Le proph&egrave;te &Eacute;lie et plusieurs autres, dans l&rsquo;Ancien Testament, priaient Dieu.
+                L&rsquo;ap&ocirc;tre Paul fait allusion &agrave; ses pri&egrave;res &agrave; Dieu dans les deux
+                &Eacute;p&icirc;tres qu&rsquo;il adressa aux chr&eacute;tiens vivant dans la ville pa&iuml;enne de
+                Corinthe (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="1 Corinthiens 11:13<br>13&nbsp;Jugez-en vous-m&ecirc;mes&nbsp;: est-il convenable qu&rsquo;une femme prie Dieu sans &ecirc;tre voil&eacute;e&nbsp;?<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">1
+                  Corinthiens 11:13</a> ; <a data-tooltip aria-haspopup="true"
+                  class="verse-reference has-tip tip-bottom"
+                  title="2 Corinthiens 13:7<br>7&nbsp;Cependant nous prions Dieu que vous ne fassiez rien de mal, non pour para&icirc;tre nous-m&ecirc;mes approuv&eacute;s, mais afin que vous pratiquiez ce qui est bien et que nous, nous soyons comme d&eacute;sapprouv&eacute;s.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">2
+                  Corinthiens 13:7</a>).</p>
+              <p>
+                J&eacute;sus dit &agrave; Ses disciples de prier &laquo;&nbsp;notre P&egrave;re&nbsp;&raquo; (<a
+                  data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Matthieu 6:6<br>6&nbsp;Mais quand tu pries, entre dans ta chambre, ferme ta porte, et prie ton P&egrave;re qui est l&agrave; dans le lieu secret&nbsp;; et ton P&egrave;re, qui voit dans le secret, te le rendra.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu
+                  6:6</a>). Il d&eacute;clara plus tard &agrave; Pierre, quand la foule vint L&rsquo;arr&ecirc;ter, dans
+                le jardin de Geths&eacute;man&eacute;e, &laquo;&nbsp;Penses-tu que je ne puisse pas invoquer mon
+                P&egrave;re, qui me donnerait &agrave; l&rsquo;instant plus de douze l&eacute;gions
+                d&rsquo;anges&nbsp;?&nbsp;&raquo; (<a data-tooltip aria-haspopup="true"
+                  class="verse-reference has-tip tip-bottom"
+                  title="Matthieu 26:53<br>53&nbsp;Penses-tu que je ne puisse pas invoquer mon P&egrave;re, qui me donnerait &agrave; l&rsquo;instant plus de douze l&eacute;gions d&rsquo;anges&nbsp;?<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu
+                  26:53</a>).</p>
+              <p>
+                Plus tard, apr&egrave;s Sa r&eacute;surrection, J&eacute;sus dit &agrave; Marie de Magdala&nbsp;de ne
+                pas Le toucher, parce qu&rsquo;Il n&rsquo;&eacute;tait pas encore mont&eacute; au ciel pour &ecirc;tre
+                agr&eacute;&eacute; de Son P&egrave;re. Il lui dit&nbsp;: &laquo;&nbsp;Ne me touche pas&nbsp;; car je ne
+                suis pas encore mont&eacute; vers mon P&egrave;re. Mais va trouver mes fr&egrave;res, et dis-leur que je
+                monte vers mon P&egrave;re et votre P&egrave;re, vers mon Dieu et votre Dieu &raquo; (<a data-tooltip
+                  aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Jean 20:17<br>17&nbsp;&nbsp;J&eacute;sus lui dit&nbsp;: Ne me touche pas&nbsp;; car je ne suis pas encore mont&eacute; vers mon P&egrave;re. Mais va trouver mes fr&egrave;res, et dis-leur que je monte vers mon P&egrave;re et votre P&egrave;re, vers mon Dieu et votre Dieu.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Jean
+                  20:17</a>).</p>
+              <h3>
+                Quand prier&nbsp;?</h3>
+              <p>
+                Dans <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Psaume 55:18<br>18 Le soir, le matin, et &agrave; midi, je soupire et je g&eacute;mis, Et il entendra ma voix.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Psaume
+                  55:18</a>, le roi David d&eacute;clare prier &laquo; le soir, le matin, et &agrave; midi&nbsp;&raquo;,
+                et Daniel, lui aussi, apparemment, priait trois fois par jour (<a data-tooltip aria-haspopup="true"
+                  class="verse-reference has-tip tip-bottom"
+                  title="Daniel 6:10, 13<br>10&nbsp;Lorsque Daniel sut que le d&eacute;sert &eacute;tait &eacute;crit, il se retira dans sa maison, o&ugrave; les fen&ecirc;tres de la chambre sup&eacute;rieure &eacute;taient ouvertes dans la direction de J&eacute;rusalem&nbsp;; et trois fois par jour il se mettait &agrave; genoux, il priait, et il louait son Dieu, comme il le faisait auparavant.<br />
                                             <br />
-                                            13&nbsp;Ils prirent de nouveau la parole et dirent au roi&nbsp;: Daniel, l&rsquo;un des captifs de Juda, n&rsquo;a tenu aucun compte de toi, &ocirc; roi, ni de la d&eacute;fense que tu as &eacute;crite, et il fait sa pri&egrave;re trois fois par jour.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Daniel 6:10, 13</a>).</p>
-                                            <p>
-                                                &Agrave; plusieurs reprises, il est question de pri&egrave;res dans le milieu de l&rsquo;apr&egrave;s-midi &ndash; &laquo;&nbsp;&agrave; la neuvi&egrave;me heure&nbsp;&raquo;. Il n&rsquo;y a donc pas de mauvais moment pour prier, et prier est quelque chose que nous devrions faire, r&eacute;guli&egrave;rement. Paul dit m&ecirc;me &laquo;&nbsp;Priez sans cesse&nbsp;&raquo; (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="1 Thessaloniciens 5:17<br>17&nbsp;&nbsp;Priez sans cesse.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">1 Thessaloniciens 5:17</a>) &ndash; indiquant que la pri&egrave;re devrait faire partie int&eacute;grante de nos vies plut&ocirc;t que d&rsquo;&ecirc;tre quelque chose auquel nous avons recours seulement dans les moments difficiles.</p>
-                                            <h3>
-                                                De quelle dur&eacute;e nos pri&egrave;res devraient-elles &ecirc;tre?</h3>
-                                            <p>
-                                                Quand J&eacute;sus choisit Ses disciples, Il passa toute une nuit &agrave; prier.</p>
-                                            <p>
-                                                &laquo;&nbsp;En ce temps-l&agrave;, J&eacute;sus se rendit sur la montagne pour prier, et il passa toute la nuit &agrave; prier Dieu. Quand le jour parut, il appela ses disciples, et il en choisit douze, auxquels il donna le nom d&rsquo;ap&ocirc;tres&nbsp;&raquo; (Luc 6:12-13).</p>
-                                            <p>
-                                                N&eacute;anmoins, c&rsquo;&eacute;tait une occasion sp&eacute;ciale. J&eacute;sus choisit les 12 ap&ocirc;tres, et Il les mit en garde de ne pas prier comme les hypocrites, les pa&iuml;ens ou les scribes.</p>
-                                            <p>
-                                                &laquo;&nbsp;Lorsque vous priez, ne soyez pas comme les hypocrites, qui aiment &agrave; prier debout dans les synagogues et aux coins des rues, pour &ecirc;tre vus des hommes. Je vous le dis en v&eacute;rit&eacute;, ils ont leur r&eacute;compense. Mais quand tu pries, entre dans ta chambre, ferme ta porte, et prie ton P&egrave;re qui est l&agrave; dans le lieu secret&nbsp;; et ton P&egrave;re, qui voit dans le secret, te le rendra. En priant, ne multipliez pas de vaines paroles, comme les pa&iuml;ens, qui s&rsquo;imaginent qu&rsquo;&agrave; force de paroles ils seront exauc&eacute;s &raquo; (Matthieu&nbsp;6:5-7).</p>
-                                            <p>
-                                                &laquo;&nbsp;Gardez-vous des scribes, qui aiment &agrave; se promener en robes longues, et &agrave; &ecirc;tre salu&eacute;s dans les places publiques&nbsp;; qui recherchent les premiers si&egrave;ges dans les synagogues, et les premi&egrave;res places dans les festins&nbsp;; qui d&eacute;vorent les maisons des veuves, et qui font pour l&rsquo;apparence de longues pri&egrave;res. Ils seront jug&eacute;s plus s&eacute;v&egrave;rement &raquo; (Marc 12:38-40).</p>
-                                            <p>
-                                                Le 18<sup>e</sup> chapitre du premier livre des Rois relate la confrontation entre le proph&egrave;te &Eacute;lie et 450 proph&egrave;tes de Baal. Apr&egrave;s que ces derniers aient pr&eacute;par&eacute; leur offrande, ils invoqu&egrave;rent leur dieu toute la journ&eacute;e, du matin au soir. Ils cri&egrave;rent et se firent des incisions, essayant, en vain de se faire entendre de Baal.</p>
-                                            <p>
-                                                Pour finir, le proph&egrave;te &Eacute;lie, lui, se contenta de prononcer quelques mots&nbsp;: &laquo;&nbsp;Au moment de la pr&eacute;sentation de l&rsquo;offrande, Elie, le proph&egrave;te, s&rsquo;avan&ccedil;a et dit&nbsp;: Eternel, Dieu d&rsquo;Abraham, d&rsquo;Isaac et d&rsquo;Isra&euml;l&nbsp;! que l&rsquo;on sache aujourd&rsquo;hui que tu es Dieu en Isra&euml;l, que je suis ton serviteur, et que j&rsquo;ai fait toutes ces choses par ta parole&nbsp;! R&eacute;ponds-moi, Eternel, r&eacute;ponds-moi, afin que ce peuple reconnaisse que c&rsquo;est toi Eternel, qui es Dieu, et que c&rsquo;est toi qui ram&egrave;nes leur c&oelig;ur&nbsp;!&nbsp;&raquo; (1 Rois 18:36-37). Ces quelques mots suffirent pour que Dieu r&eacute;ponde et Se r&eacute;v&egrave;le puissamment &agrave; tous ceux qui &eacute;taient pr&eacute;sents.</p>
-                                            <h3>
-                                                Nos pri&egrave;res devraient-elles &ecirc;tre publiques ou priv&eacute;es ?</h3>
-                                            <p>
-                                                Cela d&eacute;pend de la situation. Il y a des occasions o&ugrave;, &eacute;videmment, il est convenable de prier en public, comme lors d&rsquo;une assembl&eacute;e, d&rsquo;un mariage ou d&rsquo;obs&egrave;ques. Mais J&eacute;sus &eacute;tait souvent seul quand Il priait (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Matthieu 14:23<br>23&nbsp;&nbsp;Quand il l&rsquo;eut renvoy&eacute;e, il monta sur la montagne, pour prier &agrave; l&rsquo;&eacute;cart&nbsp;; et, comme le soir &eacute;tait venu, il &eacute;tait l&agrave; seul.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu 14:23</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Marc 1:35<br>35&nbsp;Vers le matin, pendant qu&rsquo;il faisait encore tr&egrave;s sombre, il se leva, et sortit pour aller dans un lieu d&eacute;sert, o&ugrave; il pria.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Marc 1:35</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Luc 4:42<br>42&nbsp;D&egrave;s que le jour parut, il sortit et alla dans un lieu d&eacute;sert. Une foule de gens se mirent &agrave; sa recherche, et arriv&egrave;rent jusqu&rsquo;&agrave; lui&nbsp;; ils voulaient le retenir, afin qu&rsquo;il ne les quitte point.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Luc 4:42</a>).</p>
-                                            <p>
-                                                J&eacute;sus disait que nous devrions demander &agrave; notre P&egrave;re c&eacute;leste que Son r&egrave;gne vienne&nbsp;; que Sa volont&eacute; soit faite &ndash; y compris prier pour que la t&acirc;che de Son &Eacute;glise s&rsquo;accomplisse. Nous devons aussi prier pour nos besoins quotidiens, pour &ecirc;tre pardonn&eacute;s et pour &ecirc;tre d&eacute;livr&eacute;s du malin (de Satan). Dans le sermon sur la montagne, enregistr&eacute; notamment dans les chapitres 5, 6 et 7 de l&rsquo;&Eacute;vangile selon Matthieu, J&eacute;sus nous dit d&rsquo;aller &laquo;&nbsp;dans le lieu secret&nbsp;&raquo; quand nous prions&nbsp;: &laquo;&nbsp;Quand tu pries, entre dans ta chambre, ferme ta porte, et prie ton P&egrave;re qui est l&agrave; dans le lieu secret&nbsp;; et ton P&egrave;re, qui voit dans le secret, te le rendra &raquo; (Matthieu 6:6).</p>
-                                            <h3>
-                                                Pour quoi, et pour qui, prier?</h3>
-                                            <p>
-                                                J&eacute;sus nous a dit de demander &agrave; notre P&egrave;re que Son r&egrave;gne vienne et que Sa volont&eacute; soit faite &ndash; y compris l&rsquo;accomplissement de la t&acirc;che confi&eacute;e &agrave; Son &Eacute;glise &ndash; que nous Lui demandions de pourvoir &agrave; nos besoins quotidiens, de nous pardonner nos offenses et de nous d&eacute;livrer du malin (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Matthieu 6:9-13<br>9&nbsp;Voici donc comment vous devez prier&nbsp;: Notre P&egrave;re qui es aux cieux&nbsp;! Que ton nom soit sanctifi&eacute;&nbsp;;<br />
+                                            13&nbsp;Ils prirent de nouveau la parole et dirent au roi&nbsp;: Daniel, l&rsquo;un des captifs de Juda, n&rsquo;a tenu aucun compte de toi, &ocirc; roi, ni de la d&eacute;fense que tu as &eacute;crite, et il fait sa pri&egrave;re trois fois par jour.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Daniel
+                  6:10, 13</a>).</p>
+              <p>
+                &Agrave; plusieurs reprises, il est question de pri&egrave;res dans le milieu de
+                l&rsquo;apr&egrave;s-midi &ndash; &laquo;&nbsp;&agrave; la neuvi&egrave;me heure&nbsp;&raquo;. Il
+                n&rsquo;y a donc pas de mauvais moment pour prier, et prier est quelque chose que nous devrions faire,
+                r&eacute;guli&egrave;rement. Paul dit m&ecirc;me &laquo;&nbsp;Priez sans cesse&nbsp;&raquo; (<a
+                  data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="1 Thessaloniciens 5:17<br>17&nbsp;&nbsp;Priez sans cesse.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">1
+                  Thessaloniciens 5:17</a>) &ndash; indiquant que la pri&egrave;re devrait faire partie
+                int&eacute;grante de nos vies plut&ocirc;t que d&rsquo;&ecirc;tre quelque chose auquel nous avons
+                recours seulement dans les moments difficiles.</p>
+              <h3>
+                De quelle dur&eacute;e nos pri&egrave;res devraient-elles &ecirc;tre?</h3>
+              <p>
+                Quand J&eacute;sus choisit Ses disciples, Il passa toute une nuit &agrave; prier.</p>
+              <p>
+                &laquo;&nbsp;En ce temps-l&agrave;, J&eacute;sus se rendit sur la montagne pour prier, et il passa toute
+                la nuit &agrave; prier Dieu. Quand le jour parut, il appela ses disciples, et il en choisit douze,
+                auxquels il donna le nom d&rsquo;ap&ocirc;tres&nbsp;&raquo; (Luc 6:12-13).</p>
+              <p>
+                N&eacute;anmoins, c&rsquo;&eacute;tait une occasion sp&eacute;ciale. J&eacute;sus choisit les 12
+                ap&ocirc;tres, et Il les mit en garde de ne pas prier comme les hypocrites, les pa&iuml;ens ou les
+                scribes.</p>
+              <p>
+                &laquo;&nbsp;Lorsque vous priez, ne soyez pas comme les hypocrites, qui aiment &agrave; prier debout
+                dans les synagogues et aux coins des rues, pour &ecirc;tre vus des hommes. Je vous le dis en
+                v&eacute;rit&eacute;, ils ont leur r&eacute;compense. Mais quand tu pries, entre dans ta chambre, ferme
+                ta porte, et prie ton P&egrave;re qui est l&agrave; dans le lieu secret&nbsp;; et ton P&egrave;re, qui
+                voit dans le secret, te le rendra. En priant, ne multipliez pas de vaines paroles, comme les
+                pa&iuml;ens, qui s&rsquo;imaginent qu&rsquo;&agrave; force de paroles ils seront exauc&eacute;s &raquo;
+                (Matthieu&nbsp;6:5-7).</p>
+              <p>
+                &laquo;&nbsp;Gardez-vous des scribes, qui aiment &agrave; se promener en robes longues, et &agrave;
+                &ecirc;tre salu&eacute;s dans les places publiques&nbsp;; qui recherchent les premiers si&egrave;ges
+                dans les synagogues, et les premi&egrave;res places dans les festins&nbsp;; qui d&eacute;vorent les
+                maisons des veuves, et qui font pour l&rsquo;apparence de longues pri&egrave;res. Ils seront
+                jug&eacute;s plus s&eacute;v&egrave;rement &raquo; (Marc 12:38-40).</p>
+              <p>
+                Le 18<sup>e</sup> chapitre du premier livre des Rois relate la confrontation entre le proph&egrave;te
+                &Eacute;lie et 450 proph&egrave;tes de Baal. Apr&egrave;s que ces derniers aient pr&eacute;par&eacute;
+                leur offrande, ils invoqu&egrave;rent leur dieu toute la journ&eacute;e, du matin au soir. Ils
+                cri&egrave;rent et se firent des incisions, essayant, en vain de se faire entendre de Baal.</p>
+              <p>
+                Pour finir, le proph&egrave;te &Eacute;lie, lui, se contenta de prononcer quelques mots&nbsp;:
+                &laquo;&nbsp;Au moment de la pr&eacute;sentation de l&rsquo;offrande, Elie, le proph&egrave;te,
+                s&rsquo;avan&ccedil;a et dit&nbsp;: Eternel, Dieu d&rsquo;Abraham, d&rsquo;Isaac et
+                d&rsquo;Isra&euml;l&nbsp;! que l&rsquo;on sache aujourd&rsquo;hui que tu es Dieu en Isra&euml;l, que je
+                suis ton serviteur, et que j&rsquo;ai fait toutes ces choses par ta parole&nbsp;! R&eacute;ponds-moi,
+                Eternel, r&eacute;ponds-moi, afin que ce peuple reconnaisse que c&rsquo;est toi Eternel, qui es Dieu, et
+                que c&rsquo;est toi qui ram&egrave;nes leur c&oelig;ur&nbsp;!&nbsp;&raquo; (1 Rois 18:36-37). Ces
+                quelques mots suffirent pour que Dieu r&eacute;ponde et Se r&eacute;v&egrave;le puissamment &agrave;
+                tous ceux qui &eacute;taient pr&eacute;sents.</p>
+              <h3>
+                Nos pri&egrave;res devraient-elles &ecirc;tre publiques ou priv&eacute;es ?</h3>
+              <p>
+                Cela d&eacute;pend de la situation. Il y a des occasions o&ugrave;, &eacute;videmment, il est convenable
+                de prier en public, comme lors d&rsquo;une assembl&eacute;e, d&rsquo;un mariage ou
+                d&rsquo;obs&egrave;ques. Mais J&eacute;sus &eacute;tait souvent seul quand Il priait (<a data-tooltip
+                  aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Matthieu 14:23<br>23&nbsp;&nbsp;Quand il l&rsquo;eut renvoy&eacute;e, il monta sur la montagne, pour prier &agrave; l&rsquo;&eacute;cart&nbsp;; et, comme le soir &eacute;tait venu, il &eacute;tait l&agrave; seul.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu
+                  14:23</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Marc 1:35<br>35&nbsp;Vers le matin, pendant qu&rsquo;il faisait encore tr&egrave;s sombre, il se leva, et sortit pour aller dans un lieu d&eacute;sert, o&ugrave; il pria.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Marc
+                  1:35</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Luc 4:42<br>42&nbsp;D&egrave;s que le jour parut, il sortit et alla dans un lieu d&eacute;sert. Une foule de gens se mirent &agrave; sa recherche, et arriv&egrave;rent jusqu&rsquo;&agrave; lui&nbsp;; ils voulaient le retenir, afin qu&rsquo;il ne les quitte point.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Luc
+                  4:42</a>).</p>
+              <p>
+                J&eacute;sus disait que nous devrions demander &agrave; notre P&egrave;re c&eacute;leste que Son
+                r&egrave;gne vienne&nbsp;; que Sa volont&eacute; soit faite &ndash; y compris prier pour que la
+                t&acirc;che de Son &Eacute;glise s&rsquo;accomplisse. Nous devons aussi prier pour nos besoins
+                quotidiens, pour &ecirc;tre pardonn&eacute;s et pour &ecirc;tre d&eacute;livr&eacute;s du malin (de
+                Satan). Dans le sermon sur la montagne, enregistr&eacute; notamment dans les chapitres 5, 6 et 7 de
+                l&rsquo;&Eacute;vangile selon Matthieu, J&eacute;sus nous dit d&rsquo;aller &laquo;&nbsp;dans le lieu
+                secret&nbsp;&raquo; quand nous prions&nbsp;: &laquo;&nbsp;Quand tu pries, entre dans ta chambre, ferme
+                ta porte, et prie ton P&egrave;re qui est l&agrave; dans le lieu secret&nbsp;; et ton P&egrave;re, qui
+                voit dans le secret, te le rendra &raquo; (Matthieu 6:6).</p>
+              <h3>
+                Pour quoi, et pour qui, prier?</h3>
+              <p>
+                J&eacute;sus nous a dit de demander &agrave; notre P&egrave;re que Son r&egrave;gne vienne et que Sa
+                volont&eacute; soit faite &ndash; y compris l&rsquo;accomplissement de la t&acirc;che confi&eacute;e
+                &agrave; Son &Eacute;glise &ndash; que nous Lui demandions de pourvoir &agrave; nos besoins quotidiens,
+                de nous pardonner nos offenses et de nous d&eacute;livrer du malin (<a data-tooltip aria-haspopup="true"
+                  class="verse-reference has-tip tip-bottom"
+                  title="Matthieu 6:9-13<br>9&nbsp;Voici donc comment vous devez prier&nbsp;: Notre P&egrave;re qui es aux cieux&nbsp;! Que ton nom soit sanctifi&eacute;&nbsp;;<br />
                                             10&nbsp; que ton r&egrave;gne vienne&nbsp;; que ta volont&eacute; soit faite sur la terre comme au ciel.<br />
                                             11&nbsp; Donne-nous aujourd&rsquo;hui notre pain quotidien&nbsp;;<br />
                                             12&nbsp; pardonne-nous nos offenses, comme nous aussi nous pardonnons &agrave; ceux qui nous ont offens&eacute;s&nbsp;;<br />
-                                            13&nbsp; ne nous induis pas en tentation, mais d&eacute;livre-nous du malin. Car c&rsquo;est &agrave; toi qu&rsquo;appartiennent, dans tous les si&egrave;cles, le r&egrave;gne, la puissance et la gloire. Amen&nbsp;!<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu 6:9-13</a>), mais Il nous demande aussi de prier pour ceux qui nous maltraitent et qui nous pers&eacute;cutent (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Matthieu 5:44<br>44&nbsp;Mais moi, je vous dis&nbsp;: Aimez vos ennemis, b&eacute;nissez ceux qui vous maudissent, faites du bien &agrave; ceux qui vous ha&iuml;ssent, et priez pour ceux qui vous maltraitent et qui vous pers&eacute;cutent,<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu 5:44</a>).</p>
-                                            <p>
-                                                L&rsquo;ap&ocirc;tre Jacques, dans son &Eacute;p&icirc;tre, &eacute;crit que nous devrions prier les uns pour les autres (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Jacques 5:16<br>16&nbsp;Confessez donc vos p&eacute;ch&eacute;s les uns aux autres, et priez les uns pour les autres, afin que vous soyez gu&eacute;ris. La pri&egrave;re agissante du juste a une grande efficacit&eacute;.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Jacques 5:16</a>). Paul pr&eacute;cise m&ecirc;me que nous devrions prier pour tout le monde&nbsp;: &laquo;&nbsp;J&rsquo;exhorte donc, avant toutes choses, &agrave; faire des pri&egrave;res, des supplications, des requ&ecirc;tes, des actions de gr&acirc;ces, pour tous les hommes, pour les rois et pour tous ceux qui sont &eacute;lev&eacute;s en dignit&eacute;, afin que nous menions une vie paisible et tranquille, en toute pi&eacute;t&eacute; et honn&ecirc;tet&eacute; &raquo; (1 Timoth&eacute;e 2:1-2).</p>
-                                            <h3>
-                                                Y a-t-il une position particuli&egrave;re &agrave; adopter quand on prie?</h3>
-                                            <p>
-                                                La <a href="https://vieespoiretverite.org/bible/">Bible </a>d&eacute;crit des personnes qui prient debout, &agrave; genoux, prostr&eacute;es &agrave; m&ecirc;me le sol, ou assises.</p>
-                                            <p>
-                                                Le roi Salomon, dans sa pri&egrave;re dans <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="1 Rois 8:22<br>22&nbsp;Salomon se pla&ccedil;a devant l&rsquo;autel de l&rsquo;Eternel, en face de toute l&rsquo;assembl&eacute;e d&rsquo;Isra&euml;l. Il &eacute;tendit ses mains vers le ciel, et il dit...<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">1 Rois 8:22</a>, se tenait debout, mais il est aussi d&eacute;crit comme agenouill&eacute; devant l&rsquo;autel (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="1 Rois 8:54<br>54&nbsp;Lorsque Salomon eut achev&eacute; d&rsquo;adresser &agrave; l&rsquo;Eternel toute cette pri&egrave;re et cette supplication, il se leva de devant l&rsquo;autel de l&rsquo;Eternel, o&ugrave; il &eacute;tait agenouill&eacute;, les mains &eacute;tendues vers le ciel.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">1 Rois 8:54</a>). Christ, le proph&egrave;te Daniel, le martyr &Eacute;tienne, l&rsquo;ap&ocirc;tre Pierre et l&rsquo;ap&ocirc;tre Paul priaient &agrave; genoux (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Luc 22:41<br>41&nbsp;Puis il s&rsquo;&eacute;loigna d&rsquo;eux &agrave; la distance d&rsquo;environ un jet de pierre, et, s&rsquo;&eacute;tant mis &agrave; genoux, il pria...<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Luc 22:41</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Daniel 6:10<br>10&nbsp;Lorsque Daniel sut que le d&eacute;sert &eacute;tait &eacute;crit, il se retira dans sa maison, o&ugrave; les fen&ecirc;tres de la chambre sup&eacute;rieure &eacute;taient ouvertes dans la direction de J&eacute;rusalem&nbsp;; et trois fois par jour il se mettait &agrave; genoux, il priait, et il louait son Dieu, comme il le faisait auparavant.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Daniel 6:10</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Actes 7:60<br>60&nbsp;Puis, s&rsquo;&eacute;tant mis &agrave; genoux, il s&rsquo;&eacute;cria d&rsquo;une voix forte&nbsp;: Seigneur, ne leur impute pas ce p&eacute;ch&eacute;&nbsp;! Et, apr&egrave;s ces paroles, il s&rsquo;endormit.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Actes 7:60</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Actes 9:40<br>40&nbsp;Pierre fit sortir tout le monde, se mit &agrave; genoux, et pria&nbsp;; puis, se tournant vers le corps, il dit&nbsp;: Tabitha, l&egrave;ve-toi&nbsp;! Elle ouvrit les yeux, et ayant vu Pierre, elle s&rsquo;assit.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Actes 9:40</a> ;<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Actes 20:36<br>36&nbsp;&nbsp;Apr&egrave;s avoir ainsi parl&eacute;, il se mit &agrave; genoux, et il pria avec eux tous.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Actes 20:36</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Actes&nbsp;21:5<br>5&nbsp;Mais, lorsque nous f&ucirc;mes au terme des sept jours, nous nous achemin&acirc;mes pour partir, et tous nous accompagn&egrave;rent avec leurs femmes et leurs enfants jusqu&rsquo;&agrave; l&rsquo;ext&eacute;rieur de la ville. Nous nous m&icirc;mes &agrave; genoux sur le rivage, et nous pri&acirc;mes.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Actes&nbsp;21:5</a>). S&rsquo;agenouiller est un signe de soumission &agrave; Dieu, et il est &eacute;crit, dans <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Romains 14:11<br>11&nbsp;Car il est &eacute;crit&nbsp;: Je suis vivant, dit le Seigneur, Tout genou fl&eacute;chira devant moi, Et toute langue donnera gloire &agrave; Dieu.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Romains 14:11</a> : &laquo;&nbsp;Tout genou fl&eacute;chira devant moi&nbsp;&raquo;.</p>
-                                            <p>
-                                                D&rsquo;autres, comme Abram, Aaron et le roi David &eacute;taient prostr&eacute;s quand ils priaient, mais David priait aussi assis (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="2 Samuel 7:18<br>18&nbsp;Et le roi David alla se pr&eacute;senter devant l&rsquo;Eternel, et dit&nbsp;: Qui suis-je, Seigneur Eternel, et quelle est ma maison, pour que tu m&rsquo;aies fait parvenir o&ugrave; je suis&nbsp;?<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">2 Samuel 7:18</a> ; c&rsquo;est du moins ce qu&rsquo;indique l&rsquo;original, et plusieurs versions).</p>
-                                            <p>
-                                                Paul &eacute;crivit au jeune &eacute;vang&eacute;liste Timoth&eacute;e&nbsp;: &laquo;&nbsp;Je veux donc que les hommes prient en tout lieu, en &eacute;levant des mains pures, sans col&egrave;re ni mauvaises pens&eacute;es &raquo; (1 Timoth&eacute;e 2:8) et le roi David exhorta le peuple &agrave; &eacute;lever ses mains vers le sanctuaire (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom" title="Psaume 134:2<br>2&nbsp;Elevez vos mains vers le sanctuaire, Et b&eacute;nissez l&rsquo;Eternel&nbsp;!<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Psaume 134:2</a>).</p>
-                                            <p>
-                                                Apparemment, il y a plusieurs moyens d&rsquo;approcher Dieu respectueusement, en fonction des circonstances, et il n&rsquo;est pas n&eacute;cessaire que vous adoptiez une position pr&eacute;cise pour que Dieu vous entende.</p>
-                                            <p>
-                                                D&rsquo;apr&egrave;s la Bible, Dieu et J&eacute;sus veulent que nous priions, et Ils nous ont montr&eacute; comment le faire. Le moment de la journ&eacute;e, la dur&eacute;e, et la position que nous adoptons n&rsquo;ont pas r&eacute;ellement beaucoup d&rsquo;importance. Ce que Dieu veut, c&rsquo;est que L&rsquo;approchions r&eacute;guli&egrave;rement, avec respect et humilit&eacute;.</p>
-    
-            </section>
+                                            13&nbsp; ne nous induis pas en tentation, mais d&eacute;livre-nous du malin. Car c&rsquo;est &agrave; toi qu&rsquo;appartiennent, dans tous les si&egrave;cles, le r&egrave;gne, la puissance et la gloire. Amen&nbsp;!<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu
+                  6:9-13</a>), mais Il nous demande aussi de prier pour ceux qui nous maltraitent et qui nous
+                pers&eacute;cutent (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Matthieu 5:44<br>44&nbsp;Mais moi, je vous dis&nbsp;: Aimez vos ennemis, b&eacute;nissez ceux qui vous maudissent, faites du bien &agrave; ceux qui vous ha&iuml;ssent, et priez pour ceux qui vous maltraitent et qui vous pers&eacute;cutent,<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Matthieu
+                  5:44</a>).</p>
+              <p>
+                L&rsquo;ap&ocirc;tre Jacques, dans son &Eacute;p&icirc;tre, &eacute;crit que nous devrions prier les uns
+                pour les autres (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Jacques 5:16<br>16&nbsp;Confessez donc vos p&eacute;ch&eacute;s les uns aux autres, et priez les uns pour les autres, afin que vous soyez gu&eacute;ris. La pri&egrave;re agissante du juste a une grande efficacit&eacute;.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Jacques
+                  5:16</a>). Paul pr&eacute;cise m&ecirc;me que nous devrions prier pour tout le monde&nbsp;:
+                &laquo;&nbsp;J&rsquo;exhorte donc, avant toutes choses, &agrave; faire des pri&egrave;res, des
+                supplications, des requ&ecirc;tes, des actions de gr&acirc;ces, pour tous les hommes, pour les rois et
+                pour tous ceux qui sont &eacute;lev&eacute;s en dignit&eacute;, afin que nous menions une vie paisible
+                et tranquille, en toute pi&eacute;t&eacute; et honn&ecirc;tet&eacute; &raquo; (1 Timoth&eacute;e 2:1-2).
+              </p>
+              <h3>
+                Y a-t-il une position particuli&egrave;re &agrave; adopter quand on prie?</h3>
+              <p>
+                La <a href="https://vieespoiretverite.org/bible/">Bible </a>d&eacute;crit des personnes qui prient
+                debout, &agrave; genoux, prostr&eacute;es &agrave; m&ecirc;me le sol, ou assises.</p>
+              <p>
+                Le roi Salomon, dans sa pri&egrave;re dans <a data-tooltip aria-haspopup="true"
+                  class="verse-reference has-tip tip-bottom"
+                  title="1 Rois 8:22<br>22&nbsp;Salomon se pla&ccedil;a devant l&rsquo;autel de l&rsquo;Eternel, en face de toute l&rsquo;assembl&eacute;e d&rsquo;Isra&euml;l. Il &eacute;tendit ses mains vers le ciel, et il dit...<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">1
+                  Rois 8:22</a>, se tenait debout, mais il est aussi d&eacute;crit comme agenouill&eacute; devant
+                l&rsquo;autel (<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="1 Rois 8:54<br>54&nbsp;Lorsque Salomon eut achev&eacute; d&rsquo;adresser &agrave; l&rsquo;Eternel toute cette pri&egrave;re et cette supplication, il se leva de devant l&rsquo;autel de l&rsquo;Eternel, o&ugrave; il &eacute;tait agenouill&eacute;, les mains &eacute;tendues vers le ciel.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">1
+                  Rois 8:54</a>). Christ, le proph&egrave;te Daniel, le martyr &Eacute;tienne, l&rsquo;ap&ocirc;tre
+                Pierre et l&rsquo;ap&ocirc;tre Paul priaient &agrave; genoux (<a data-tooltip aria-haspopup="true"
+                  class="verse-reference has-tip tip-bottom"
+                  title="Luc 22:41<br>41&nbsp;Puis il s&rsquo;&eacute;loigna d&rsquo;eux &agrave; la distance d&rsquo;environ un jet de pierre, et, s&rsquo;&eacute;tant mis &agrave; genoux, il pria...<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Luc
+                  22:41</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Daniel 6:10<br>10&nbsp;Lorsque Daniel sut que le d&eacute;sert &eacute;tait &eacute;crit, il se retira dans sa maison, o&ugrave; les fen&ecirc;tres de la chambre sup&eacute;rieure &eacute;taient ouvertes dans la direction de J&eacute;rusalem&nbsp;; et trois fois par jour il se mettait &agrave; genoux, il priait, et il louait son Dieu, comme il le faisait auparavant.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Daniel
+                  6:10</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Actes 7:60<br>60&nbsp;Puis, s&rsquo;&eacute;tant mis &agrave; genoux, il s&rsquo;&eacute;cria d&rsquo;une voix forte&nbsp;: Seigneur, ne leur impute pas ce p&eacute;ch&eacute;&nbsp;! Et, apr&egrave;s ces paroles, il s&rsquo;endormit.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Actes
+                  7:60</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Actes 9:40<br>40&nbsp;Pierre fit sortir tout le monde, se mit &agrave; genoux, et pria&nbsp;; puis, se tournant vers le corps, il dit&nbsp;: Tabitha, l&egrave;ve-toi&nbsp;! Elle ouvrit les yeux, et ayant vu Pierre, elle s&rsquo;assit.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Actes
+                  9:40</a> ;<a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Actes 20:36<br>36&nbsp;&nbsp;Apr&egrave;s avoir ainsi parl&eacute;, il se mit &agrave; genoux, et il pria avec eux tous.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Actes
+                  20:36</a> ; <a data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Actes&nbsp;21:5<br>5&nbsp;Mais, lorsque nous f&ucirc;mes au terme des sept jours, nous nous achemin&acirc;mes pour partir, et tous nous accompagn&egrave;rent avec leurs femmes et leurs enfants jusqu&rsquo;&agrave; l&rsquo;ext&eacute;rieur de la ville. Nous nous m&icirc;mes &agrave; genoux sur le rivage, et nous pri&acirc;mes.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Actes&nbsp;21:5</a>).
+                S&rsquo;agenouiller est un signe de soumission &agrave; Dieu, et il est &eacute;crit, dans <a
+                  data-tooltip aria-haspopup="true" class="verse-reference has-tip tip-bottom"
+                  title="Romains 14:11<br>11&nbsp;Car il est &eacute;crit&nbsp;: Je suis vivant, dit le Seigneur, Tout genou fl&eacute;chira devant moi, Et toute langue donnera gloire &agrave; Dieu.<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Romains
+                  14:11</a> : &laquo;&nbsp;Tout genou fl&eacute;chira devant moi&nbsp;&raquo;.</p>
+              <p>
+                D&rsquo;autres, comme Abram, Aaron et le roi David &eacute;taient prostr&eacute;s quand ils priaient,
+                mais David priait aussi assis (<a data-tooltip aria-haspopup="true"
+                  class="verse-reference has-tip tip-bottom"
+                  title="2 Samuel 7:18<br>18&nbsp;Et le roi David alla se pr&eacute;senter devant l&rsquo;Eternel, et dit&nbsp;: Qui suis-je, Seigneur Eternel, et quelle est ma maison, pour que tu m&rsquo;aies fait parvenir o&ugrave; je suis&nbsp;?<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">2
+                  Samuel 7:18</a> ; c&rsquo;est du moins ce qu&rsquo;indique l&rsquo;original, et plusieurs versions).
+              </p>
+              <p>
+                Paul &eacute;crivit au jeune &eacute;vang&eacute;liste Timoth&eacute;e&nbsp;: &laquo;&nbsp;Je veux donc
+                que les hommes prient en tout lieu, en &eacute;levant des mains pures, sans col&egrave;re ni mauvaises
+                pens&eacute;es &raquo; (1 Timoth&eacute;e 2:8) et le roi David exhorta le peuple &agrave; &eacute;lever
+                ses mains vers le sanctuaire (<a data-tooltip aria-haspopup="true"
+                  class="verse-reference has-tip tip-bottom"
+                  title="Psaume 134:2<br>2&nbsp;Elevez vos mains vers le sanctuaire, Et b&eacute;nissez l&rsquo;Eternel&nbsp;!<br> <hr><span style='font-size:.8em'>Louis Segond, Nouvelle &Eacute;dition de Gen&egrave;ve (&copy; 1979 Soci&eacute;t&eacute; Biblique de Gen&egrave;ve)</span>">Psaume
+                  134:2</a>).</p>
+              <p>
+                Apparemment, il y a plusieurs moyens d&rsquo;approcher Dieu respectueusement, en fonction des
+                circonstances, et il n&rsquo;est pas n&eacute;cessaire que vous adoptiez une position pr&eacute;cise
+                pour que Dieu vous entende.</p>
+              <p>
+                D&rsquo;apr&egrave;s la Bible, Dieu et J&eacute;sus veulent que nous priions, et Ils nous ont
+                montr&eacute; comment le faire. Le moment de la journ&eacute;e, la dur&eacute;e, et la position que nous
+                adoptons n&rsquo;ont pas r&eacute;ellement beaucoup d&rsquo;importance. Ce que Dieu veut, c&rsquo;est
+                que L&rsquo;approchions r&eacute;guli&egrave;rement, avec respect et humilit&eacute;.</p>
 
-            <footer>
+          </section>
+          <hr>
+          <footer>
+            <div class="m-2 flex flex-wrap gap-3">
+              <span class="text-black font-bold">Tag:</span>
+              <span
+                class="text-black rounded-xl bg-slate-100 px-5 py-1 hover:bg-primary-color hover:text-white transition "><a
+                  href="">Notre Histoire</a></span>
+              <span
+                class="text-black rounded-xl bg-slate-100 px-5 py-1 hover:bg-primary-color hover:text-white transition "><a
+                  href="">Nos dirigeants</a></span>
+              <span
+                class="text-black rounded-xl bg-slate-100 px-5 py-1 hover:bg-primary-color hover:text-white transition "><a
+                  href="">Ou nous trouver</a></span>
+            </div>
+          </footer>
 
-            </footer>
-           
-        </section>
-         <!--about card -->
-         <section class="shadow-xl bg-fixed bg-cover flex  " style="background-image: url('img/img-\(8\).png');">   
-            <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 " style="background-color: rgba(0, 0, 0, 0.40);backdrop-filter: blur(2px);">
-                <span class="font-oswald text-white text-md md:text-lg">Voulez-vous connaitre plus sur nous ?</span>
-                <span class="border-2 border-white rounded-3xl border-spacing-1 px-10 py-1  bg-transparent border-solid  hover:bg-white transition"><a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "  href=" ">A Propos de Nous</a></span>
-            </div>    
         </section>
         <!--about card -->
-        <section>
-            <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl  py-4">Nos Autres Articles</h1>
-            <div class="multiple-items flex gap-3">
-              <!--card long -->
-                <div class="grid grid-rows-card-y bg-white w-48 md:w-72 text-center gap-3">
-                    <div>
-                        <img   src="img/img- (5).jpg" alt="" class="w-72 h-36" >
-                    </div>
-                    <div class="p-2 flex gap-2 flex-col">
-                        <div>
-                            <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-                        </div>
-                        <div>
-                            <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
-                        </div>
-                        <div class="text-slate-600  text-sm  sm:block sm:text-sm  limite_text" title="">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </div>
-                        <div class="flex sm:justify-around sm:items-center flex-row ">
-                            <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-                            <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
-                        </div>
-                    </div>         
-                </div>
-              <!--card long -->
-                <div class="grid grid-rows-card-y bg-white w-48 md:w-72 text-center gap-3">
-                  <div>
-                      <img   src="img/img- (5).jpg" alt="" class="w-72 h-36" >
-                  </div>
-                  <div class="p-2 flex gap-2 flex-col">
-                      <div>
-                          <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-                      </div>
-                      <div>
-                          <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
-                      </div>
-                      <div class="text-slate-600  text-sm  sm:block sm:text-sm  limite_text" title="">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      </div>
-                      <div class="flex sm:justify-around sm:items-center flex-row ">
-                          <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-                          <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
-                      </div>
-                  </div>         
-                </div>
-              <!--card long -->
-              <div class="grid grid-rows-card-y bg-white w-48 md:w-72 text-center gap-3">
-                <div>
-                    <img   src="img/img- (5).jpg" alt="" class="w-72 h-36" >
-                </div>
-                <div class="p-2 flex gap-2 flex-col">
-                    <div>
-                        <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-                    </div>
-                    <div>
-                        <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
-                    </div>
-                    <div class="text-slate-600  text-sm  sm:block sm:text-sm  limite_text" title="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </div>
-                    <div class="flex sm:justify-around sm:items-center flex-row ">
-                        <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-                        <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
-                    </div>
-                </div>         
-              </div>
-                
-            </div>   
+        <section class="shadow-xl bg-fixed bg-cover flex  " style="background-image: url('img/img-\(8\).png');">
+          <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 "
+            style="background-color: rgba(0, 0, 0, 0.40);backdrop-filter: blur(2px);">
+            <span class="font-oswald text-white text-md md:text-lg">Voulez-vous connaitre jJESUS CHRIST ?</span>
+            <span
+              class="border-2 border-white rounded-3xl border-spacing-1 px-10 py-1  bg-transparent border-solid  hover:bg-white transition"><a
+                class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "
+                href=" ">Oui je le Connaitre</a></span>
+          </div>
         </section>
-    </article>
-    <!--========================================= ASIDE ============================================-->
-    <aside class="bg-white h-full  md:p-5 p-3 ">
-      <!+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++>
-      <section class="text-left">
-        <h3 class="font-oswald font-bold  text-xl md:text-xl  titre_content py-4 ">Nos Programmes du Jour</h3>
-        <div class="flex flex-col gap-3"> 
-          <!--starts card aside programme-->
-          <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer"> 
-            <div>
-              <img src="img/img- (6).jpg" alt="" class="w-full h-full" >
+        <!--about card -->
+        <section class="swiffy-slider slider-nav-dark slider-nav-autoplay slider-nav-animation-fadein">
+          <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl  py-4">Nos Autres Articles</h1>
+          <div class="slider-container slider-item-show3 slider-nav-touch slider-item-show2-sm slider-nav-round">
+            <!--card long -->
+            <div class="grid grid-rows-card-y bg-white w-48 md:w-72 text-center gap-3 cursor-pointer">
+              <div>
+                <img src="img/img- (5).jpg" alt="" class="w-72 h-36">
+              </div>
+              <div class="p-2 flex gap-2 flex-col">
+                <div>
+                  <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+                </div>
+                <div>
+                  <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
+                </div>
+                <div class="text-slate-600  text-sm  sm:block sm:text-sm  limite_text" title="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="flex sm:justify-around sm:items-center flex-row ">
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                      2023</span></span>
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                      Mulongo</span></span>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-col ">
-              <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Aujourd Hui</a></span>
-              <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
-              <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
-              <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon> <span>Av kasapa</span> - <span>fac de medecine</span></span>
-            </div>     
-          </div>
-          <!--end card aside programme-->
-          <!--starts card aside programme-->
-          <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer"> 
-            <div>
-              <img src="img/img- (6).jpg" alt="" class="w-full h-full" >
+            <!--card long -->
+            <div class="grid grid-rows-card-y bg-white w-48 md:w-72 text-center gap-3 cursor-pointer">
+              <div>
+                <img src="img/img- (5).jpg" alt="" class="w-72 h-36">
+              </div>
+              <div class="p-2 flex gap-2 flex-col">
+                <div>
+                  <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+                </div>
+                <div>
+                  <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
+                </div>
+                <div class="text-slate-600  text-sm  sm:block sm:text-sm  limite_text" title="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="flex sm:justify-around sm:items-center flex-row ">
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                      2023</span></span>
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                      Mulongo</span></span>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-col ">
-              <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Aujourd Hui</a></span>
-              <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
-              <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg">
-                <ion-icon name="time"></ion-icon> 
-                <span>12 h 30</span> - <span>14 h 30</span>
-              </span>
-              <span class="text-slate-600 text-left text-sm sm:text-sm">
-                <ion-icon name="navigate"></ion-icon> 
-                <span>AV Kasapa</span> - <span>Cellule de sciences</span>
-              </span>
-            </div>     
-          </div>
-          <!--end card aside programme-->
-        </div>
-      </section>
-      <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
-      <section class="text-left">
-        <h3 class="font-oswald font-bold  text-xl md:text-xl  titre_content py-4 ">Nos Programmes de la semaine</h3>
-        <div class="flex flex-col gap-3"> 
-          <!--starts card aside programme-->
-          <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer"> 
-            <div>
-              <img src="img/img- (6).jpg" alt="" class="w-full h-full" >
+            <!--card long -->
+            <div class="grid grid-rows-card-y bg-white w-48 md:w-72 text-center gap-3 cursor-pointer">
+              <div>
+                <img src="img/img- (5).jpg" alt="" class="w-72 h-36">
+              </div>
+              <div class="p-2 flex gap-2 flex-col">
+                <div>
+                  <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+                </div>
+                <div>
+                  <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu? 4</h1>
+                </div>
+                <div class="text-slate-600  text-sm  sm:block sm:text-sm  limite_text" title="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="flex sm:justify-around sm:items-center flex-row ">
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                      2023</span></span>
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                      Mulongo</span></span>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-col ">
-              <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Jeudi</a></span>
-              <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
-              <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
-              <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon> <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
-            </div>     
-          </div>
-          <!--end card aside programme-->
-          <!--starts card aside programme-->
-          <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer"> 
-            <div>
-              <img src="img/img- (6).jpg" alt="" class="w-full h-full" >
+            <!--card long -->
+            <div class="grid grid-rows-card-y bg-white w-48 md:w-72 text-center gap-3 cursor-pointer">
+              <div>
+                <img src="img/img- (5).jpg" alt="" class="w-72 h-36">
+              </div>
+              <div class="p-2 flex gap-2 flex-col">
+                <div>
+                  <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+                </div>
+                <div>
+                  <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
+                </div>
+                <div class="text-slate-600  text-sm  sm:block sm:text-sm  limite_text" title="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="flex sm:justify-around sm:items-center flex-row ">
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                      2023</span></span>
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                      Mulongo</span></span>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-col ">
-              <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Vendredi</a></span>
-              <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
-              <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
-              <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon> <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
-            </div>     
+            <!--card long -->
+            <div class="grid grid-rows-card-y bg-white w-48 md:w-72 text-center gap-3 cursor-pointer">
+              <div>
+                <img src="img/img- (5).jpg" alt="" class="w-72 h-36">
+              </div>
+              <div class="p-2 flex gap-2 flex-col">
+                <div>
+                  <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+                </div>
+                <div>
+                  <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu? 2</h1>
+                </div>
+                <div class="text-slate-600  text-sm  sm:block sm:text-sm  limite_text" title="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="flex sm:justify-around sm:items-center flex-row ">
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                      2023</span></span>
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                      Mulongo</span></span>
+                </div>
+              </div>
+            </div>
           </div>
-          <!--end card aside programme-->
+          <button type="button" class="slider-nav "></button>
+          <button type="button" class="slider-nav slider-nav-next "></button>
 
-        </div>
-      </section>
-      <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
-      <section class="text-left">
-        <h3 class="font-oswald font-bold  text-xl md:text-xl  titre_content py-4 ">Nos Evennements du Mois</h3>
-        <div class="flex flex-col gap-3"> 
-          <!--starts card aside programme-->
-          <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer"> 
-            <div>
-              <img src="img/img- (6).jpg" alt="" class="w-full h-full" >
-            </div>
-            <div class="flex flex-col ">
-              <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Du lundi Au Dimanche</a></span>
-              <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
-              <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
-              <span class="text-slate-600 text-left text-md sm:text-sm"><ion-icon name="calendar"></ion-icon> <span>4 dec 2023</span></span>
-              <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon> <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
-            </div>     
-          </div>
-          <!--end card aside programme-->
-           <!--about card -->
-           <div class="shadow-xl bg-cover flex  " style="background-image: url('https://images.pexels.com/photos/1098515/pexels-photo-1098515.jpeg?auto=compress&cs=tinysrgb&w=400');">   
-            <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-10 " style="background-color: rgba(0, 0, 0, 0.20);backdrop-filter: blur(2px);">
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier"> <path d="M12 10C12.5523 10 13 10.4477 13 11V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V11C11 10.4477 11.4477 10 12 10Z" fill="#ffffff"></path>
-                     <path d="M12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z" fill="#ffffff"></path> 
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" fill="#ffffff"></path> </g>
-                 </svg>
-              </span>
-              <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1 hover:bg-white transition">
-                <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "  href=" ">
-                  <ion-icon name="navigate"></ion-icon>
-                  Ou Nous trouver?
-                </a>
-              </span>
-            </div>    
-          </div>
-          <!--about card -->
-         
-        </div>
-      </section>
-    </aside>
-  </main>
-<!--############################################################# FOOTER ###############################################################-->
-  <!--Footer 2-->
-  <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
-  <section class="h-16  bg-fixed bg-cover" style="background-image: url('img/img-\(8\).png');">
-    <div class="h-16 flex  justify-center  items-center" style="background-color: rgba(0, 0, 0, 0.70);">
-      <div>
-        <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
-          <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline" >
-          INTERFAC
-        </a>
-      </div>
-    </div>
-  </section>
-  <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
-  <section class="bg-black flex flex-wrap  p-5   md:justify-around">
-    <section >
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Nous Contacter</h2>
-      <div class="text-slate-700 w-80 text-sm md:py-5 p-5"> 
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="mail" size="small"></ion-icon> <a href="" class="text-lg  px-2">interfac@interfac.com</a></div>
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="logo-whatsapp" size="small"></ion-icon> <a href="" class="text-lg px-2">+243 081000000</a></div>
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a href=""class="text-lg px-2" >+243 081000000</a></div>
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a href="" class="text-lg px-2"  >+243 081000000</a></div>
-    </section>
-  <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
-    <section >
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Ecrivez-Nous</h2>
-      <div class="p-2"> 
-        <form class="flex gap-5 flex-col justify-center ">
-          <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" type="text" name="text" placeholder="Enter Votre Name"   />
-          <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" type="email" name="email" placeholder="Enter Votre Email" />
-          <textarea class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" placeholder="Message"></textarea>
-          <button class="bg-black p-2 border-2 border-solid rounded-md  border-slate-600 text-white w-20 hover:bg-white hover:text-black transition ">Envoyer</button>
-      </form>
-      </div>
-    </section>
-  <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
-    <section>
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Savoir plus sur Nous</h2>
-      <div class="p-5">
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Qui sommes nous?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Ou nous trouver?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Nos dirigeants?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Notre Histoire?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Galerie Photo</a></div>
-      </div>
-    </section>
-  <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
-    <section>
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Reseaux Social</h2>
-      <div class="p-5 ">
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-facebook"></ion-icon> Facebook</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-instagram" size="small"></ion-icon> Instagram</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-youtube" size="small" ></ion-icon> Youtube</a></div>
-      </div>
-    </section>
-
-  </section>
-  <footer class="bg-black   text-center text-gray-600 text-md md:text-lg p-5 ">
-    &copy; Cellule de priere <strong>Interfac</strong>ultaire 2023 - 2024 
-  </footer>
-<!--############################################################# MODAL ###############################################################-->
-  <!--MODAL CONNAITRE JESUS -->
-  <div id="overlay_modal"  class="flex flex-col md:p-5 p-3  items-center relative ">  
-    <div id="modal" class="flex flex-row gap-2 items-center h-4/5 w-72 md:w-2/3  shadow-sm" style="background-image: url('https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');background-size: cover;">
-      <div class="flex flex-col gap-5  justify-center p-10 h-full w-72 md:w-full" style="background-color: rgba(0, 0, 0, 0.50);">
-         <div class="font-bold text-xl md:text-3xl text-center text-white">
-            Voulez-vous Connaitre qui est JESUS CHRIST?
-         </div>
-         <div class="font-bold text-xl md:text-3xl text-center text-primary-color ">
-             lui,Il t'aime et veux te connaitre!
-         </div>
-         <div class="flex flex-col gap-3 items-center justify-center md:w-full">
+        </section>
+        <section>
+          <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl  py-4">Commentaires</h1>
           <div>
-               <button  class="  border-2 px-10 py-1 w-64 md:w-72 rounded-3xl bg-white  text-black text-sm sm:text-md font-bold cursor-pointer">Oui, Je Veux le connaitre!</button>
-           </div>
-           <div>
-               <button onclick="chose_modal()"  class="  border-2 px-10 py-1 w-64 rounded-3xl bg-transparent border-solid border-white text-white text-sm sm:text-md font-bold cursor-pointer">je le connais deja</button>
-           </div>
-           <div>
-               <button onclick="chose_modal()"  class="px-10 py-1 w-36 rounded-3xl  bg-transparent text-white text-sm sm:text-md font-bold cursor-pointer"><ion-icon name="close" size="large"></ion-icon>Fermer</button>
-           </div>
-         </div>
-         
+
+          </div>
+
+
+        </section>
+      </article>
+      <!--========================================= ASIDE ============================================-->
+      <aside class="bg-white h-full  md:p-5 p-3 ">
+        <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
+          <section class="text-left">
+            <h3 class="font-oswald font-bold  text-xl md:text-xl  titre_content py-4 ">Nos Programmes du Jour</h3>
+            <div class="flex flex-col gap-3">
+              <!--starts card aside programme-->
+              <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer">
+                <div>
+                  <img src="img/img- (6).jpg" alt="" class="w-full h-full">
+                </div>
+                <div class="flex flex-col ">
+                  <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Aujourd
+                      Hui</a></span>
+                  <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
+                  <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon
+                      name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
+                  <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon>
+                    <span>Av kasapa</span> - <span>fac de medecine</span></span>
+                </div>
+              </div>
+              <!--end card aside programme-->
+              <!--starts card aside programme-->
+              <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer">
+                <div>
+                  <img src="img/img- (6).jpg" alt="" class="w-full h-full">
+                </div>
+                <div class="flex flex-col ">
+                  <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Aujourd
+                      Hui</a></span>
+                  <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
+                  <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg">
+                    <ion-icon name="time"></ion-icon>
+                    <span>12 h 30</span> - <span>14 h 30</span>
+                  </span>
+                  <span class="text-slate-600 text-left text-sm sm:text-sm">
+                    <ion-icon name="navigate"></ion-icon>
+                    <span>AV Kasapa</span> - <span>Cellule de sciences</span>
+                  </span>
+                </div>
+              </div>
+              <!--end card aside programme-->
+            </div>
+          </section>
+          <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
+            <section class="text-left">
+              <h3 class="font-oswald font-bold  text-xl md:text-xl  titre_content py-4 ">Nos Programmes de la semaine
+              </h3>
+              <div class="flex flex-col gap-3">
+                <!--starts card aside programme-->
+                <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer">
+                  <div>
+                    <img src="img/img- (6).jpg" alt="" class="w-full h-full">
+                  </div>
+                  <div class="flex flex-col ">
+                    <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color"
+                        href="">Jeudi</a></span>
+                    <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
+                    <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon
+                        name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
+                    <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon>
+                      <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
+                  </div>
+                </div>
+                <!--end card aside programme-->
+                <!--starts card aside programme-->
+                <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer">
+                  <div>
+                    <img src="img/img- (6).jpg" alt="" class="w-full h-full">
+                  </div>
+                  <div class="flex flex-col ">
+                    <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color"
+                        href="">Vendredi</a></span>
+                    <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de Priere</span></span>
+                    <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon
+                        name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
+                    <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon>
+                      <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
+                  </div>
+                </div>
+                <!--end card aside programme-->
+
+              </div>
+            </section>
+            <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
+              <section class="text-left">
+                <h3 class="font-oswald font-bold  text-xl md:text-xl  titre_content py-4 ">Nos Evennements du Mois</h3>
+                <div class="flex flex-col gap-3">
+                  <!--starts card aside programme-->
+                  <div class="bg-white grid grid-cols-card gap-2 hover:shadow-xl transition cursor-pointer">
+                    <div>
+                      <img src="img/img- (6).jpg" alt="" class="w-full h-full">
+                    </div>
+                    <div class="flex flex-col ">
+                      <span><a class="font-oswald text-left text-sm sm:text-sm text-primary-color" href="">Du lundi Au
+                          Dimanche</a></span>
+                      <span class="font-oswald text-left text-black text- md:text-md"><span>Culte de
+                          Priere</span></span>
+                      <span class="font-oswald text-slate-600 text-left text-xl sm:text-lg"><ion-icon
+                          name="time"></ion-icon> <span>12 h 30</span> - <span>14 h 30</span></span>
+                      <span class="text-slate-600 text-left text-md sm:text-sm"><ion-icon name="calendar"></ion-icon>
+                        <span>4 dec 2023</span></span>
+                      <span class="text-slate-600 text-left text-sm sm:text-sm"><ion-icon name="navigate"></ion-icon>
+                        <span>Clara Mulongo</span> - <span>Clara Mulongo</span></span>
+                    </div>
+                  </div>
+                  <!--end card aside programme-->
+                  <!--about card -->
+                  <div class="shadow-xl bg-cover flex  "
+                    style="background-image: url('https://images.pexels.com/photos/1098515/pexels-photo-1098515.jpeg?auto=compress&cs=tinysrgb&w=400');">
+                    <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-10 "
+                      style="background-color: rgba(0, 0, 0, 0.20);backdrop-filter: blur(2px);">
+                      <span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 10C12.5523 10 13 10.4477 13 11V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V11C11 10.4477 11.4477 10 12 10Z"
+                              fill="#ffffff"></path>
+                            <path
+                              d="M12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z"
+                              fill="#ffffff"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
+                              fill="#ffffff"></path>
+                          </g>
+                        </svg>
+                      </span>
+                      <span
+                        class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1 hover:bg-white transition">
+                        <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "
+                          href=" ">
+                          <ion-icon name="navigate"></ion-icon>
+                          Ou Nous trouver?
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <!--about card -->
+
+                </div>
+              </section>
+      </aside>
+    </main>
+    <!--############################################################# FOOTER ###############################################################-->
+    <!--Footer 2-->
+    <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
+    <section class="h-16  bg-fixed bg-cover" style="background-image: url('img/img-\(8\).png');">
+      <div class="h-16 flex  justify-center  items-center" style="background-color: rgba(0, 0, 0, 0.70);">
+        <div>
+          <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
+            <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline">
+            INTERFAC
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
+    <section class="bg-black flex flex-wrap  p-5   md:justify-around">
+      <section>
+        <h2 class="text-slate-600 font-bold font-Oswald titre_content">Nous Contacter</h2>
+        <div class="text-slate-700 w-80 text-sm md:py-5 p-5">
+          <div class="text-slate-700 transition hover:text-white"><ion-icon name="mail" size="small"></ion-icon> <a
+              href="" class="text-lg  px-2">interfac@interfac.com</a></div>
+          <div class="text-slate-700 transition hover:text-white"><ion-icon name="logo-whatsapp"
+              size="small"></ion-icon> <a href="" class="text-lg px-2">+243 081000000</a></div>
+          <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a
+              href="" class="text-lg px-2">+243 081000000</a></div>
+          <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a
+              href="" class="text-lg px-2">+243 081000000</a></div>
+      </section>
+      <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
+      <section>
+        <h2 class="text-slate-600 font-bold font-Oswald titre_content">Ecrivez-Nous</h2>
+        <div class="p-2">
+          <form class="flex gap-5 flex-col justify-center ">
+            <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" type="text"
+              name="text" placeholder="Enter Votre Name" />
+            <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" type="email"
+              name="email" placeholder="Enter Votre Email" />
+            <textarea class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white"
+              placeholder="Message"></textarea>
+            <button
+              class="bg-black p-2 border-2 border-solid rounded-md  border-slate-600 text-white w-20 hover:bg-white hover:text-black transition ">Envoyer</button>
+          </form>
+        </div>
+      </section>
+      <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
+      <section>
+        <h2 class="text-slate-600 font-bold font-Oswald titre_content">Savoir plus sur Nous</h2>
+        <div class="p-5">
+          <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Qui sommes nous?</a></div>
+          <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Ou nous trouver?</a></div>
+          <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Nos dirigeants?</a></div>
+          <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Notre Histoire?</a></div>
+          <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                name="arrow-round-forward"></ion-icon> Galerie Photo</a></div>
+        </div>
+      </section>
+      <!--+++++++++++++++++++++++++++++++++ SECTION  +++++++++++++++++++++++++++++++++++-->
+      <section>
+        <h2 class="text-slate-600 font-bold font-Oswald titre_content">Reseaux Social</h2>
+        <div class="p-5 ">
+          <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                name="logo-facebook"></ion-icon> Facebook</a></div>
+          <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-instagram"
+                size="small"></ion-icon> Instagram</a></div>
+          <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-youtube"
+                size="small"></ion-icon> Youtube</a></div>
+        </div>
+      </section>
+
+    </section>
+    <footer class="bg-black   text-center text-gray-600 text-md md:text-lg p-5 ">
+      &copy; Cellule de priere <strong>Interfac</strong>ultaire 2023 - 2024
+    </footer>
+    <!--############################################################# MODAL ###############################################################-->
+    <!--MODAL CONNAITRE JESUS -->
+    <div id="overlay_modal" class="flex flex-col md:p-5 p-3  items-center relative ">
+      <div id="modal" class="flex flex-row gap-2 items-center h-4/5 w-72 md:w-2/3  shadow-sm"
+        style="background-image: url('https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');background-size: cover;">
+        <div class="flex flex-col gap-5  justify-center p-10 h-full w-72 md:w-full"
+          style="background-color: rgba(0, 0, 0, 0.50);">
+          <div class="font-bold text-xl md:text-3xl text-center text-white">
+            Voulez-vous Connaitre qui est JESUS CHRIST?
+          </div>
+          <div class="font-bold text-xl md:text-3xl text-center text-primary-color ">
+            lui,Il t'aime et veux te connaitre!
+          </div>
+          <div class="flex flex-col gap-3 items-center justify-center md:w-full">
+            <div>
+              <button
+                class="  border-2 px-10 py-1 w-64 md:w-72 rounded-3xl bg-white  text-black text-sm sm:text-md font-bold cursor-pointer">Oui,
+                Je Veux le connaitre!</button>
+            </div>
+            <div>
+              <button onclick="chose_modal()"
+                class="  border-2 px-10 py-1 w-64 rounded-3xl bg-transparent border-solid border-white text-white text-sm sm:text-md font-bold cursor-pointer">je
+                le connais deja</button>
+            </div>
+            <div>
+              <button onclick="chose_modal()"
+                class="px-10 py-1 w-36 rounded-3xl  bg-transparent text-white text-sm sm:text-md font-bold cursor-pointer"><ion-icon
+                  name="close" size="large"></ion-icon>Fermer</button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-  <!-- MODAL rechercher overlay -->
-  <div id="overlay"  class="flex flex-col md:p-5 p-3  items-center relative ">  
-  <div id="text" class="flex flex-col gap-2  md:w-4/6  ">
-    <div class="flex justify-center">
-      <img  src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" height="100" width="100">
-   </div> 
-    <!--about card -->
-    <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl text-white py-4">Rechercher</h1>
+    <!-- MODAL rechercher overlay -->
+    <div id="overlay" class="flex flex-col md:p-5 p-3  items-center relative ">
+      <div id="text" class="flex flex-col gap-2  md:w-4/6  ">
+        <div class="flex justify-center">
+          <img src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" height="100" width="100">
+        </div>
+        <!--about card -->
+        <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl text-white py-4">Rechercher</h1>
 
-    <div> 
-      <form class="flex gap-3 justify-center ">
-        <botton onclick="off()" class="bg-transparent p-2  text-white">
-          <ion-icon name="close" size="large"></ion-icon>
-          
-        </botton>
-        <input id="input-saerch" class="bg-transparent p-2 border-b-2 border-solid  md:w-96 border-white text-md text-white" type="text" name="text" placeholder="Rechercher "   />
-        <botton class="bg-transparent p-2  text-white " >
-          <ion-icon name="search" size="large"></ion-icon>
-        </botton>
-    </form>
-    </div>
-    
-    <h1 class="font-poppins font-light text-center text-xl md:text-2xl text-white py-4"><span id="text-see-search">Ecrivez quelque chose</span> <span id="text-search"></span></h1> 
-    <div class="flex justify-center items-center">
-      <div id="loader" class="loader" style="display: none;"></div>
-    </div>
-    
-    <!--about card -->
-        <div class="shadow-xl bg-fixed bg-cover flex" style="background-image: url('img/img-\(8\).png');">   
-          <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 " style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(2px);">
+        <div>
+          <form class="flex gap-3 justify-center ">
+            <botton onclick="off()" class="bg-transparent p-2  text-white">
+              <ion-icon name="close" size="large"></ion-icon>
+
+            </botton>
+            <input id="input-saerch"
+              class="bg-transparent p-2 border-b-2 border-solid  md:w-96 border-white text-md text-white" type="text"
+              name="text" placeholder="Rechercher " />
+            <botton class="bg-transparent p-2  text-white ">
+              <ion-icon name="search" size="large"></ion-icon>
+            </botton>
+          </form>
+        </div>
+
+        <h1 class="font-poppins font-light text-center text-xl md:text-2xl text-white py-4"><span
+            id="text-see-search">Ecrivez quelque chose</span> <span id="text-search"></span></h1>
+        <div class="flex justify-center items-center">
+          <div id="loader" class="loader" style="display: none;"></div>
+        </div>
+
+        <!--about card -->
+        <div class="shadow-xl bg-fixed bg-cover flex" style="background-image: url('img/img-\(8\).png');">
+          <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 "
+            style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(2px);">
             <span class="font-oswald text-white text-sm md:text-xl">Voulez-vous connaitre plus sur nous ?</span>
-            <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1"><a class="text-white text-bold text-sm sm:text-md font-bold "  href=" ">A Propos de Nous</a></span>
-          </div>    
+            <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1"><a
+                class="text-white text-bold text-sm sm:text-md font-bold " href=" ">A Propos de Nous</a></span>
+          </div>
         </div>
         <!--card items  -->
         <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
           <!--card thumbail   -->
-          <div> 
-            <div class="z-2" >
-              <img   src="img/img- (7).jpg" alt="" class="w-72 h-40" >
-            </div>    
+          <div>
+            <div class="z-2">
+              <img src="img/img- (7).jpg" alt="" class="w-72 h-40">
+            </div>
           </div>
           <!--card body-->
           <div class="p-2 flex gap-2 flex-col">
-              <!--card body titre-->
-              <div>
-                <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
-              </div>
-              <!--card body description-->
-              <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
-                porro aperiam saepe necessitatibus maxime nobis autem,
-              </div>
-              <!--card body details -->
-              <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
-                <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-                <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-                <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
-              </div>
-          </div>
-          <!--card body -->
-         </div>
-         <!--card items  -->
-          <!--card items  -->
-       <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
-        <!--card thumbail   -->
-        <div> 
-          <div class="z-2" >
-            <img   src="img/img- (7).jpg" alt="" class="w-72 h-40" >
-          </div>    
-        </div>
-        <!--card body-->
-        <div class="p-2 flex gap-2 flex-col">
             <!--card body titre-->
             <div>
               <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
             </div>
             <!--card body description-->
             <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+              consequuntur
               porro aperiam saepe necessitatibus maxime nobis autem,
             </div>
             <!--card body details -->
             <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
               <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                  2023</span></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                  Mulongo</span></span>
             </div>
+          </div>
+          <!--card body -->
         </div>
-        <!--card body -->
-       </div>
-       <!--card items  -->
-       
-      
-       <!--card items  -->
-     </div>
-     <div style="display: none" class="flex justify-center mx-20 z-5">
-      <button onclick="off()"  class="  border-2 px-10 py-1 w-36 rounded-3xl bg-transparent border-solid border-white border-spacing-1 text-white text-sm sm:text-md font-bold cursor-pointer">Fermer</button>
-     </div>
-  </div>
- <!--############################################################# OTHER ###############################################################-->
-  </div>
-  <!--BOUTON POUR MONTER EN HAUT-->
-  <button onclick="topFunction()" id="myBtn" title="Go to top">
-    <img src="img/up-arrow-svgrepo-com.svg" alt="" height="50" width="50">
-  </button> 
-  <!--BOUTON POUR SUVRE SUR LE RESEAU -->
-  <div class="fixed top-24 left-0" >
-    <div id="bg-social-media" class=" p-3 flex gap-5 flex-col" style="backdrop-filter:blur(3px) ;">
-      <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-facebook"></ion-icon></a></div>
-      <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-instagram" size="small"></ion-icon></a></div>
-      <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-youtube" size="small" ></ion-icon></a></div>
-    </div>
-  </div>
+        <!--card items  -->
+        <!--card items  -->
+        <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
+          <!--card thumbail   -->
+          <div>
+            <div class="z-2">
+              <img src="img/img- (7).jpg" alt="" class="w-72 h-40">
+            </div>
+          </div>
+          <!--card body-->
+          <div class="p-2 flex gap-2 flex-col">
+            <!--card body titre-->
+            <div>
+              <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
+            </div>
+            <!--card body description-->
+            <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+              consequuntur
+              porro aperiam saepe necessitatibus maxime nobis autem,
+            </div>
+            <!--card body details -->
+            <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
+              <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                  2023</span></span>
+              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                  Mulongo</span></span>
+            </div>
+          </div>
+          <!--card body -->
+        </div>
+        <!--card items  -->
 
- <!---scripts -->
- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
- <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
- <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
- <script src="js/index.js"></script>
- <script>
-$(document).ready(function(){
-    $('#multiple-items').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-        });
-});
-    
- </script>
+
+        <!--card items  -->
+      </div>
+      <div style="display: none" class="flex justify-center mx-20 z-5">
+        <button onclick="off()"
+          class="  border-2 px-10 py-1 w-36 rounded-3xl bg-transparent border-solid border-white border-spacing-1 text-white text-sm sm:text-md font-bold cursor-pointer">Fermer</button>
+      </div>
+    </div>
+    <!--############################################################# OTHER ###############################################################-->
+    </div>
+    <!--BOUTON POUR MONTER EN HAUT-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="img/up-arrow-svgrepo-com.svg" alt="" height="50" width="50">
+    </button>
+    <!--BOUTON POUR SUVRE SUR LE RESEAU -->
+    <div class="fixed top-24 left-0">
+      <div id="bg-social-media" class=" p-3 flex gap-5 flex-col" style="backdrop-filter:blur(3px) ;">
+        <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon
+              name="logo-facebook"></ion-icon></a></div>
+        <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-instagram"
+              size="small"></ion-icon></a></div>
+        <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-youtube"
+              size="small"></ion-icon></a></div>
+      </div>
+    </div>
+
+    <!---scripts -->
+    <!-- Don't forget to add jQuery first -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+
+    </script>
 </body>
+
 </html>

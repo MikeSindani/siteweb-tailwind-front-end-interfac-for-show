@@ -1,0 +1,48 @@
+.chapitre_nombre{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style: none;
+}
+.chapitre_nombre_link{
+    cursor: pointer;
+    font-weight: bold;
+}
+.now{
+    background-color: blue;
+    padding: 5px;
+    color: white;
+
+}
+
+
+#article-body  h1,#article-body  h2, #article-body  h3,#article-body  h4,#article-body  h5,#article-body  h6 {
+    margin:10px !important;
+    font-weight: bold !important;
+    font-size: 30px !important;
+ }
+ #article-body  h2{
+    text-align: center;
+ }
+#article-body  blockquote,#article-body  dl,#article-body  dd,#article-body  hr,#article-body  figure,#article-body  p,#article-body  pre {
+    margin: 5px !important;
+    text-align: center;
+ }
+ul{
+    text-align: center;
+}
+
+ ol  li {
+    font-size: 18px;
+    font-family: "poppins",sans-serif;
+    margin: 10px 0;
+}
+ol  li:hover {
+    font-weight: bold;
+    transition: all .5s ease ;
+}
+ol  {
+    list-style-type: decimal !important;
+    margin: 30px !important;
+    padding: 10px !important;
+}
