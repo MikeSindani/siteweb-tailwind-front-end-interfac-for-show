@@ -141,3 +141,26 @@ $('ol li').click(function () {
   // code to execute when the element is clicked
   document.execCommand('copy');
 });
+
+window.addEventListener('load', function () {  
+  new Glider(document.querySelector('.glider'), {
+  slidesToShow: 6,
+  dots: '.dots',
+  arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+  },
+  responsive: [
+       {
+          // screens greater than >= 1024px
+          breakpoint: 768,
+          settings: {
+              slidesToShow: 8,
+              slidesToScroll: 2,
+              itemWidth: 150,
+              duration: 0.25
+          }
+      }
+  ]
+});
+});

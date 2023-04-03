@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="css/bible.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Add the slick-theme.css if you want default styling -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.css'
+  integrity='sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg=='
+  crossorigin='anonymous' />
   <!--links -->
   <!--script -->
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
@@ -35,81 +37,111 @@
     <header>
       <!--navbar -->
       <nav
-      class="bg-transparent  flex flex-col lg:flex-row gap-7 items-center justify-around  p-2 fixed top-0 left-0 right-0 z-10"
+      class="bg-transparent  flex flex-col gap-3  p-2 fixed top-0 left-0 right-0 z-10"
       style="background-color: rgba(0, 0, 0, 0.80);backdrop-filter: blur(10px);">
-      <div class="flex justify-center items-center  ">
-        <!--menu -->
-        <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2" id="menu-hamberger">
-          <span class="hamburger-box">
-            <div class="hamburger-inner"></div>
-          </span>
+      <div class="flex flex-col md:flex-row gap-3 md:gap-7 items-center justify-around  ">
+
+        <div class="flex justify-center items-center  ">
+          <!--menu -->
+          <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2" id="menu-hamberger">
+            <span class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </span>
+          </div>
+          <!--menu -->
+          <!--logo -->
+          <div>
+            <a href="" class="text-white text-xl font-bold font-Oswald gap-3 ">
+              <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac"
+                class="inline">
+              INTERFAC
+            </a>
+          </div>
+          <!--logo -->
+          <div onclick="on()" class="btn__search absolute top-2 right-4 p-2">
+            <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi" srcset="" style="height: 36px;">
+          </div>
         </div>
-        <!--menu -->
-        <!--logo -->
-        <div>
-          <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
-            <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline">
-            INTERFAC
-          </a>
+        <!-- nav links -->
+        <div class="flex gap-3 md:gap-7 flex-wrap items-center justify-center " id="nav-links">
+              <div class="navlinks flex flex-col md:flex-row gap-3 ">
+                <div><a class="nav-link text-sm nav_links_content nav_links_content_hover" href="">Accueil</a></div>
+                <div id="dropdown-wrapper" class="hidden md:flex items-center text-white">
+                  <bouton onmouseover="toggleMenu()" class="text-white text-sm nav_links_content nav_links_content_hover " href="">
+                    Nos Enseigements</bouton>
+                  <ion-icon name="arrow-dropdown" size="small"></ion-icon>
+                </div>
+                <div  class="inline-block md:hidden cursor-pointer">
+                    <button  class="text-white text-sm nav_links_content nav_links_content_hover ">
+                      Nos Enseigements 
+                      <ion-icon name="arrow-dropdown" ></ion-icon>
+                    </button>
+                    <div class="md:hidden flex flex-col drop-shadow-md border-white border-l">
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color  " href="#">Qui est Dieu?</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color " href="#">Qui est Jesus-Christ?</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color  " href="#">Qui est Le Saint Esprit?</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">ABC de la Foi Chretiens</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">Nos Predications</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">Nos Enseigements</a>
+                    </div>
+                </div>
+                <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Meditations</a>
+                </div>
+                <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos News</a></div>
+                <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Temoignages</a>
+                </div>
+                <div><a class="text-primary-color text-sm nav_links_content nav_links_content_hover"
+                    href="#Contacter">Contactez-Nous</a></div>
+          </div>
+          <div class="flex flex-wrap gap-3 justify-center p-2 items-center">
+                <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a
+                    class="text-black text-bold text-sm font-poppins font-bold hover:text-white transition flex items-center gap-1"
+                    href=" "><ion-icon name="heart"></ion-icon> Faire un don</a></div>
+                <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a
+                    class="text-white text-bold text-sm font-poppins font-bold hover:text-black transition" href=" ">Lire la Bible</a>
+                </div>
+                <div onclick="on()" class="btn__search">
+                  <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi-2" srcset="" style="height:28px;"
+                    class="cursor-pointer">
+                </div>
+          </div>
         </div>
-        <!--logo -->
-        <div onclick="on()" class="btn__search absolute top-2 right-3 p-2">
-          <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi" srcset="" style="height: 36px;">
+        <!-- nav links -->
+      </div>
+      <div id="menu" class="hidden md:hidden md:flex flex-row ">  
+        <div  class=" flex flex-row drop-shadow-md border-white border-l-4 ">
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color  " href="#">Qui est Dieu?</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color " href="#">Qui est Jesus-Christ?</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color  " href="#">Qui est Le Saint Esprit?</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">ABC de la Foi Chretiens</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">Nos Predications</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">Nos Enseigements</a>
         </div>
       </div>
-      <!-- nav links -->
-      <div class="flex gap-10 flex-wrap items-center justify-center" id="nav-links">
-        <div class="navlinks flex flex-col md:flex-row gap-3">
-          <div><a class="nav-link text-sm nav_links_content nav_links_content_hover" href="">Accueil</a></div>
-          <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Enseigments</a>
-          </div>
-          <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Meditations</a>
-          </div>
-          <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos News</a></div>
-          <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Temoignages</a>
-          </div>
-          <div><a class="text-primary-color text-sm nav_links_content nav_links_content_hover"
-              href="">Contactez-Nous</a></div>
-        </div>
-        <div class="flex flex-wrap gap-3 justify-center p-2 items-center">
-          <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a
-              class="text-black text-bold text-sm font-bold hover:text-white transition flex items-center gap-1"
-              href=" "><ion-icon name="heart"></ion-icon> Faire un don</a></div>
-          <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a
-              class="text-white text-bold text-sm font-bold hover:text-black transition" href=" ">Lire la Bible</a>
-          </div>
-          <div onclick="on()" class="btn__search">
-            <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi-2" srcset="" style="height:28px;"
-              class="cursor-pointer">
-          </div>
-        </div>
-      </div>
-      <!-- nav links -->
-      </nav>
+    </nav>
       <!--navbar -->
       <!--+++++++++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++-->
       <!--slider-->
       <div>
         <div class="paralex bg-fixed bg-cover "
           style="background-image: url('https://images.unsplash.com/photo-1499652848871-1527a310b13a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJpYmxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');height: 80vh">
-          <div class=" flex flex-col justify-center gap-0 md:gap-2 items-center"
+          <div class=" flex flex-col justify-center gap-2 items-center"
             style="background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);height: 80vh;">
             <h1 class="font-oswald font-bold text-center text-4xl md:text-5xl text-white  py-4">La Sainte Bible</h1>
             <div class="flex justify-center gap-2">
               <span
-                class="text-white font-oswald text-md md:text-xl text-center backdrop-blur-sm bg-black/[.06] p-5 hover:bg-primary-color  transition "><a
+                class="text-white font-oswald text-md md:text-xl rounded-lg text-center backdrop-blur-sm bg-black/[.06] p-5 hover:bg-primary-color  transition "><a
                   href="" class="">Ancien Testements</a>
               </span>
               <span
-                class="text-white font-oswald text-md md:text-xl text-center backdrop-blur-sm bg-black/[.06] p-5 hover:bg-primary-color  transition "><a
+                class="text-white font-oswald text-md md:text-xl rounded-lg text-center backdrop-blur-sm bg-black/[.06] p-5 hover:bg-primary-color  transition "><a
                   href="" class="">Nouveau Testements</a>
               </span>
 
             </div>
-            <div class="swiffy-slider slider-nav-autoplay slider-nav-animation-fadein">
-
+            <div class="glider-contain">
               <div
-                class="slider-container slider-item-show6 slider-nav-touch slider-item-show2-sm slider-nav-round p-10">
+                class="glider flex gap-5">
                 <span class="text-white font-oswald text-xl text-center  hover:text-primary-color  transition "><a
                     href="">Genese</a></span>
                 <span class="text-white font-oswald text-xl   hover:text-primary-color transition "><a
@@ -120,10 +152,20 @@
                       href="">Nombres</a></span>
                       <span class="text-white font-oswald text-xl hover:text-primary-color transition "><a
                         href="">Deutéronome</a></span>
+                        <span class="text-white font-oswald text-xl text-center  hover:text-primary-color  transition "><a
+                            href="">Genese</a></span>
+                        <span class="text-white font-oswald text-xl   hover:text-primary-color transition "><a
+                            href="">Exode</a></span>
+                        <span class="text-white font-oswald text-xl hover:text-primary-color transition "><a
+                            href="">Lévitique</a></span>
+                            <span class="text-white font-oswald text-xl hover:text-primary-color transition "><a
+                              href="">Nombres</a></span>
+                              <span class="text-white font-oswald text-xl hover:text-primary-color transition "><a
+                                href="">Deutéronome</a></span>
               </div>
-              <button type="button" class="slider-nav "></button>
-              <button type="button" class="slider-nav slider-nav-next "></button>
-
+              <button aria-label="Previous" type="button" class="glider-prev  " style="position: absolute; left:20px;color: white;"><ion-icon name="arrow-round-back"></ion-icon></button>
+              <button aria-label="Next" type="button" class="glider-next"  style="position: absolute; right:20px; color: white ;" ><ion-icon name="arrow-round-forward"></ion-icon></button>
+              
             </div>
           </div>
 
@@ -4332,8 +4374,9 @@
             
     
           </section>
-          <hr>
+          
           <footer>
+            <hr>
             <div class="m-2 flex flex-wrap gap-3 justify-center items-center">
               <span id="chap_precedent" class="text-black font-oswald md:text-xl text-md cursor-pointer ">Chapitre Precedent</span>
               <span id="chap_numbre"class="text-black font-oswald rounded-xl p-3 bg-slate-100 "></span>
@@ -4601,10 +4644,11 @@
     <!-- Don't forget to add jQuery first -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js' integrity='sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==' crossorigin='anonymous'></script>
     <script src="js/index.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.js'
+    integrity='sha512-AZURF+lGBgrV0WM7dsCFwaQEltUV5964wxMv+TSzbb6G1/Poa9sFxaCed8l8CcFRTiP7FsCgCyOm/kf1LARyxA=='
+    crossorigin='anonymous'></script>
+    
     <script src="bible.js"></script>
-    <script>
-
-    </script>
 </body>
 
 </html>

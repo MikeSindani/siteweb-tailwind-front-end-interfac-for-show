@@ -20,52 +20,95 @@
   <!+++++++++++++++++++++++++++++++++ NAV +++++++++++++++++++++++++++++++++++++++>
   <header>
   <!--navbar -->
-   <nav class="bg-transparent  flex flex-col lg:flex-row gap-10 items-center justify-around  p-2 fixed top-0 left-0 right-0 z-10" style="background-color: rgba(0, 0, 0, 0.80);backdrop-filter: blur(10px);">
-    <div class="flex justify-center items-center  " >  
-      <!--menu -->  
-      <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2"  id="menu-hamberger">
-        <span class="hamburger-box" >
-          <div class="hamburger-inner" ></div>
-        </span>
-      </div>
-      <!--menu -->
-       <!--logo -->
-      <div>
-        <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
-          <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline" >
-          INTERFAC
-        </a>
-      </div>
-      <!--logo -->
-      <div onclick="on()"   class="btn__search absolute top-2 right-3 p-2">
-        <img  src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi"  srcset="" style="height: 36px;" >
-      </div>
-    </div> 
-   <!-- nav links -->
-    <div class="flex gap-10 flex-wrap items-center justify-center" id="nav-links">
-      <div class="navlinks flex flex-col md:flex-row gap-5">
-        <div><a class="nav-link nav_links_content nav_links_content_hover" href="">Accueil</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Enseigments</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Predications</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos News</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Temoignages</a></div>
-      </div>
-      <div class="flex flex-wrap gap-5 justify-center p-2 items-center">
-        <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a class="text-black text-bold text-md font-bold hover:text-white transition"  href=" ">Faire un don</a></div>
-        <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a class="text-white text-bold text-md font-bold hover:text-black transition"  href=" ">Contacte Nous</a></div>
-        <div onclick="on()" class="btn__search" >
-          <img  src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi-2"  srcset="" style="height:28px;" class="cursor-pointer" >
-        </div> 
-      </div>
-    </div>
-     <!-- nav links -->
-   </nav>
+        <nav
+        class="bg-transparent  flex flex-col gap-3  p-2 fixed top-0 left-0 right-0 z-50"
+        style="background-color: rgba(0, 0, 0, 0.80);backdrop-filter: blur(10px);">
+        <div class="flex flex-col md:flex-row gap-3 md:gap-7 items-center justify-around  ">
+
+          <div class="flex justify-center items-center  ">
+            <!--menu -->
+            <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2" id="menu-hamberger">
+              <span class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </span>
+            </div>
+            <!--menu -->
+            <!--logo -->
+            <div>
+              <a href="" class="text-white text-xl font-bold font-Oswald gap-3 ">
+                <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac"
+                  class="inline">
+                INTERFAC
+              </a>
+            </div>
+            <!--logo -->
+            <div onclick="on()" class="btn__search absolute top-2 right-4 p-2">
+              <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi" srcset="" style="height: 36px;">
+            </div>
+          </div>
+          <!-- nav links -->
+          <div class="flex gap-3 md:gap-7 flex-wrap items-center justify-center " id="nav-links">
+                <div class="navlinks flex flex-col md:flex-row gap-3 ">
+                  <div><a class="nav-link text-sm nav_links_content nav_links_content_hover" href="">Accueil</a></div>
+                  <div id="dropdown-wrapper" class="hidden md:flex items-center text-white">
+                    <bouton onmouseover="toggleMenu()" class="text-white text-sm nav_links_content nav_links_content_hover " href="">
+                      Nos Enseigements</bouton>
+                    <ion-icon name="arrow-dropdown" size="small"></ion-icon>
+                  </div>
+                  <div  class="inline-block md:hidden cursor-pointer">
+                      <button  class="text-white text-sm nav_links_content nav_links_content_hover ">
+                        Nos Enseigements 
+                        <ion-icon name="arrow-dropdown" ></ion-icon>
+                      </button>
+                      <div class="md:hidden flex flex-col drop-shadow-md border-white border-l">
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color  " href="#">Qui est Dieu?</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color " href="#">Qui est Jesus-Christ?</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color  " href="#">Qui est Le Saint Esprit?</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">ABC de la Foi Chretiens</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">Nos Predications</a>
+                        <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">Nos Enseigements</a>
+                      </div>
+                  </div>
+                  <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Meditations</a>
+                  </div>
+                  <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos News</a></div>
+                  <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Temoignages</a>
+                  </div>
+                  <div><a class="text-primary-color text-sm nav_links_content nav_links_content_hover"
+                      href="#Contacter">Contactez-Nous</a></div>
+            </div>
+            <div class="flex flex-wrap gap-3 justify-center p-2 items-center">
+                  <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a
+                      class="text-black text-bold text-sm font-poppins font-bold hover:text-white transition flex items-center gap-1"
+                      href=" "><ion-icon name="heart"></ion-icon> Faire un don</a></div>
+                  <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a
+                      class="text-white text-bold text-sm font-poppins font-bold hover:text-black transition" href=" ">Lire la Bible</a>
+                  </div>
+                  <div onclick="on()" class="btn__search">
+                    <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi-2" srcset="" style="height:28px;"
+                      class="cursor-pointer">
+                  </div>
+            </div>
+          </div>
+          <!-- nav links -->
+        </div>
+        <div id="menu" class="hidden md:hidden md:flex flex-row ">  
+          <div  class=" flex flex-row drop-shadow-md border-white border-l-4 ">
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color  " href="#">Qui est Dieu?</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color " href="#">Qui est Jesus-Christ?</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color  " href="#">Qui est Le Saint Esprit?</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">ABC de la Foi Chretiens</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">Nos Predications</a>
+            <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">Nos Enseigements</a>
+          </div>
+        </div>
+      </nav>
    <!--navbar -->
    <!+++++++++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++>
     <!--slider-->
-   <div>
-    <div class=" bg-fixed bg-cover  " style="height: 40vh;" >
-      <div class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center" style="height: 40vh;">
+   <div class="relative top-24">
+    <div style="height: 40vh;" >
+      <div class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center" >
            <h1 class="text-black text-3xl font-bold">Qui Sommes Nous?</h1>
       </div> 
     </div>
@@ -75,8 +118,8 @@
   <!--header -->
   <!-- body -->
   <!--############################################################# MAIN ###############################################################-->
-  <main class="h-full flex flex-col bg-white justify-center items-center shadow-xl ">
-    <div class="m-14 flex flex-col gap-5 items-center ">
+  <main class="h-full flex flex-col  justify-center items-center shadow-xl ">
+    <div class="p-14 flex flex-col gap-5 items-center bg-white">
         <div class="m-2 w-2/3 text-justify ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio repudiandae sunt quod dolores eaque beatae. Pariatur repellat, 
             et assumenda perferendis, animi quia tempore facilis adipisci, architecto libero exercitationem doloremque modi!
@@ -85,25 +128,23 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio repudiandae sunt quod dolores eaque beatae. Pariatur repellat, 
             et assumenda perferendis, animi quia tempore facilis adipisci, architecto libero exercitationem doloremque modi!
         </div>
-        <!--debut see more-->
-        <div class="m-2 flex flex-wrap gap-5">
-            <span class="text-black font-bold">Voir aussi :</span> 
-            <span class="text-white rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Notre Histoire</a></span>
-            <span class="text-white rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Nos dirigeants</a></span>
-            <span class="text-white rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Ou nous trouver</a></span>
-            <span class="text-white rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Galerie photos</a></span>
-        </div>
-        <!--fin see more-->
-         <!--about card -->
-         <div class="shadow-xl bg-fixed bg-cover flex px-10 " style="background-image: url('https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">   
-            <div class="flex flex-wrap justify-center md:items-center gap-6 w-full  p-5 " style="background-color: rgba(0, 0, 0, 0.40);backdrop-filter: blur(2px);">
-              <span class="font-oswald text-white text-xl">Voulez-vous connaitre Jesus Christ ?</span>
-              <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1 hover:bg-white transition">
-                <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "  href=" ">A Propos de Nous</a>
-              </span>
-            </div>    
+        
+
+      </div>
+        <div class="glider-contain flex items-center">
+          <div class="glider m-2 flex gap-5">
+            <span class="text-black font-bold">Voir aussi :</span>
+            <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Notre
+                Histoire</a></span>
+            <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Nos
+                dirigeants</a></span>
+            <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Qui
+                sommes Nous?</a></span>
+            <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Galerie
+                photos</a></span>
           </div>
-          <!--about card -->
+      
+        
     </div> 
   </main>
 <!--############################################################# FOOTER ###############################################################-->

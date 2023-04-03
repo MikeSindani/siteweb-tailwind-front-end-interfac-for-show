@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,336 +12,481 @@
   <!--script -->
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+    defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.css'
+    integrity='sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg=='
+    crossorigin='anonymous' />
   <!--script-->
   <title>interfac - home page</title>
 </head>
+
 <body id="body" class="bg-slate-100 " onload="GetMap(-11.616248, 27.478152)">
-<!--############################################################# HEADER  ###############################################################-->
+  <!--############################################################# HEADER  ###############################################################-->
   <!--header -->
   <!+++++++++++++++++++++++++++++++++ NAV +++++++++++++++++++++++++++++++++++++++>
-  <header>
-  <!--navbar -->
-   <nav class="bg-transparent  flex flex-col lg:flex-row gap-10 items-center justify-around  p-2 fixed top-0 left-0 right-0 z-10" style="background-color: rgba(0, 0, 0, 0.80);backdrop-filter: blur(10px);">
-    <div class="flex justify-center items-center  " >  
-      <!--menu -->  
-      <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2"  id="menu-hamberger">
-        <span class="hamburger-box" >
-          <div class="hamburger-inner" ></div>
-        </span>
-      </div>
-      <!--menu -->
-       <!--logo -->
-      <div>
-        <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
-          <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline" >
-          INTERFAC
-        </a>
-      </div>
-      <!--logo -->
-      <div onclick="on()"   class="btn__search absolute top-2 right-3 p-2">
-        <img  src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi"  srcset="" style="height: 36px;" >
-      </div>
-    </div> 
-   <!-- nav links -->
-    <div class="flex gap-10 flex-wrap items-center justify-center" id="nav-links">
-      <div class="navlinks flex flex-col md:flex-row gap-5">
-        <div><a class="nav-link nav_links_content nav_links_content_hover" href="">Accueil</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Enseigments</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Predications</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos News</a></div>
-        <div><a class="text-white text-md nav_links_content nav_links_content_hover"  href="">Nos Temoignages</a></div>
-      </div>
-      <div class="flex flex-wrap gap-5 justify-center p-2 items-center">
-        <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a class="text-black text-bold text-md font-bold hover:text-white transition"  href=" ">Faire un don</a></div>
-        <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a class="text-white text-bold text-md font-bold hover:text-black transition"  href=" ">Contacte Nous</a></div>
-        <div onclick="on()" class="btn__search" >
-          <img  src="img/search1-svgrepo-com (2).svg" alt=""  id="search-btn-mobi-2"  srcset="" style="height:28px;" class="cursor-pointer" >
-        </div> 
-      </div>
-    </div>
-     <!-- nav links -->
-   </nav>
-   <!--navbar -->
-   <!+++++++++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++>
-    <!--slider-->
-   <div>
-    <div style="height: 60vh;" >
-      <div class=" flex flex-col justify-center gap-5 items-center p-5 " style="height: 60vh;">
-           <h1 class="text-black text-3xl font-bold ">Ou Nous Trouve?</h1>
-           <div class="swiffy-slider ">
-              <div class="slider-container flex gap-2 slider-item-show4  slider-item-show2-sm slider-nav-animation-fadein">
+    <header>
+      <!--navbar -->
+      <nav
+      class="bg-transparent  flex flex-col gap-3  p-2 fixed top-0 left-0 right-0 z-50"
+      style="background-color: rgba(0, 0, 0, 0.80);backdrop-filter: blur(10px);">
+      <div class="flex flex-col md:flex-row gap-3 md:gap-7 items-center justify-around  ">
 
-                    <div onclick="GetMap(-11.616248, 27.478152)" class=" bg-fixed bg-cover  shadow-xl cursor-pointer" style="background-image: url('img/img-\ \(5\).jpg');background-position: center;height:144px;width:320px;" >
-                        <span class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center w-80 h-36 text-white text-2xl" style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);"> 
-                            Grande Cellule      
-                        </span>
-                    </div> 
-                    <div onclick="GetMap(-11.635623, 27.482299)"   class=" bg-fixed bg-cover w-80 h-36 shadow-xl cursor-pointer" style="background-image: url('img/img-\ \(3\).jpg');background-position: center;height:144px;width:320px;" >
-                        <span class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center w-80 h-36 text-white text-2xl" style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);"> 
-                            Cellule sciences     
-                        </span> 
-                    </div>
-                    <div onclick="GetMap(-11.635623, 27.482299)"   class=" bg-fixed bg-cover w-80 h-36 shadow-xl cursor-pointer" style="background-image: url('img/img-\ \(2\).jpg');background-position: center;height:144px;width:320px;" >
-                      <span class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center w-80 h-36 text-white text-2xl" style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);"> 
-                          Cellule chimie&envi    
-                      </span> 
-                  </div>
-                  <div onclick="GetMap(-11.635623, 27.482299)"   class=" bg-fixed bg-cover w-80 h-36 shadow-xl cursor-pointer" style="background-image: url('img/img-\ \(1\).jpg');background-position: center;height:144px;width:320px;" >
-                    <span class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center w-80 h-36 text-white text-2xl" style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);"> 
-                        Cellule sciences     
-                    </span> 
-                  </div>
-                  <div onclick="GetMap(-11.635623, 27.482299)"   class=" bg-fixed bg-cover w-80 h-36 shadow-xl cursor-pointer" style="background-image: url('img/img-\ \(2\).jpg');background-position: center;height:144px;width:320px;" >
-                    <span class=" flex flex-wrap justify-center gap-0 md:gap-10 items-center w-80 h-36 text-white text-2xl" style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);"> 
-                        Cellule chimie&envi    
-                    </span> 
+        <div class="flex justify-center items-center  ">
+          <!--menu -->
+          <div class="hamburger hamburger--collapse absolute top-2 left-3 p-2" id="menu-hamberger">
+            <span class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </span>
+          </div>
+          <!--menu -->
+          <!--logo -->
+          <div>
+            <a href="" class="text-white text-xl font-bold font-Oswald gap-3 ">
+              <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac"
+                class="inline">
+              INTERFAC
+            </a>
+          </div>
+          <!--logo -->
+          <div onclick="on()" class="btn__search absolute top-2 right-4 p-2">
+            <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi" srcset="" style="height: 36px;">
+          </div>
+        </div>
+        <!-- nav links -->
+        <div class="flex gap-3 md:gap-7 flex-wrap items-center justify-center " id="nav-links">
+              <div class="navlinks flex flex-col md:flex-row gap-3 ">
+                <div><a class="nav-link text-sm nav_links_content nav_links_content_hover" href="">Accueil</a></div>
+                <div id="dropdown-wrapper" class="hidden md:flex items-center text-white">
+                  <bouton onmouseover="toggleMenu()" class="text-white text-sm nav_links_content nav_links_content_hover " href="">
+                    Nos Enseigements</bouton>
+                  <ion-icon name="arrow-dropdown" size="small"></ion-icon>
                 </div>
-              </div>
-               
+                <div  class="inline-block md:hidden cursor-pointer">
+                    <button  class="text-white text-sm nav_links_content nav_links_content_hover ">
+                      Nos Enseigements 
+                      <ion-icon name="arrow-dropdown" ></ion-icon>
+                    </button>
+                    <div class="md:hidden flex flex-col drop-shadow-md border-white border-l">
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color  " href="#">Qui est Dieu?</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color " href="#">Qui est Jesus-Christ?</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color  " href="#">Qui est Le Saint Esprit?</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">ABC de la Foi Chretiens</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">Nos Predications</a>
+                      <a class="text-white text-sm px-5 py-3 hover:bg-primary-color" href="#">Nos Enseigements</a>
+                    </div>
+                </div>
+                <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Meditations</a>
+                </div>
+                <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos News</a></div>
+                <div><a class="text-white text-sm nav_links_content nav_links_content_hover" href="">Nos Temoignages</a>
+                </div>
+                <div><a class="text-primary-color text-sm nav_links_content nav_links_content_hover"
+                    href="#Contacter">Contactez-Nous</a></div>
+          </div>
+          <div class="flex flex-wrap gap-3 justify-center p-2 items-center">
+                <div class="bg-white px-10 py-1 rounded-3xl  hover:bg-primary-color transition"><a
+                    class="text-black text-bold text-sm font-poppins font-bold hover:text-white transition flex items-center gap-1"
+                    href=" "><ion-icon name="heart"></ion-icon> Faire un don</a></div>
+                <div class="bg-primary-color px-10 py-1 rounded-3xl hover:bg-white transition "><a
+                    class="text-white text-bold text-sm font-poppins font-bold hover:text-black transition" href=" ">Lire la Bible</a>
+                </div>
+                <div onclick="on()" class="btn__search">
+                  <img src="img/search1-svgrepo-com (2).svg" alt="" id="search-btn-mobi-2" srcset="" style="height:28px;"
+                    class="cursor-pointer">
+                </div>
+          </div>
+        </div>
+        <!-- nav links -->
+      </div>
+      <div id="menu" class="hidden md:hidden md:flex flex-row ">  
+        <div  class=" flex flex-row drop-shadow-md border-white border-l-4 ">
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color  " href="#">Qui est Dieu?</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color " href="#">Qui est Jesus-Christ?</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color  " href="#">Qui est Le Saint Esprit?</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">ABC de la Foi Chretiens</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">Nos Predications</a>
+          <a class="text-white text-sm px-5 py-3 font-poppins hover:bg-primary-color" href="#">Nos Enseigements</a>
+        </div>
+      </div>
+    </nav>
+      <!--navbar -->
+      <!+++++++++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++>
+        <!--slider-->
+        <div>
+          <div  style="height: 40vh;">
+            <div class=" flex flex-col justify-center gap-5 items-center p-2 " style="height: 60vh;">
+              <h1 class="text-black text-3xl font-bold ">Ou Nous Trouve?</h1>
+              <div class="glider-contain ">
+                <div class="glider flex gap-5 ">
+        
+                    <div onclick="GetMap(-11.616248, 27.478152)" class=" bg-fixed bg-cover  shadow-xl cursor-pointer  m-3"
+                        style="background-image: url('img/img-\ \(5\).jpg');background-position: center;width:150px;">
+                        <div class=" flex  justify-center  items-center  h-24 text-white text-lg md:text-xl"
+                            style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);">
+                            Grande Cellule
+                        </div>
+                    </div>
+                    <div onclick="GetMap(-11.635623, 27.482299)"
+                        class=" bg-fixed bg-cover  h-24 shadow-xl cursor-pointer m-3"
+                        style="background-image: url('img/img-\ \(3\).jpg');background-position: center;width:150px;">
+                        <div class=" flex  justify-center  items-center  h-24 text-white text-lg md:text-xl"
+                            style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);">
+                            Cellule sciences
+                        </div>
+                    </div>
+                    <div onclick="GetMap(-11.635623, 27.482299)"
+                        class=" bg-fixed bg-cover  h-24 shadow-xl cursor-pointer m-3"
+                        style="background-image: url('img/img-\ \(2\).jpg');background-position: center;width:150px;">
+                        <div class="h-24 flex  justify-center  items-center text-white text-lg md:text-xl"
+                            style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);">
+                            Cellule chimie&envi
+                        </div>
+                    </div>
+                    <div onclick="GetMap(-11.635623, 27.482299)"
+                        class=" bg-fixed bg-cover  h-24 shadow-xl cursor-pointer m-3"
+                        style="background-image: url('img/img-\ \(1\).jpg');background-position: center;width:150px;">
+                        <div class=" flex  justify-center  items-center  h-24 text-white text-lg md:text-xl"
+                            style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);">
+                            Cellule sciences
+                        </div>
+                    </div>
+                    <div onclick="GetMap(-11.635623, 27.482299)"
+                        class=" bg-fixed bg-cover  h-24 shadow-xl cursor-pointer m-3"
+                        style="background-image: url('img/img-\ \(2\).jpg');background-position: center;width:150px;">
+                        <div class=" flex  justify-center  items-center  h-24 text-white text-lg md:text-xl"
+                            style=" background-color: rgba(0, 0, 0, 0.50);backdrop-filter: blur(2px);">
+                            Cellule chimie&envi
+                        </div>
+                    </div>
+                </div>
+        
+                <button aria-label="Previous" type="button" class="glider-prev  " style="position: absolute; left:20px;color: white;"><ion-icon name="arrow-round-back"></ion-icon></button>
+              <button aria-label="Next" type="button" class="glider-next"  style="position: absolute; right:20px; color: white ;" ><ion-icon name="arrow-round-forward"></ion-icon></button>
+                <div role="tablist" class="dots"></div>
+            </div>
+            </div>
+          </div>
+          <!--slider-->
+    </header>
+    <!--header -->
+    <!-- body -->
+    <!--############################################################# MAIN ###############################################################-->
+    <main class="h-full flex flex-col  justify-center items-center shadow-xl ">
+      <div class=" flex flex-col gap-5 items-center p-2 w-full">
+        <!---carte avec bing maps -->
+        <div class="grid grid-cols-1 md:grid-cols-maps  gap-5 bg-white p-2">
+          <div class="flex flex-col gap-3">
+            <div class="swiffy-slider">
+              <ul class="slider-container">
+                <li><img src="https://source.unsplash.com/49b9l_29ceA/1600x900" style="max-width: 100%;height: auto;">
+                </li>
+                <li><img src="https://source.unsplash.com/nKAglN6HBH8/1600x900" style="max-width: 100%;height: auto;">
+                </li>
+                <li><img src="https://source.unsplash.com/E9ZwWcMGzj8/1600x900" style="max-width: 100%;height: auto;">
+                </li>
+              </ul>
+
               <button type="button" class="slider-nav"></button>
               <button type="button" class="slider-nav slider-nav-next"></button>
-          </div>    
-    </div>
-   </div>
-   <!--slider-->
-  </header>
-  <!--header -->
-  <!-- body -->
-  <!--############################################################# MAIN ###############################################################-->
-  <main class="h-full flex flex-col bg-white justify-center items-center shadow-xl ">
-    <div class=" flex flex-col gap-5 items-center ">
-        <!---carte avec bing maps -->
-        <div id="map" style="width:98vw;height:400px;"></div>
+
+              <div class="slider-indicators">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3">
+              <h1 class=" font-bold text-lg">A Propos du Lieu</h1>
+              <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto recusandae eos libero eligendi eum
+                laborum culpa asperiores consequatur sapiente sed animi autem iste saepe eveniet temporibus error
+                provident, reprehenderit est.4
+              </div>
+            </div>
+            
+          </div>
+          <div id="map" style="height: 400px;"></div>
+        </div>
+        
+
         <!---carte avec bing maps -->
         <!--debut see more-->
-        <div class="m-2 flex flex-wrap gap-5">
-            <span class="text-black font-bold">Voir aussi :</span> 
-            <span class="text-white rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Notre Histoire</a></span>
-            <span class="text-white rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Nos dirigeants</a></span>
-            <span class="text-white rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Qui sommes Nous?</a></span>
-            <span class="text-white rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Galerie photos</a></span>
+        <div class="glider-contain flex items-center">
+          <div class="glider m-2 flex  gap-5">
+            <span class="text-black font-bold">Voir aussi :</span>
+            <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Notre
+                Histoire</a></span>
+            <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Nos
+                dirigeants</a></span>
+            <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Qui
+                sommes Nous?</a></span>
+            <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Galerie
+                photos</a></span>
+          </div>
+
         </div>
+        
+
         <!--fin see more-->
-         <!--about card -->
-         <div class="shadow-xl m-2 bg-fixed bg-cover flex px-10 " style="background-image: url('https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">   
-            <div class="flex flex-wrap justify-center md:items-center gap-6 w-full  p-5 " style="background-color: rgba(0, 0, 0, 0.40);backdrop-filter: blur(2px);">
-              <span class="font-oswald text-white text-xl">Voulez-vous connaitre Jesus Christ ?</span>
-              <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1 hover:bg-white transition">
-                <a class="text-white text-bold text-sm sm:text-md font-bold hover:bg-white hover:text-black transition "  href=" ">A Propos de Nous</a>
-              </span>
-            </div>    
-          </div>
-          <!--about card -->
-    </div> 
-  </main>
-<!--############################################################# FOOTER ###############################################################-->
-  <!--Footer 2-->
-  <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
-  <section class="h-16  bg-fixed bg-cover" style="background-image: url('img/img-\(8\).png');">
-    <div class="h-16 flex  justify-center  items-center" style="background-color: rgba(0, 0, 0, 0.70);">
-      <div>
-        <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
-          <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline" >
-          INTERFAC
-        </a>
-      </div>
-    </div>
-  </section>
-  <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
-  <section class="bg-black flex flex-wrap  p-5   md:justify-around">
-    <section >
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Nous Contacter</h2>
-      <div class="text-slate-700 w-80 text-sm md:py-5 p-5"> 
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="mail" size="small"></ion-icon> <a href="" class="text-lg  px-2">interfac@interfac.com</a></div>
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="logo-whatsapp" size="small"></ion-icon> <a href="" class="text-lg px-2">+243 081000000</a></div>
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a href=""class="text-lg px-2" >+243 081000000</a></div>
-        <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a href="" class="text-lg px-2"  >+243 081000000</a></div>
-    </section>
-  <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
-    <section >
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Ecrivez-Nous</h2>
-      <div class="p-2"> 
-        <form class="flex gap-5 flex-col justify-center ">
-          <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" type="text" name="text" placeholder="Enter Votre Name"   />
-          <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" type="email" name="email" placeholder="Enter Votre Email" />
-          <textarea class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white" placeholder="Message"></textarea>
-          <button class="bg-black p-2 border-2 border-solid rounded-md  border-slate-600 text-white w-20 hover:bg-white hover:text-black transition ">Envoyer</button>
-      </form>
-      </div>
-    </section>
-  <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
-    <section>
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Savoir plus sur Nous</h2>
-      <div class="p-5">
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Qui sommes nous?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Ou nous trouver?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Nos dirigeants?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Notre Histoire?</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="arrow-round-forward"></ion-icon> Galerie Photo</a></div>
-      </div>
-    </section>
-  <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
-    <section>
-      <h2 class="text-slate-600 font-bold font-Oswald titre_content">Reseaux Social</h2>
-      <div class="p-5 ">
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-facebook"></ion-icon> Facebook</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-instagram" size="small"></ion-icon> Instagram</a></div>
-        <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon name="logo-youtube" size="small" ></ion-icon> Youtube</a></div>
-      </div>
-    </section>
 
-  </section>
-  <footer class="bg-black   text-center text-gray-600 text-md md:text-lg p-5 ">
-    &copy; Cellule de priere <strong>Interfac</strong>ultaire 2023 - 2024 
-  </footer>
-<!--############################################################# MODAL ###############################################################-->
-  <!--MODAL CONNAITRE JESUS -->
-  <div id="overlay_modal"  class="flex flex-col md:p-5 p-3  items-center relative ">  
-    <div id="modal" class="flex flex-row gap-2 items-center h-4/5 w-72 md:w-2/3  shadow-sm" style="background-image: url('data:image/jpeg;base64,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');background-size: cover;">
-      <div class="flex flex-col gap-5  justify-center p-10 h-full w-72 md:w-full" style="background-color: rgba(0, 0, 0, 0.50);">
-         <div class="font-bold text-xl md:text-3xl text-center text-white">
-            Voulez-vous Connaitre qui est JESUS CHRIST?
-         </div>
-         <div class="font-bold text-xl md:text-3xl text-center text-primary-color ">
-             lui,Il t'aime et veux te connaitre!
-         </div>
-         <div class="flex flex-col gap-3 items-center justify-center md:w-full">
+      </div>
+    </main>
+    <!--############################################################# FOOTER ###############################################################-->
+    <!--Footer 2-->
+    <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
+      <section class="h-16  bg-fixed bg-cover" style="background-image: url('img/img-\(8\).png');">
+        <div class="h-16 flex  justify-center  items-center" style="background-color: rgba(0, 0, 0, 0.70);">
           <div>
-               <button  class="  border-2 px-10 py-1 w-64 md:w-72 rounded-3xl bg-white  text-black text-sm sm:text-md font-bold cursor-pointer">Oui, Je Veux le connaitre!</button>
-           </div>
-           <div>
-               <button onclick="chose_modal()"  class="  border-2 px-10 py-1 w-64 rounded-3xl bg-transparent border-solid border-white text-white text-sm sm:text-md font-bold cursor-pointer">je le connais deja</button>
-           </div>
-           <div>
-               <button onclick="chose_modal()"  class="px-10 py-1 w-36 rounded-3xl  bg-transparent text-white text-sm sm:text-md font-bold cursor-pointer"><ion-icon name="close" size="large"></ion-icon>Fermer</button>
-           </div>
-         </div>
-         
-      </div>
-    </div>
-  </div>
-  <!-- MODAL rechercher overlay -->
-  <div id="overlay"  class="flex flex-col md:p-5 p-3  items-center relative ">  
-  <div id="text" class="flex flex-col gap-2  md:w-4/6  ">
-    <div class="flex justify-center">
-      <img  src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" height="100" width="100">
-   </div> 
-    <!--about card -->
-    <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl text-white py-4">Rechercher</h1>
+            <a href="" class="text-white text-xl font-bold font-Oswald gap-3">
+              <img src="img/inferc_logo-removebg-preview.png" style="height: 48px;" alt="logo-interfac" class="inline">
+              INTERFAC
+            </a>
+          </div>
+        </div>
+      </section>
+      <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
+        <section class="bg-black flex flex-wrap  p-5   md:justify-around">
+          <section>
+            <h2 class="text-slate-600 font-bold font-Oswald titre_content">Nous Contacter</h2>
+            <div class="text-slate-700 w-80 text-sm md:py-5 p-5">
+              <div class="text-slate-700 transition hover:text-white"><ion-icon name="mail" size="small"></ion-icon> <a
+                  href="" class="text-lg  px-2">interfac@interfac.com</a></div>
+              <div class="text-slate-700 transition hover:text-white"><ion-icon name="logo-whatsapp"
+                  size="small"></ion-icon> <a href="" class="text-lg px-2">+243 081000000</a></div>
+              <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a
+                  href="" class="text-lg px-2">+243 081000000</a></div>
+              <div class="text-slate-700 transition hover:text-white"><ion-icon name="call" size="small"></ion-icon> <a
+                  href="" class="text-lg px-2">+243 081000000</a></div>
+          </section>
+          <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
+            <section>
+              <h2 class="text-slate-600 font-bold font-Oswald titre_content">Ecrivez-Nous</h2>
+              <div class="p-2">
+                <form class="flex gap-5 flex-col justify-center ">
+                  <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white"
+                    type="text" name="text" placeholder="Enter Votre Name" />
+                  <input class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white"
+                    type="email" name="email" placeholder="Enter Votre Email" />
+                  <textarea class="bg-black p-2 border-2 border-solid rounded-md w-full border-slate-600 text-white"
+                    placeholder="Message"></textarea>
+                  <button
+                    class="bg-black p-2 border-2 border-solid rounded-md  border-slate-600 text-white w-20 hover:bg-white hover:text-black transition ">Envoyer</button>
+                </form>
+              </div>
+            </section>
+            <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
+              <section>
+                <h2 class="text-slate-600 font-bold font-Oswald titre_content">Savoir plus sur Nous</h2>
+                <div class="p-5">
+                  <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                        name="arrow-round-forward"></ion-icon> Qui sommes nous?</a></div>
+                  <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                        name="arrow-round-forward"></ion-icon> Ou nous trouver?</a></div>
+                  <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                        name="arrow-round-forward"></ion-icon> Nos dirigeants?</a></div>
+                  <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                        name="arrow-round-forward"></ion-icon> Notre Histoire?</a></div>
+                  <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                        name="arrow-round-forward"></ion-icon> Galerie Photo</a></div>
+                </div>
+              </section>
+              <!+++++++++++++++++++++++++++++++++ SECTION +++++++++++++++++++++++++++++++++++>
+                <section>
+                  <h2 class="text-slate-600 font-bold font-Oswald titre_content">Reseaux Social</h2>
+                  <div class="p-5 ">
+                    <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                          name="logo-facebook"></ion-icon> Facebook</a></div>
+                    <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                          name="logo-instagram" size="small"></ion-icon> Instagram</a></div>
+                    <div><a href="" class="text-slate-700 text-lg transition hover:text-white"><ion-icon
+                          name="logo-youtube" size="small"></ion-icon> Youtube</a></div>
+                  </div>
+                </section>
 
-    <div> 
-      <form class="flex gap-3 justify-center ">
-        <botton onclick="off()" class="bg-transparent p-2  text-white">
-          <ion-icon name="close" size="large"></ion-icon>
-          
-        </botton>
-        <input id="input-saerch" class="bg-transparent p-2 border-b-2 border-solid  md:w-96 border-white text-md text-white" type="text" name="text" placeholder="Rechercher "   />
-        <botton class="bg-transparent p-2  text-white " >
-          <ion-icon name="search" size="large"></ion-icon>
-        </botton>
-    </form>
-    </div>
-    
-    <h1 class="font-poppins font-light text-center text-xl md:text-2xl text-white py-4"><span id="text-see-search">Ecrivez quelque chose</span> <span id="text-search"></span></h1> 
-    <div class="flex justify-center items-center">
-      <div id="loader" class="loader" style="display: none;"></div>
-    </div>
-    
-    <!--about card -->
-        <div class="shadow-xl bg-fixed bg-cover flex" style="background-image: url('img/img-\(8\).png');">   
-          <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 " style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(2px);">
-            <span class="font-oswald text-white text-sm md:text-xl">Voulez-vous connaitre plus sur nous ?</span>
-            <span class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1"><a class="text-white text-bold text-sm sm:text-md font-bold "  href=" ">A Propos de Nous</a></span>
-          </div>    
-        </div>
-        <!--card items  -->
-        <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
-          <!--card thumbail   -->
-          <div> 
-            <div class="z-2" >
-              <img   src="img/img- (7).jpg" alt="" class="w-72 h-40" >
-            </div>    
+        </section>
+        <footer class="bg-black   text-center text-gray-600 text-md md:text-lg p-5 ">
+          &copy; Cellule de priere <strong>Interfac</strong>ultaire 2023 - 2024
+        </footer>
+        <!--############################################################# MODAL ###############################################################-->
+        <!--MODAL CONNAITRE JESUS -->
+        <div id="overlay_modal" class="flex flex-col md:p-5 p-3  items-center relative ">
+          <div id="modal" class="flex flex-row gap-2 items-center h-4/5 w-72 md:w-2/3  shadow-sm"
+            style="background-image: url('data:image/jpeg;base64,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');background-size: cover;">
+            <div class="flex flex-col gap-5  justify-center p-10 h-full w-72 md:w-full"
+              style="background-color: rgba(0, 0, 0, 0.50);">
+              <div class="font-bold text-xl md:text-3xl text-center text-white">
+                Voulez-vous Connaitre qui est JESUS CHRIST?
+              </div>
+              <div class="font-bold text-xl md:text-3xl text-center text-primary-color ">
+                lui,Il t'aime et veux te connaitre!
+              </div>
+              <div class="flex flex-col gap-3 items-center justify-center md:w-full">
+                <div>
+                  <button
+                    class="  border-2 px-10 py-1 w-64 md:w-72 rounded-3xl bg-white  text-black text-sm sm:text-md font-bold cursor-pointer">Oui,
+                    Je Veux le connaitre!</button>
+                </div>
+                <div>
+                  <button onclick="chose_modal()"
+                    class="  border-2 px-10 py-1 w-64 rounded-3xl bg-transparent border-solid border-white text-white text-sm sm:text-md font-bold cursor-pointer">je
+                    le connais deja</button>
+                </div>
+                <div>
+                  <button onclick="chose_modal()"
+                    class="px-10 py-1 w-36 rounded-3xl  bg-transparent text-white text-sm sm:text-md font-bold cursor-pointer"><ion-icon
+                      name="close" size="large"></ion-icon>Fermer</button>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <!--card body-->
-          <div class="p-2 flex gap-2 flex-col">
-              <!--card body titre-->
-              <div>
-                <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
-              </div>
-              <!--card body description-->
-              <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
-                porro aperiam saepe necessitatibus maxime nobis autem,
-              </div>
-              <!--card body details -->
-              <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
-                <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-                <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-                <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
-              </div>
-          </div>
-          <!--card body -->
-         </div>
-         <!--card items  -->
-          <!--card items  -->
-       <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
-        <!--card thumbail   -->
-        <div> 
-          <div class="z-2" >
-            <img   src="img/img- (7).jpg" alt="" class="w-72 h-40" >
-          </div>    
         </div>
-        <!--card body-->
-        <div class="p-2 flex gap-2 flex-col">
-            <!--card body titre-->
+        <!-- MODAL rechercher overlay -->
+        <div id="overlay" class="flex flex-col md:p-5 p-3  items-center relative ">
+          <div id="text" class="flex flex-col gap-2  md:w-4/6  ">
+            <div class="flex justify-center">
+              <img src="img/inferc_logo-removebg-preview.png" alt="logo-interfac" height="100" width="100">
+            </div>
+            <!--about card -->
+            <h1 class="font-oswald font-bold text-center text-2xl md:text-3xl text-white py-4">Rechercher</h1>
+
             <div>
-              <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
-            </div>
-            <!--card body description-->
-            <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit consequuntur
-              porro aperiam saepe necessitatibus maxime nobis autem,
-            </div>
-            <!--card body details -->
-            <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
-              <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
-              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars 2023</span></span>
-              <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara Mulongo</span></span>
-            </div>
-        </div>
-        <!--card body -->
-       </div>
-       <!--card items  -->
-       
-      
-       <!--card items  -->
-     </div>
-     <div style="display: none" class="flex justify-center mx-20 z-5">
-      <button onclick="off()"  class="  border-2 px-10 py-1 w-36 rounded-3xl bg-transparent border-solid border-white border-spacing-1 text-white text-sm sm:text-md font-bold cursor-pointer">Fermer</button>
-     </div>
-  </div>
- <!--############################################################# OTHER ###############################################################-->
-  </div>
-  <!--BOUTON POUR MONTER EN HAUT-->
-  <button onclick="topFunction()" id="myBtn" title="Go to top">
-    <img src="img/up-arrow-svgrepo-com.svg" alt="" height="50" width="50">
-  </button> 
-  <!--BOUTON POUR SUVRE SUR LE RESEAU -->
-  <div class="fixed top-24 left-0" >
-    <div id="bg-social-media" class=" p-3 flex gap-5 flex-col" style="backdrop-filter:blur(3px) ;">
-      <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-facebook"></ion-icon></a></div>
-      <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-instagram" size="small"></ion-icon></a></div>
-      <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-youtube" size="small" ></ion-icon></a></div>
-    </div>
-  </div>
+              <form class="flex gap-3 justify-center ">
+                <botton onclick="off()" class="bg-transparent p-2  text-white">
+                  <ion-icon name="close" size="large"></ion-icon>
 
- <!---scripts -->
- <script src="js/index.js"></script>
- <script type='text/javascript'
-   src='http://www.bing.com/api/maps/mapcontrol?branch=release&callback=GetMap'>
-</script>
- <script src="js/maps.js"></script>
+                </botton>
+                <input id="input-saerch"
+                  class="bg-transparent p-2 border-b-2 border-solid  md:w-96 border-white text-md text-white"
+                  type="text" name="text" placeholder="Rechercher " />
+                <botton class="bg-transparent p-2  text-white ">
+                  <ion-icon name="search" size="large"></ion-icon>
+                </botton>
+              </form>
+            </div>
+
+            <h1 class="font-poppins font-light text-center text-xl md:text-xl text-white py-4"><span
+                id="text-see-search">Ecrivez quelque chose</span> <span id="text-search"></span></h1>
+            <div class="flex justify-center items-center">
+              <div id="loader" class="loader" style="display: none;"></div>
+            </div>
+
+            <!--about card -->
+            <div class="shadow-xl bg-fixed bg-cover flex" style="background-image: url('img/img-\(8\).png');">
+              <div class="flex flex-wrap justify-center md:items-center gap-6 w-full py-5 "
+                style="background-color: rgba(0, 0, 0, 0.70);backdrop-filter: blur(2px);">
+                <span class="font-oswald text-white text-sm md:text-xl">Voulez-vous connaitre plus sur nous ?</span>
+                <span
+                  class="border-2 px-10 py-1 rounded-3xl bg-transparent border-solid border-white border-spacing-1"><a
+                    class="text-white text-bold text-sm sm:text-md font-bold " href=" ">A Propos de Nous</a></span>
+              </div>
+            </div>
+            <!--card items  -->
+            <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
+              <!--card thumbail   -->
+              <div>
+                <div class="z-2">
+                  <img src="img/img- (7).jpg" alt="" class="w-72 h-40">
+                </div>
+              </div>
+              <!--card body-->
+              <div class="p-2 flex gap-2 flex-col">
+                <!--card body titre-->
+                <div>
+                  <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
+                </div>
+                <!--card body description-->
+                <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+                  consequuntur
+                  porro aperiam saepe necessitatibus maxime nobis autem,
+                </div>
+                <!--card body details -->
+                <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
+                  <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                      2023</span></span>
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                      Mulongo</span></span>
+                </div>
+              </div>
+              <!--card body -->
+            </div>
+            <!--card items  -->
+            <!--card items  -->
+            <div class="bg-white grid grid-cols-card gap-3 hover:shadow-xl transition cursor-pointer">
+              <!--card thumbail   -->
+              <div>
+                <div class="z-2">
+                  <img src="img/img- (7).jpg" alt="" class="w-72 h-40">
+                </div>
+              </div>
+              <!--card body-->
+              <div class="p-2 flex gap-2 flex-col">
+                <!--card body titre-->
+                <div>
+                  <h1 class="font-oswald font-bold text-xl " title="Comment prier Dieu?">Comment prier Dieu?</h1>
+                </div>
+                <!--card body description-->
+                <div class="text-slate-600  text-sm  sm:block sm:text-base  limite_text" title="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo labore ipsam veritatis odit
+                  consequuntur
+                  porro aperiam saepe necessitatibus maxime nobis autem,
+                </div>
+                <!--card body details -->
+                <div class="flex sm:justify-around sm:items-center flex-col sm:flex-row ">
+                  <span><a class="font-oswald text-sm sm:text-md text-primary-color" href="">Nos Enseigements</a></span>
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="time"></ion-icon> <span>14 mars
+                      2023</span></span>
+                  <span class="text-slate-600 text-sm sm:text-md"><ion-icon name="person"></ion-icon> <span>Clara
+                      Mulongo</span></span>
+                </div>
+              </div>
+              <!--card body -->
+            </div>
+            <!--card items  -->
+
+
+            <!--card items  -->
+          </div>
+          <div style="display: none" class="flex justify-center mx-20 z-5">
+            <button onclick="off()"
+              class="  border-2 px-10 py-1 w-36 rounded-3xl bg-transparent border-solid border-white border-spacing-1 text-white text-sm sm:text-md font-bold cursor-pointer">Fermer</button>
+          </div>
+        </div>
+        <!--############################################################# OTHER ###############################################################-->
+        </div>
+        <!--BOUTON POUR MONTER EN HAUT-->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          <img src="img/up-arrow-svgrepo-com.svg" alt="" height="50" width="50">
+        </button>
+        <!--BOUTON POUR SUVRE SUR LE RESEAU -->
+        <div class="fixed top-24 left-0">
+          <div id="bg-social-media" class=" p-3 flex gap-5 flex-col" style="backdrop-filter:blur(3px) ;">
+            <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon
+                  name="logo-facebook"></ion-icon></a></div>
+            <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-instagram"
+                  size="small"></ion-icon></a></div>
+            <div><a href="" class="text-white text-lg transition hover:text-white"><ion-icon name="logo-youtube"
+                  size="small"></ion-icon></a></div>
+          </div>
+        </div>
+
+        <!---scripts -->
+        <script src="js/index.js"></script>
+        <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?branch=release&callback=GetMap'>
+
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.js'
+        integrity='sha512-AZURF+lGBgrV0WM7dsCFwaQEltUV5964wxMv+TSzbb6G1/Poa9sFxaCed8l8CcFRTiP7FsCgCyOm/kf1LARyxA=='
+        crossorigin='anonymous'></script>
+        <script src="js/maps.js"></script>
+        
+    <script>
+        
 </body>
+
 </html>

@@ -12,7 +12,7 @@ function toggleMenu() {
 // close the menu when the user clicks outside of it 
 window.onclick = function (event) {
     var dropdownWrapper = document.getElementById('dropdown-wrapper');
-    if (!dropdownWrapper.contains(event.target) && !menu_dropdown.classList.contains('md:hidden') && !menu_dropdown.classList.contains('hidden')) {
+    if (!dropdownWrapper.contains(event.target) || !menu_dropdown.classList.contains('md:hidden') || !menu_dropdown.classList.contains('hidden')) {
         menu_dropdown.classList.add('md:hidden');
     }
 }
@@ -111,6 +111,11 @@ window.onscroll = function() {
   var numbre_scroll = 250 
   if (window.pageYOffset >= numbre_scroll) {
     document.getElementById("bg-social-media").style.backgroundColor = "rgba(0, 0, 0, 0.699)";
+   // to close enseigment menu 
+    var dropdownWrapper = document.getElementById('dropdown-wrapper');
+    if (!dropdownWrapper.contains(event.target) || !menu_dropdown.classList.contains('md:hidden') || !menu_dropdown.classList.contains('hidden')) {
+        menu_dropdown.classList.add('md:hidden');
+    }
   }
   if (window.pageYOffset < numbre_scroll) {
     document.getElementById("bg-social-media").style.backgroundColor = "transparent";
@@ -123,5 +128,6 @@ window.onscroll = function() {
   } else {
     mybutton.style.display = "none";
   }
+ 
 }
 

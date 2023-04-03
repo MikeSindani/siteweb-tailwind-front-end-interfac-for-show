@@ -179,7 +179,7 @@ html {
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(38, 0, 255, 0.9);
     backdrop-filter: blur(2px); /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */ /* Some padding */

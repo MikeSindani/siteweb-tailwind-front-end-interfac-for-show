@@ -15,10 +15,13 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.css'
+        integrity='sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg=='
+        crossorigin='anonymous' />
   <!--script-->
   <title>interfac - home page</title>
 </head>
-<body id="body" class="bg-slate-100 bg-black">
+<body id="body" class="bg-slate-100 bg-zinc-900">
 <!--############################################################# HEADER  ###############################################################-->
   <!--header -->
   <!+++++++++++++++++++++++++++++++++ NAV +++++++++++++++++++++++++++++++++++++++>
@@ -68,25 +71,23 @@
    <!--navbar -->
    <!+++++++++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++>
     <!--slider-->
-   <div>
-        <div  class=" bg-fixed bg-cover " style="height: 40vh;" >
-           <div class=" flex flex-col justify-center gap-0 md:gap-10 items-center" style="height: 40vh;">
+   <div class="relative top-24">
+        <div style="height: 40vh;" >
+           <div class=" flex flex-col justify-center gap-0 md:gap-10 items-center" >
             <h1 class="text-white text-3xl font-bold font-oswald">Notre Galerie Photos</h1> 
-            <div class="swiffy-slider slider-nav-autoplay slider-nav-animation-fadein">
+            <div class="glider-contain flex items-center">
 
-              <div
-                class="slider-container slider-item-show3 slider-nav-touch slider-item-show2-sm slider-nav-round p-10">
+              <div class="glider">
                 <span class="text-white font-oswald text-xl text-center  hover:text-primary-color  transition "><a
                     href="">2021</a></span>
                 <span class="text-white font-oswald text-xl   hover:text-primary-color transition "><a
                     href="">2022</a></span>
                 <span class="text-white font-oswald text-xl hover:text-primary-color transition "><a
                     href="">2023</a></span>
-                
               </div>
+              
                   
-          </div>
-             
+            </div>    
        </div>
     </div> 
     </div>
@@ -96,10 +97,8 @@
   <!--header -->
   <!-- body -->
   <!--############################################################# MAIN ###############################################################-->
-  <main class="flex justify-center items-center m-2 md:m-5">
-   
-   
-  <section class="swiffy-slider  slider-nav-animation-fadein">
+  <main class="flex flex-col justify-center items-center p-2 md:p-10 gap-5 ">
+  <section class="swiffy-slider  slider-nav-animation-fadein  bg-black">
     <div  class="slider-container slider-item-show slider-nav-touch slider-nav-round">
         <div class="row"> 
             <img src="img/img- (3).jpg" style="width:100%">
@@ -113,9 +112,22 @@
        </div> 
     </div> 
     <button type="button" class="slider-nav"></button>
-    <button type="button" class="slider-nav slider-nav-next "></button>
-                                 
-</section>
+    <button type="button" class="slider-nav slider-nav-next "></button>                           
+  </section>
+  <section>
+    <div class="glider-contain flex items-center">
+      <div class="glider flex  gap-5">
+        <span class="text-white font-bold">Voir aussi :</span>
+        <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Notre
+            Histoire</a></span>
+        <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Nos
+            dirigeants</a></span>
+        <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Qui
+            sommes Nous?</a></span>
+        <span class="text-white text-sm rounded-xl bg-primary-color px-10 py-1 hover:bg-black transition "><a href="">Galerie
+            photos</a></span>
+      </div>
+  </section>
 
       
   </main>
@@ -325,8 +337,34 @@
 
  <!---scripts -->
  <script src="js/index.js"></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.js'
+ integrity='sha512-AZURF+lGBgrV0WM7dsCFwaQEltUV5964wxMv+TSzbb6G1/Poa9sFxaCed8l8CcFRTiP7FsCgCyOm/kf1LARyxA=='
+ crossorigin='anonymous'></script>
+
  <script>
  document.getElementById("body").classList.remove("bg-slate-100")
+ 
+ window.addEventListener('load', function () {  
+  new Glider(document.querySelector('.glider'), {
+  slidesToShow: 6,
+  dots: '.dots',
+  arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+  },
+  responsive: [
+       {
+          // screens greater than >= 1024px
+          breakpoint: 768,
+          settings: {
+              slidesToShow: 8,
+              slidesToScroll: 2,
+              duration: 0.25
+          }
+      }
+  ]
+});
+});
 
  </script>
 </body>
